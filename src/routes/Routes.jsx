@@ -7,6 +7,7 @@ import { useSnapshot } from 'valtio'
 import Login from '../pages/Auth/login/Login'
 import Rides from "../pages/Rides/index"
 import Users from '../pages/Users/index'
+import Driver from '../pages/Driver/Driver'
 const Routes = () => {
     const authCtx = useSnapshot(auth)
     return (
@@ -19,6 +20,8 @@ const Routes = () => {
                     <Route path="/rides" element={authCtx.isLogin ? <Rides /> : <Navigate to="/login" />}
                     />
                     <Route path="/users" element={authCtx.isLogin ? <Users /> : <Navigate to="/login" />}
+                    />
+                    <Route path="/drivers" element={authCtx.isLogin ? <Driver /> : <Navigate to="/login" />}
                     />
                    
                 </Routing>
