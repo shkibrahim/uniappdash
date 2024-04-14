@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { IoIosArrowDown } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { Filter } from '../SVGICONS/Icons';
+import { Active, Filter } from '../SVGICONS/Icons';
+import { FaArrowUpLong } from "react-icons/fa6";
+import { FaArrowDownLong } from "react-icons/fa6";
 
 const Rider = () => {
     const ranges = [
@@ -37,7 +39,7 @@ const Rider = () => {
 
     return (
         <main className='mx-10'>
-            <div className='flex items-center justify-between '>
+            <div className='flex my-10 items-center justify-between '>
                 <div className=''>
                     <div className="flex items-center space-x-4">
                         <div className='text-2xl font-medium'>
@@ -100,8 +102,179 @@ const Rider = () => {
                 </div>
             </div>
 
-            <div className='flex'>
+            <div className='my-10 justify-between flex '>
+                <div>
+                    <div className="flex   flex-col items-center space-y-4">
+                        <div >
+                            <div className="flex flex-col space-y-4 p-4 border-2 border-gray-200 rounded-md shadow-md shadow-gray-300">
+                                <div className="flex  space-x-8">
+                                    <div className='text-gray-500 font-medium text-lg'>Hire Vs Cancel</div>
+                                    <div className=' bg-gray-200 px-2 text-gray-600 text-sm p-1 rounded-md'>
+                                        Today
+                                    </div>
+                                </div>
+                                <div className="flex justify-center">
+                                    graph
+                                </div>
+                                <div>
 
+                                    <div>
+                                        <div className="flex flex-col space-y-2">
+                                            <div className='flex items-center justify-between'>
+                                                <div className='flex items-center  space-x-1'>
+                                                    <div className=' bg-green-600 w-4 h-4 rounded-full' />
+                                                    <div>
+                                                        Total Hired
+                                                    </div>
+                                                </div>
+                                                <div className='flex items-center space-x-2'>
+                                                    <div>
+                                                        54%
+                                                    </div>
+                                                    <div>
+                                                        <FaArrowUpLong className='text-green-500' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='flex items-center justify-between'>
+                                                <div className='flex items-center  space-x-1'>
+                                                    <div className=' bg-red-600 w-4 h-4 rounded-full' />
+                                                    <div>
+                                                        Total Canceled
+                                                    </div>
+                                                </div>
+                                                <div className='flex items-center space-x-2'>
+                                                    <div>
+                                                        20%
+                                                    </div>
+                                                    <div>
+                                                        <FaArrowUpLong className='text-red-500' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='flex items-center justify-between'>
+                                                <div className='flex items-center  space-x-1'>
+                                                    <div className=' bg-primary w-4 h-4 rounded-full' />
+                                                    <div>
+                                                        Total Pending
+                                                    </div>
+                                                </div>
+                                                <div className='flex items-center space-x-2'>
+                                                    <div>
+                                                        21%
+                                                    </div>
+                                                    <div>
+                                                        <FaArrowDownLong className='text-primary' />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div >
+                            <div className="flex flex-col space-y-4 p-4  border-2 border-gray-200 rounded-md shadow-md shadow-gray-300">
+                                <div className="flex  justify-between">
+                                    <div className='text-gray-500 font-medium text-lg'>Income</div>
+                                    <div className=' bg-gray-200 px-2 text-gray-600 text-sm p-1 rounded-md'>
+                                        Today
+                                    </div>
+                                </div>
+                                <div>
+
+                                    <div>
+                                        <div className="flex flex-col space-y-2">
+                                            <div className='flex items-center justify-between'>
+                                                <div className=' text-2xl font-semibold'>
+                                                    $ 9460.00
+                                                </div>
+                                                <div className='flex items-center'>
+                                                    <FaArrowDownLong className='text-red-500' />
+                                                    <div className='text-red-500'>
+                                                        1.5%
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div className=' text-gray-500 text-sm'>
+                                                Compared to $9940 yesterday
+                                            </div>
+                                            <div className='flex items-center w-[200px] justify-between'>
+                                                <div className='text-gray-500 text-sm' >
+                                                    Last week Income
+                                                </div>
+                                                <div>
+                                                    $25658.00
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div >
+                            <div className="flex flex-col space-y-4 p-4  border-2 border-gray-200 rounded-md shadow-md shadow-gray-300">
+                                <div className="flex  justify-between">
+                                    <div className='text-gray-500 font-medium text-lg'>Active Drivers</div>
+                                    <div className=' bg-gray-200 px-2 text-gray-600 text-sm p-1 rounded-md'>
+                                        Today
+                                    </div>
+                                </div>
+                                <div>
+
+                                    <div>
+                                        <div className="flex flex-col space-y-2">
+                                            <div className='flex items-center justify-between'>
+                                                <div className="flex items-center space-x-4">
+                                                    <div className=' text-2xl font-semibold'>
+                                                        340
+                                                    </div>
+                                                    <div>
+                                                        <Active />
+                                                    </div>
+                                                </div>
+                                                <div className='flex items-center'>
+                                                    <FaArrowDownLong className='text-red-500' />
+                                                    <div className='text-red-500'>
+                                                        1.5%
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div className=' text-gray-500 text-sm'>
+                                                Compared to 440 yesterday                                            </div>
+                                            <div className='flex items-center w-[200px] justify-between'>
+                                                <div className='text-gray-500 text-sm' >
+                                                    Already booked
+                                                </div>
+                                                <div>
+                                                    120
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div>
+                    <div></div>
+                </div>
             </div>
         </main>
     );
