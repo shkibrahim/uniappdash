@@ -127,7 +127,7 @@ const Navbar = () => {
           <div onClick={() => {
             setShowUserModal(!showUserModal)
           }} className=' cursor-pointer flex'>
-            <div className='flex space-x-4 items-center'>
+            <div className='flex space-x-2 items-center'>
               <div>
                 Alex Hales
               </div>
