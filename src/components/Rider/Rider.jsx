@@ -424,7 +424,6 @@ const Rider = () => {
                         </div>
                         <div id='PAGINATION' className='mt-10'>
                             <div className="flex items-center justify-between">
-
                                 <div >
                                     <span className="text-sm text-gray-700 ">
                                         Showing data<span className=" ml-2 font-semibold ">1</span> to <span className="font-semibold ">10</span> of <span className="font-semibold  ">100</span> entries
@@ -451,12 +450,11 @@ const Rider = () => {
                                             <a href="#" className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white">3</a>
                                         </li>
                                         <li>
-                                            <a href="#" className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white">..</a>
+                                            <a href="#"  className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white">..</a>
                                         </li>
                                         <li>
                                             <a href="#" className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white">40</a>
                                         </li>
-
 
                                         <li>
                                             <a href="#" className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 hover:text-gray-700">

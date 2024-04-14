@@ -6,6 +6,7 @@ import auth from '../proxyState/auth'
 import { useSnapshot } from 'valtio'
 import Login from '../pages/Auth/login/Login'
 import Rides from "../pages/Rides/index"
+import Users from '../pages/Users/index'
 const Routes = () => {
     const authCtx = useSnapshot(auth)
     return (
@@ -16,6 +17,8 @@ const Routes = () => {
                     <Route path="/" element={authCtx.isLogin ? <Dashboard /> : <Navigate to="/login" />}
                     />
                     <Route path="/rides" element={authCtx.isLogin ? <Rides /> : <Navigate to="/login" />}
+                    />
+                    <Route path="/users" element={authCtx.isLogin ? <Users /> : <Navigate to="/login" />}
                     />
                    
                 </Routing>
