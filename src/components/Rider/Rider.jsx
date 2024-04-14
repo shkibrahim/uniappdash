@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { IoIosArrowDown } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { Active, Filter } from '../SVGICONS/Icons';
+import { ActionIcon, Active, Filter } from '../SVGICONS/Icons';
 import { FaArrowUpLong } from "react-icons/fa6";
 import { FaArrowDownLong } from "react-icons/fa6";
-
+import driverImage from "../../assets/img/tableimg.png"
 const Rider = () => {
     const ranges = [
         {
@@ -28,6 +28,82 @@ const Rider = () => {
             name: "This Year",
             value: { start: new Date(new Date().getFullYear(), 0, 1), end: new Date() }
         }
+    ]
+    const tableData = [
+        {
+            id: 1,
+            carno: 299,
+            driver: {
+                img: driverImage,
+                name: "Alex Noman"
+            },
+            status: "Completed",
+            earnings: 62
+        },
+        {
+            id: 2,
+            carno: 299,
+            driver: {
+                img: driverImage,
+                name: "Alex Noman"
+            },
+            status: "Completed",
+            earnings: 62
+        },
+        {
+            id: 3,
+            carno: 299,
+            driver: {
+                img: driverImage,
+                name: "Alex Noman"
+            },
+            status: "Completed",
+            earnings: 62
+        },
+        {
+            id: 4,
+            carno: 299,
+            driver: {
+                img: driverImage,
+                name: "Alex Noman"
+            },
+            status: "Completed",
+            earnings: 62
+        },
+        {
+            id: 5,
+            carno: 299,
+            driver: {
+                img: driverImage,
+                name: "Alex Noman"
+            },
+            status: "Completed",
+            earnings: 62
+        },
+        {
+            id: 5,
+            carno: 299,
+            driver: {
+                img: driverImage,
+                name: "Alex Noman"
+            },
+            status: "Completed",
+            earnings: 62
+        },
+        {
+            id: 5,
+            carno: 299,
+            driver: {
+                img: driverImage,
+                name: "Alex Noman"
+            },
+            status: "Completed",
+            earnings: 62
+        },
+
+
+
+
     ]
     const [activeRange, setActiveRange] = useState(ranges[0].name);
     const [showRange, setRange] = useState(false);
@@ -272,8 +348,134 @@ const Rider = () => {
 
                     </div>
                 </div>
-                <div>
-                    <div></div>
+                <div className='w-[70%]'>
+                    <div className='text-center mb-10'>
+                        Live Car Status
+                    </div>
+                    <div>
+                        <div>
+                            <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+                                <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                    <thead className="text-xs text-gray-700 uppercase dark:text-gray-400">
+                                        <tr className='text-gray-800'>
+                                            <th scope="col" className="px-6 py-3 ">
+                                                No.
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Car no.
+                                            </th>
+                                            <th scope="col" className="px-6 py-3 ">
+                                                Driver
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Status
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Earning
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Action
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {
+                                            tableData?.map((item, index) => {
+                                                return <tr key={index} className="border-b border-gray-200 text-gray-800">
+
+                                                    <td className="px-6 py-4">
+                                                        {index + 1}
+                                                    </td>
+                                                    <td className="px-6 py-4 bg-gray-50">
+                                                        {item?.carno}
+                                                    </td>
+                                                    <td className="px-6 py-4">
+                                                        <div className="flex items-center space-x-2">
+                                                            <div>
+                                                                {item?.driver?.name}
+                                                            </div>
+                                                            <div>
+                                                                <img className='w-6 h-6 rounded-full' src={item?.driver?.img} alt={item?.driver?.name} />
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td className="px-6 py-4 flex space-x-2">
+                                                        <div>
+                                                            <Active />
+                                                        </div>
+                                                        <div>
+                                                            {item?.status}
+                                                        </div>
+                                                    </td>
+                                                    <td className="px-6 py-4 ">
+                                                        $ {item?.earnings}
+                                                    </td>
+                                                    <td className="px-6 py-4 ">
+                                                        <ActionIcon />
+                                                    </td>
+                                                </tr>
+                                            })
+                                        }
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                        <div id='PAGINATION' className='mt-10'>
+                            <div className="flex items-center justify-between">
+
+                                <div >
+                                    <span className="text-sm text-gray-700 ">
+                                        Showing data<span className=" ml-2 font-semibold ">1</span> to <span className="font-semibold ">10</span> of <span className="font-semibold  ">100</span> entries
+                                    </span>
+
+                                </div>
+                                <div>
+                                    <ul className="flex items-center space-x-4 h-10 text-base">
+                                        <li>
+                                            <a href="#" className="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500  hover:text-gray-700 ">
+                                                <span className="sr-only">Previous</span>
+                                                <svg className="w-3 h-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className="flex items-center justify-center px-2 h-10 leading-tight text-white rounded-md bg-primary border  ">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white">..</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white">40</a>
+                                        </li>
+
+
+                                        <li>
+                                            <a href="#" className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 hover:text-gray-700">
+                                                <span className="sr-only">Next</span>
+                                                <svg className="w-3 h-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
