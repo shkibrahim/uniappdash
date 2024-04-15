@@ -127,7 +127,7 @@ const Navbar = () => {
           <div onClick={() => {
             setShowUserModal(!showUserModal)
           }} className=' cursor-pointer flex'>
-            <div className='flex space-x-4 items-center'>
+            <div className='flex space-x-2 items-center'>
               <div>
                 Alex Hales
               </div>
@@ -137,7 +137,7 @@ const Navbar = () => {
             </div>
             <div className='relative font-primary' >
 
-              <div id="userDropDown" className={`z-[200] -left-[8.5rem] sm:-left-[9.5rem] top-12 md:top-14  absolute bg-white rounded-lg   border-[1px] border-gray-300 w-36 sm:w-44 md:w-48 ${showUserModal ? "" : "hidden"}`}>
+              <div id="userDropDown" className={`z-[200] -left-[8.5rem] sm:-left-[11rem] top-12 md:top-14  absolute bg-white rounded-lg   border-[1px] border-gray-300 w-36 sm:w-44 md:w-42 ${showUserModal ? "" : "hidden"}`}>
 
                 <ul className="py-2 text-sm text-gray-700 " aria-labelledby="dropdownUserAvatarButton">
                   <li className='flex space-x-2 items-center ml-4' onClick={() => { setShowUserModal(!showUserModal) }}>
