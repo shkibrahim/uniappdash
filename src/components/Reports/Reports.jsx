@@ -2,21 +2,27 @@ import React from 'react'
 import { IoSearchOutline } from "react-icons/io5";
 import { Filter } from '../SVGICONS/Icons';
 import { IoMdArrowDropdown } from "react-icons/io";
-import UsersTable from './UsersTable';
-
-const Users = () => {
+import ReportsData from './ReportsData';
+const Reports = () => {
   return (
     <main className='m-10'>
-      <div className=" mb-10  items-center flex justify-between">
-        <div>
-          <div className=" flex space-x-8 items-center">
-            <div className=" text-2xl underline-offset-[10px] decoration-primary decoration-[4px]    underline ">
-              All Users
-            </div>
-            <div className='text-gray-500 text-xl'>
-              Analytics
-            </div>
+      <div>
+        <div className=" flex space-x-8 items-center">
+          <div className=" text-2xl underline-offset-[10px] decoration-primary decoration-[4px]    underline ">
+            All Users
           </div>
+          <div className='text-gray-500 text-xl'>
+            Analytics
+          </div>
+        </div>
+      </div>
+      <div className=" my-4  items-center flex justify-between">
+        <div>
+
+          <div className='text-gray-500 text-xl font-semibold'>
+            Reports
+          </div>
+
         </div>
         <div>
           <div className='w-[400px]'>
@@ -44,7 +50,7 @@ const Users = () => {
           </div>
         </div>
       </div>
-      <UsersTable />
+      <ReportsData />
       <div id='PAGINATION' className='mt-10'>
         <div className="flex items-center justify-between">
           <div >
@@ -95,4 +101,4 @@ const Users = () => {
   )
 }
 
-export default Users
+export default Reports

@@ -8,6 +8,8 @@ import Login from '../pages/Auth/login/Login'
 import Rides from "../pages/Rides/index"
 import Users from '../pages/Users/index'
 import Driver from '../pages/Driver/Driver'
+import Reports from '../pages/Reports/Reports.jsx'
+import Support from '../pages/Support/Support.jsx'
 const Routes = () => {
     const authCtx = useSnapshot(auth)
     return (
@@ -22,6 +24,11 @@ const Routes = () => {
                     <Route path="/users" element={authCtx.isLogin ? <Users /> : <Navigate to="/login" />}
                     />
                     <Route path="/drivers" element={authCtx.isLogin ? <Driver /> : <Navigate to="/login" />}
+                    />
+                    <Route path="/reports" element={authCtx.isLogin ? <Reports /> : <Navigate to="/login" />}
+                    />
+                   
+                    <Route path="/support" element={authCtx.isLogin ? <Support /> : <Navigate to="/login" />}
                     />
                    
                 </Routing>
