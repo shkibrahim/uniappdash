@@ -1,12 +1,11 @@
-import React from 'react'
-import NotificationScreen from '../../components/Notification/Notification'
-
+import React from "react";
+import NotificationPage from "../../components/Notification/Notification";
 const Notification = () => {
-    return (
-        <div>
-            <NotificationScreen />
-        </div>
-    )
-}
+  return (
+    <div>
+      <NotificationPage />
+    </div>
+  );
+};
 
-export default Notification
+export default Notification;
