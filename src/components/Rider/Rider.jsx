@@ -6,6 +6,7 @@ import { ActionIcon, Active, Filter } from '../SVGICONS/Icons';
 import { FaArrowUpLong } from "react-icons/fa6";
 import { FaArrowDownLong } from "react-icons/fa6";
 import driverImage from "../../assets/img/tableimg.png"
+import PieChart from '../../utils/PieChart';
 const Rider = () => {
     const ranges = [
         {
@@ -181,7 +182,7 @@ const Rider = () => {
             <div className='my-10 md:flex justify-between '>
                 <div>
                     <div className="flex   flex-col items-center space-y-4">
-                        <div >
+                        <div className='' >
                             <div className="flex flex-col space-y-4 p-4 border-2 border-gray-200 rounded-md shadow-md shadow-gray-300">
                                 <div className="flex  space-x-8">
                                     <div className='text-gray-500 font-medium text-lg'>Hire Vs Cancel</div>
@@ -190,7 +191,9 @@ const Rider = () => {
                                     </div>
                                 </div>
                                 <div className="flex justify-center">
-                                    graph
+                                    <div className="">
+                                    <PieChart/>
+                                    </div>
                                 </div>
                                 <div>
 

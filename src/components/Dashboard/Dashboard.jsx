@@ -3,6 +3,7 @@ import { Driver, Earnings, Rides, Users } from '../SVGICONS/Icons'
 import { IoIosArrowDown, IoMdTrendingUp } from "react-icons/io";
 import BarChart from '../Charts/BarChart';
 import img from "../../assets/img/tableimg.png"
+import LineChart from '../../utils/LineChart';
 const Dashboard = () => {
   const stats = [
     {
@@ -162,7 +163,6 @@ const Dashboard = () => {
           $30.6K
         </div>
         <div className="flex items-center  space-x-2 text-sm sm:text-base  md:text-lg">
-
           <div className=' text-primary'>
             6% than last month
           </div>
@@ -171,8 +171,8 @@ const Dashboard = () => {
       </div>
       <BarChart />
       <div className=' my-10  grid md:grid-cols-[3fr_1fr] gap-x-4'>
-        <section id="chart" className=' bg-red-400 my-4'>
-          1
+        <section id="chart" className=' my-4'>
+          <LineChart/>
         </section>
         <section id="stats " className='border-2 my-4 border-gray-200 shadow-lg shadow-gray-200 p-4  rounded-md  '>
           <div className=' flex items-center justify-between space-x-2 sm:space-x-4 md:space-x-8'>
@@ -207,7 +207,9 @@ const Dashboard = () => {
 
       </div>
       <div className='my-10  grid md:grid-cols-[3fr_1fr] gap-y-8 gap-x-4 '>
-        <section className=" bg-red-500">1</section>
+        <section className=" ">
+          <LineChart/>
+        </section>
         <section className="">
           <div className="flex flex-col items-center border-2 border-gray-200 shadow-lg shadow-gray-200 p-2 px-8 rounded-md space-y-8">
             <div className='flex flex-col items-center'>
