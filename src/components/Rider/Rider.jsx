@@ -6,6 +6,7 @@ import { ActionIcon, Active, Filter } from '../SVGICONS/Icons';
 import { FaArrowUpLong } from "react-icons/fa6";
 import { FaArrowDownLong } from "react-icons/fa6";
 import driverImage from "../../assets/img/tableimg.png"
+import PieChart from '../../utils/PieChart';
 const Rider = () => {
     const ranges = [
         {
@@ -115,13 +116,13 @@ const Rider = () => {
 
     return (
         <main className='mx-10'>
-            <div className='flex my-10 items-center justify-between '>
+            <div className='flex my-10 flex-wrap items-center justify-between '>
                 <div className=''>
                     <div className="flex items-center space-x-4">
-                        <div className='text-2xl font-medium'>
+                        <div className=' sm:text-xl text-lg md:text-2xl font-medium'>
                             All Rides
                         </div>
-                        <div className='flex relative w-[200px] '>
+                        <div className='flex relative sm:w-[180px] w-[150px]  md:w-[200px] '>
                             <div className='flex items-center space-x-4 cursor-pointer' onClick={() => setRange(!showRange)}>
                                 <div>
                                     {activeRange}
@@ -152,7 +153,7 @@ const Rider = () => {
                     </div>
                 </div>
 
-                <div className='w-[400px]'>
+                <div className=' sm:w-[300px] w-[250px] md:w-[400px]'>
                     <div className="relative w-full">
                         <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                             <IoSearchOutline className=' text-gray-900 text-xl' />
@@ -178,10 +179,10 @@ const Rider = () => {
                 </div>
             </div>
 
-            <div className='my-10 justify-between flex '>
+            <div className='my-10 md:flex justify-between '>
                 <div>
                     <div className="flex   flex-col items-center space-y-4">
-                        <div >
+                        <div className='' >
                             <div className="flex flex-col space-y-4 p-4 border-2 border-gray-200 rounded-md shadow-md shadow-gray-300">
                                 <div className="flex  space-x-8">
                                     <div className='text-gray-500 font-medium text-lg'>Hire Vs Cancel</div>
@@ -190,7 +191,9 @@ const Rider = () => {
                                     </div>
                                 </div>
                                 <div className="flex justify-center">
-                                    graph
+                                    <div className="">
+                                    <PieChart/>
+                                    </div>
                                 </div>
                                 <div>
 
@@ -348,8 +351,8 @@ const Rider = () => {
 
                     </div>
                 </div>
-                <div className='w-[70%]'>
-                    <div className='text-center mb-10'>
+                <div className='md:w-[70%]'>
+                    <div className='text-center text-lg font-semibold my-10'>
                         Live Car Status
                     </div>
                     <div>
@@ -423,7 +426,7 @@ const Rider = () => {
 
                         </div>
                         <div id='PAGINATION' className='mt-10'>
-                            <div className="flex items-center justify-between">
+                            <div className="flex items-center flex-wrap justify-between">
                                 <div >
                                     <span className="text-sm text-gray-700 ">
                                         Showing data<span className=" ml-2 font-semibold ">1</span> to <span className="font-semibold ">10</span> of <span className="font-semibold  ">100</span> entries
@@ -431,7 +434,7 @@ const Rider = () => {
 
                                 </div>
                                 <div>
-                                    <ul className="flex items-center space-x-4 h-10 text-base">
+                                    <ul className="flex  items-center space-x-4 h-10 text-base">
                                         <li>
                                             <a href="#" className="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500  hover:text-gray-700 ">
                                                 <span className="sr-only">Previous</span>
