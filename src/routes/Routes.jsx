@@ -19,6 +19,7 @@ import Support from "../pages/Support/Support.jsx";
 import Notification from "../pages/Notification/Notification.jsx";
 import DriverDetails from "../components/DriverDetails/DriverDetails.jsx";
 import DriverInformation from "../components/DriverInformation/DriverInformation.jsx";
+import UserInformation from "../components/UserInformation/UserInformation.jsx";
 const Routes = () => {
   const authCtx = useSnapshot(auth);
   return (
@@ -39,7 +40,10 @@ const Routes = () => {
           />
           <Route
             path="/users"
-            element={authCtx.isLogin ? <Users /> : <Navigate to="/login" />}
+            // element={authCtx.isLogin ? <Users /> : <Navigate to="/login" />}
+            element={
+              authCtx.isLogin ? <UserInformation /> : <Navigate to="/login" />
+            }
           />
           <Route
             path="/drivers"
@@ -55,10 +59,10 @@ const Routes = () => {
 
           <Route
             path="/support"
-            element={authCtx.isLogin ? <Support /> : <Navigate to="/login" />}
-            // element={
-            //   authCtx.isLogin ? <DriverDetails /> : <Navigate to="/login" />
-            // }
+            // element={authCtx.isLogin ? <Support /> : <Navigate to="/login" />}
+            element={
+              authCtx.isLogin ? <DriverDetails /> : <Navigate to="/login" />
+            }
           />
           <Route
             path="/notifications"

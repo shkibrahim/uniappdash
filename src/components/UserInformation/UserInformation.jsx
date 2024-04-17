@@ -15,66 +15,37 @@ import { MdBarChart, MdOutlineCancel } from "react-icons/md";
 import DriverScheduledCards from "../DriverScheduledCards/DriverScheduledCards";
 import { useState } from "react";
 import Reviews from "../Reviews/Reviews";
-import Vehicles from "../Vehicles/Vehicles";
 import RideDetails from "../RideDetails/RideDetails";
-const DriverInformation = () => {
-  const [showDetails, setShowDetails] = useState(false);
+import NewNotification from "../NewNotification/NewNotification";
+const UserInformation = () => {
+  const [showOptions, setShowOptions] = useState(false);
   const [current, setCurrent] = useState(1);
   const [showRideDetails, setShowRideDetails] = useState(false);
+  const [flag, setFlag] = useState(false);
 
-  const MoreDetails = () => {
+  const EditOptions = () => {
     return (
       <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-40 z-50 overflow-auto">
         <div className="bg-white p-4 px-6 rounded-lg relative flex flex-col gap-3 w-[350px] mt-16 ">
           <button
-            onClick={() => setShowDetails(false)}
+            onClick={() => setShowOptions(false)}
             className="absolute top-4 right-4 text-black"
           >
             &#10006;
           </button>
-          <h1 className="text-2xl font-semibold text-center">
-            More Driver Details
-          </h1>
-          <label htmlFor="front" className="text-primary font-semibold">
-            ID Card Front Image
-          </label>
-          <div className="bg-gray-200 overflow-hidden rounded-md cursor-pointer">
-            <img
-              src={profile}
-              alt=""
-              className="w-[330px] h-[150px] object-contain"
-            />
-          </div>
-          <label htmlFor="front" className="text-primary font-semibold">
-            ID Card Back Image
-          </label>
-          <div className="bg-gray-200 overflow-hidden rounded-md cursor-pointer">
-            <img
-              src={profile}
-              alt=""
-              className="w-[330px] h-[150px] object-contain"
-            />
-          </div>
-          <label htmlFor="front" className="text-primary font-semibold">
-            Student Id Card Image
-          </label>
-          <div className="bg-gray-200 overflow-hidden rounded-md cursor-pointer">
-            <img
-              src={profile}
-              alt=""
-              className="w-[330px] h-[150px] object-contain"
-            />
-          </div>
-          <label htmlFor="front" className="text-primary font-semibold">
-            Liscense Image
-          </label>
-          <div className="bg-gray-200 overflow-hidden rounded-md cursor-pointer">
-            <img
-              src={profile}
-              alt=""
-              className="w-[330px] h-[150px] object-contain"
-            />
-          </div>
+          <h1 className="text-2xl font-semibold text-center">Edit</h1>
+          <hr />
+          <h2 className=" text-center">Block</h2>
+          <hr />
+          <h2 className=" text-center">Delete</h2>
+          <hr />
+          <h2 className=" text-center">Restrict</h2>
+          <button
+            onClick={() => setShowOptions(false)}
+            className="rounded-md p-2 bg-primary text-white"
+          >
+            Cancel
+          </button>
         </div>
       </div>
     );
@@ -88,13 +59,89 @@ const DriverInformation = () => {
           status={"completed"}
         />
       )}
-      {showDetails && <MoreDetails />}
+      {showOptions && <EditOptions />}
+      {flag && (
+        <NewNotification setTrigger={setFlag}>
+          <h1 className="text-xl font-semibold mb-4">
+            Create New Notification
+          </h1>
+          <form action="" className="flex flex-col w-full gap-3">
+            <label className="flex flex-col ">
+              <span className="text-primary font-bold">
+                Upload Image:(Optional)
+              </span>
+              <span className="text-primary font-semibold text-xs">
+                Image size upto 5MB
+              </span>
+              <input
+                type="file"
+                accept="image/*"
+                className="hidden"
+                onChange={(e) => console.log(e.target.files[0])} // Handle file selection
+              />
+              <div className="mt-2 flex items-center justify-center bg-gray-100 border border-gray-300 rounded-md cursor-pointer p-1">
+                <svg
+                  className="w-6 h-6 text-gray-600"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M12 5v14m-4-4H8a2 2 0 012-2V9a2 2 0 00-2-2H6V5h2zm10 0v14m-4-4h2a2 2 0 00-2-2V9a2 2 0 012-2h.5V5h-.5z"></path>
+                </svg>
+                <span className="ml-2 text-gray-600">Select an image</span>
+              </div>
+            </label>
+            <label htmlFor="date" className="text-primary font-bold">
+              Choose Date and Time
+            </label>
+            <input
+              type="date"
+              name="date"
+              id="date"
+              className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
+            />
+            <label htmlFor="title" className="text-primary font-bold">
+              Notification Title
+            </label>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
+            />
+            <label htmlFor="desc" className="text-primary font-bold">
+              Notification Description
+            </label>
+            <textarea
+              className="resize-none border rounded-md p-2 w-full h-32 focus:outline-none focus:ring-primary focus:border-primary"
+              placeholder="Enter your text here"
+            ></textarea>
+            <div className="flex gap-6">
+              <button
+                className="flex-1 border-2 border-primary text-primary py-2 px-3 rounded-md  font-semibold"
+                onClick={() => setTrigger(false)}
+              >
+                Draft
+              </button>
+              <button className="flex-1 bg-primary py-2 px-3 rounded-md text-white shadow-custom font-semibold">
+                Schedule
+              </button>
+            </div>
+          </form>
+        </NewNotification>
+      )}
       <div className="flex justify-between items-center">
         <div className="flex gap-2 items-center">
           <FaChevronLeft />
           <span className="text-xl font-semibold">Information</span>
         </div>
-        <button className="text-white bg-primary px-5 py-2 rounded-md">
+        <button
+          onClick={() => setShowOptions(true)}
+          className="text-white bg-primary px-5 py-2 rounded-md"
+        >
           Edit
         </button>
       </div>
@@ -102,7 +149,6 @@ const DriverInformation = () => {
         <div className="flex flex-col md:flex-row gap-4">
           <div className="flex justify-center w-40 h-50 rounded-md overflow-hidden object-contain bg-gray-400 self-start relative">
             <img src={profile} alt="" className="w-full object-contain" />
-            <FaCheck className="absolute top-2 right-2 text-green-500 text-xl border-2 border-solid border-green-500 rounded-full" />
           </div>
           <div className="flex">
             <table className="min-w-full">
@@ -152,24 +198,16 @@ const DriverInformation = () => {
             </table>
           </div>
         </div>
-        <div className="self-auto md-1150:self-end">
-          Verified By: <span className="text-gray-500">Max Holland</span>{" "}
-        </div>
         <div className="flex flex-col items-center justify-between gap-4">
           <div className="flex gap-6">
-            <button className="p-5 bg-gray-300 rounded-2xl shadow-md">
+            <button
+              onClick={() => setFlag(true)}
+              className="p-5 bg-gray-300 rounded-2xl shadow-md"
+            >
               <FaBell className="text-gray-500 text-xl" />
             </button>
             <button className="p-5 bg-gray-300 rounded-2xl shadow-md">
               <FaPhone className="text-gray-500 text-xl" />
-            </button>
-          </div>
-          <div className="block">
-            <button
-              onClick={() => setShowDetails(true)}
-              className="p-2 px-6 bg-gray-300 rounded-2xl shadow-md text-gray-500 text-xl"
-            >
-              Show More
             </button>
           </div>
         </div>
@@ -249,14 +287,6 @@ const DriverInformation = () => {
             >
               Reviews
             </h1>
-            <h1
-              className={`text-xl font-semibold ${
-                current === 4 ? "text-primary" : "text-gray-400"
-              } cursor-pointer`}
-              onClick={() => setCurrent(4)}
-            >
-              Vehicles
-            </h1>
           </div>
           <div className="flex gap-2 items-center">
             <FaSort />
@@ -289,10 +319,9 @@ const DriverInformation = () => {
           </div>
         )}
         {current === 3 && <Reviews />}
-        {current === 4 && <Vehicles />}
       </div>
     </div>
   );
 };
 
-export default DriverInformation;
+export default UserInformation;

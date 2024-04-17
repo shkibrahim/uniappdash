@@ -6,6 +6,7 @@ import {
   FaCashRegister,
   FaLocationPin,
   FaPerson,
+  FaPhone,
   FaRegStar,
   FaStar,
 } from "react-icons/fa6";
@@ -13,7 +14,7 @@ import { IoRadioButtonOn } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import profile from "../../assets/img/profile.jpeg";
 
-const RideDetails = () => {
+const RideDetails = ({ setTrigger, current, status, flag }) => {
   return (
     <div className="fixed top-0 left-0 w-full h-screen bg-[rgba(0,0,0,0.4)] flex  justify-center md:justify-end z-50">
       <div className="relative p-4 md:p-9 bg-white rounded-lg flex flex-col items-center overflow-auto gap-7 md:w-[570px] ">
@@ -33,6 +34,7 @@ const RideDetails = () => {
                 <span className="text-xl font-semibold">10:00 AM</span>
               </div>
               <FaCalendarDay className="text-2xl" />
+              {current === 1 && <div className="text-black">{status}</div>}
             </div>
             <span className="py-2 px-3 bg-[#FFB0004D] rounded-3xl border-2 border-[#ce94194d] font-semibold shadow-custom text-xl">
               $25.00
@@ -110,14 +112,48 @@ const RideDetails = () => {
               <FaRegStar className="text-primary" />
               <FaRegStar className="text-primary" />
             </div>
+            {flag && (
+              <div className="block">
+                <FaPhone className="text-gray-400" />
+              </div>
+            )}
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-            blanditiis doloribus atque magnam, quis porro quaerat maiores
-            eveniet quidem cupiditate fuga quasi sapiente impedit repellat, ea
-            beatae non minus. Expedita.
-          </p>
+          {!flag && (
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+              blanditiis doloribus atque magnam, quis porro quaerat maiores
+              eveniet quidem cupiditate fuga quasi sapiente impedit repellat, ea
+              beatae non minus. Expedita.
+            </p>
+          )}
         </div>
+        {flag && (
+          <div className="flex shadow-custom py-3 px-5 flex-col rounded-md w-full gap-5">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <img
+                  src={profile}
+                  alt=""
+                  className="w-10 h-10 rounded-full object-cover bg-center"
+                />
+                <div className="flex flex-col">
+                  <h2 className="font-semibold">Ali Abbas</h2>
+                  <h2 className="font-semibold">Passenger</h2>
+                </div>
+              </div>
+              <div className="flex gap-1">
+                <FaStar className="text-primary" />
+                <FaRegStar className="text-primary" />
+                <FaRegStar className="text-primary" />
+                <FaRegStar className="text-primary" />
+                <FaRegStar className="text-primary" />
+              </div>
+              <div className="block">
+                <FaPhone className="text-gray-400" />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
