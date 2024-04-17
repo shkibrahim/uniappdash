@@ -63,9 +63,9 @@ const Dashboard = () => {
   ]
   return (
     <div className='m-10'>
-      <div className='flex justify-between'>
+      <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
 
-        <div className=' p-2 pl-8 pr-12 border-2 border-gray-100 shadow-md shadow-gray-300 rounded-md'>
+        <div className=' p-2 pl-8 my-4 pr-12 border-2 border-gray-100 shadow-md shadow-gray-300 rounded-md'>
           <div className="flex space-x-5">
             <div>
               <Earnings color={"#FFB000"} size={30} />
@@ -80,7 +80,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className=' p-2 pl-8 pr-12 border-2 border-gray-100 shadow-md shadow-gray-300 rounded-md'>
+        <div className=' p-2 pl-8 my-4 pr-12 border-2 border-gray-100 shadow-md shadow-gray-300 rounded-md'>
           <div className="flex space-x-5">
             <div>
               <Users color={"#FFB000"} size={30} />
@@ -95,7 +95,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className=' p-2 pl-8 pr-12 border-2 border-gray-100 shadow-md shadow-gray-300 rounded-md'>
+        <div className=' my-4 p-2 pl-8 pr-12 border-2 border-gray-100 shadow-md shadow-gray-300 rounded-md'>
           <div className="flex space-x-5">
             <div>
               <Driver color={"#FFB000"} size={30} />
@@ -110,7 +110,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className=' p-2 pl-8 pr-12 border-2 border-gray-100 shadow-md shadow-gray-300 rounded-md'>
+        <div className='my-4  p-2 pl-8 pr-12 border-2 border-gray-100 shadow-md shadow-gray-300 rounded-md'>
           <div className="flex space-x-5">
             <div>
               <Rides color={"#FFB000"} size={30} />
@@ -131,52 +131,52 @@ const Dashboard = () => {
       </div>
 
       <div className="mt-10 flex  justify-between  items-center ">
-        <div className="flex items-center space-x-8">
-          <div className='text-xl  text-gray-800 font-semibold'>
+        <div className="flex items-center space-x-4 md:space-x-8">
+          <div className=' text-sm sm:text-lg md:text-xl  text-gray-800 font-semibold'>
             Total Revenue
           </div>
-          <div className='text-sm text-gray-600'>
+          <div className='text-xs sm:text-base text-gray-600'>
             Mar 2022 - Oct 2022
           </div>
           <div>
-            <IoIosArrowDown className='text-gray-800' />
+            <IoIosArrowDown className='text-gray-800 text-sm md:text-base' />
           </div>
         </div>
-        <div className='flex space-x-8 items-center '>
-          <div className='flex space-x-2 items-center'>
-            <div className='bg-primary rounded-full h-4 p-2 w-4' />
-            <div>
+        <div className='flex  space-x-4 md:space-x-8 items-center '>
+          <div className='flex space-x-1 md:space-x-2 items-center'>
+            <div className='bg-primary rounded-full h-2  md:h-4 w-2  p-1 md:p-2 md:w-4' />
+            <div className='text-xs sm:text-base'>
               Last 6 months
             </div>
           </div>
-          <div className='flex space-x-2 items-center'>
-            <div className='bg-gray-300 rounded-full h-4 p-2 w-4' />
-            <div>
+          <div className='flex md:space-x-2 space-x-1 items-center'>
+            <div className='bg-gray-300  rounded-full h-2  md:h-4 w-2  p-1 md:p-2 md:w-4' />
+            <div className='text-xs sm:text-base'>
               Same period last year
             </div>
           </div>
         </div>
       </div>
-      <div className='flex items-center mt-4 space-x-8'>
-        <div className=' text-4xl font-semibold '>
+      <div className='flex items-center mt-4 space-x-4 md:space-x-8'>
+        <div className='  md:text-3xl sm:text-2xl text-xl lg:text-4xl font-semibold '>
           $30.6K
         </div>
-        <div className="flex items-center  space-x-2 text-lg">
+        <div className="flex items-center  space-x-2 text-sm sm:text-base  md:text-lg">
 
-          <div className='text-primary'>
+          <div className=' text-primary'>
             6% than last month
           </div>
           <IoMdTrendingUp className='text-primary' />
         </div>
       </div>
       <BarChart />
-      <div className='flex my-10 justify-between'>
-        <section id="chart" className='w-[65%] bg-red-400'>
+      <div className=' my-10  grid md:grid-cols-[3fr_1fr] gap-x-4'>
+        <section id="chart" className=' bg-red-400 my-4'>
           1
         </section>
-        <section id="stats " className='border-2 border-gray-200 shadow-lg shadow-gray-200 p-4  rounded-md  '>
-          <div className=' flex items-center space-x-8'>
-            <div className='text-gray-800 text-xl font-medium'>
+        <section id="stats " className='border-2 my-4 border-gray-200 shadow-lg shadow-gray-200 p-4  rounded-md  '>
+          <div className=' flex items-center justify-between space-x-2 sm:space-x-4 md:space-x-8'>
+            <div className='text-gray-800 sm:text-lg md:text-xl font-medium'>
               Other Stats
             </div>
             <div className='flex space-x-2 items-center'>
@@ -196,7 +196,7 @@ const Dashboard = () => {
                   <li className='text-gray-400'>
                     {item?.name}
                   </li>
-                  <li className='text-lg'>
+                  <li className=' sm:text-base text-sm md:text-lg'>
                     {item?.value}
                   </li>
                 </ul>
@@ -206,8 +206,8 @@ const Dashboard = () => {
         </section>
 
       </div>
-      <div className='flex my-10 justify-between '>
-        <section className="w-[65%] bg-red-500">1</section>
+      <div className='my-10  grid md:grid-cols-[3fr_1fr] gap-y-8 gap-x-4 '>
+        <section className=" bg-red-500">1</section>
         <section className="">
           <div className="flex flex-col items-center border-2 border-gray-200 shadow-lg shadow-gray-200 p-2 px-8 rounded-md space-y-8">
             <div className='flex flex-col items-center'>
@@ -258,8 +258,8 @@ const Dashboard = () => {
           </div>
         </section>
       </div>
-      <div className="my-10 flex  justify-between space-x-10 ">
-        <div className='w-8/12 overflow-auto'>
+      <div className="my-12  md:gap-x-8  md:grid grid-cols-2  ">
+        <div className=''>
           <div className="flex justify-between">
             <div className='text-xl font-medium'>
               Top Drivers
@@ -329,7 +329,7 @@ const Dashboard = () => {
               </table>
             </div>
         </div>
-        <div className='w-8/12 overflow-auto'>
+        <div className= ' '>
           <div className="flex justify-between">
             <div className='text-xl font-medium'>
               Top Riders
