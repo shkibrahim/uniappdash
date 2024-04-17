@@ -40,17 +40,17 @@ const Routes = () => {
           />
           <Route
             path="/users"
-            // element={authCtx.isLogin ? <Users /> : <Navigate to="/login" />}
-            element={
-              authCtx.isLogin ? <UserInformation /> : <Navigate to="/login" />
-            }
+            element={authCtx.isLogin ? <Users /> : <Navigate to="/login" />}
+            // element={
+            //   authCtx.isLogin ? <UserInformation /> : <Navigate to="/login" />
+            // }
           />
           <Route
             path="/drivers"
-            // element={authCtx.isLogin ? <Driver /> : <Navigate to="/login" />}
-            element={
-              authCtx.isLogin ? <DriverInformation /> : <Navigate to="/login" />
-            }
+            element={authCtx.isLogin ? <Driver /> : <Navigate to="/login" />}
+            // element={
+            //   authCtx.isLogin ? <DriverInformation /> : <Navigate to="/login" />
+            // }
           />
           <Route
             path="/reports"
@@ -59,10 +59,10 @@ const Routes = () => {
 
           <Route
             path="/support"
-            // element={authCtx.isLogin ? <Support /> : <Navigate to="/login" />}
-            element={
-              authCtx.isLogin ? <DriverDetails /> : <Navigate to="/login" />
-            }
+            element={authCtx.isLogin ? <Support /> : <Navigate to="/login" />}
+            // element={
+            //   authCtx.isLogin ? <DriverDetails /> : <Navigate to="/login" />
+            // }
           />
           <Route
             path="/notifications"
