@@ -96,12 +96,12 @@ const Sidebar = ({ children }) => {
             <img
               src={hamBurger}
               alt={"hamburger-Icn"}
-              className={`${!showSideBar ? "rotate-180 invert" : ""}`}
+              className={`${!showSideBar ? "rotate-180 invert" : ""} `}
             />
             <img
               src={hamBurger}
               alt={"hamburger-Icn"}
-              className={`${!showSideBar ? "rotate-180 invert" : ""} `}
+              className={`${!showSideBar ? "rotate-180 invert" : ""}  `}
             />
           </div>
         </div>
@@ -137,7 +137,12 @@ const Sidebar = ({ children }) => {
                 state.mobileSidebar = false;
               }}
             >
-              <FaArrowRightLong className="text-3xl  text-buttonPrimary" />
+              {/* <FaArrowRightLong className="text-3xl  text-primary bg-white p-2 rounded-full" /> */}
+              <img
+                src={hamBurger}
+                alt={"hamburger-Icn"}
+                className="rotate-180 bg-white p-2 rounded-full text-3xl"
+              />
             </div>
           </div>
           <ul className="space-y-2 font-medium">
