@@ -74,7 +74,6 @@ const Sidebar = ({ children }) => {
   return (
     <div>
       <aside
-        id="default-sidebar"
         className={`bg-[#FFB000]  ${
           snap.mobileSidebar === false ? " sidebarHide " : ""
         } lg:block fixed top-0 lg:left-0 left-0 z-40 ${
@@ -163,7 +162,9 @@ const Sidebar = ({ children }) => {
         </div>
       </aside>
 
-      <div className="  lg:ml-64">
+      <div className={`${
+          !showSideBar ? "lg:ml-24" : "lg:ml-64"
+        }    `}>
         <div className="">
           <Navbar />
         </div>

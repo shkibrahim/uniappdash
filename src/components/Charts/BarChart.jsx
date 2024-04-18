@@ -16,7 +16,7 @@ const BarChart = () => {
         const series = [
           
           {
-            data: [30, 7, 10, 20, 10, 7, 50],
+            data: [30, 7, 10, 20, 10, 7, 50,30, 7, 10, 20, 10,30, 7, 10, 20, 10],
             type: 'bar',
             stack: 'a',
             name: 'c',
@@ -83,7 +83,7 @@ const BarChart = () => {
         const option = {
           xAxis: {
             type: 'category',
-            data: ['Jan', 'Feb', 'March', 'Apirl', 'May', 'June', 'July']
+            data: ['Jan', 'Feb', 'March', 'Apirl', 'May', 'June', 'July','Aug','Sep','Oct','Nov','Dec']
           },
           yAxis: {
             type: 'value'

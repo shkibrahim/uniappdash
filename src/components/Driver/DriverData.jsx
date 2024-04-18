@@ -2,6 +2,7 @@ import React from 'react'
 import img from "../../assets/img/tableimg.png"
 import { ActionIcon } from '../SVGICONS/Icons'
 import { FaStar } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 const DriverData = () => {
     const userData = [
         {
@@ -166,8 +167,10 @@ const DriverData = () => {
                                         </div>
                                     </div>
                                 </td>
-                                <td className="px-6 py-4 ">
+                                <td className="px-6 py-4 " >
+                                    <Link to="/drivers/details">
                                     <ActionIcon />
+                                    </Link>
                                 </td>
                             </tr>
                         })

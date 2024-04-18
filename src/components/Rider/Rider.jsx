@@ -191,7 +191,7 @@ const Rider = () => {
           <div className="flex items-center space-x-2">
             <Filter />
             <div className="flex items-center space-x-2">
-              <div onClick={() => setShowRideDetails(true)}>Sort By</div>
+              <div >Sort By</div>
               <div>
                 <IoMdArrowDropdown />
               </div>
@@ -400,7 +400,9 @@ const Rider = () => {
                           </td>
                           <td className="px-6 py-4 ">$ {item?.earnings}</td>
                           <td className="px-6 py-4 ">
+                            <div className=" cursor-pointer" onClick={() => setShowRideDetails(true)}>
                             <ActionIcon />
+                            </div>
                           </td>
                         </tr>
                       );

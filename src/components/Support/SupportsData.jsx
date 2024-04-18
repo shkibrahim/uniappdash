@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import img from "../../assets/img/tableimg.png";
 import { ActionIcon, Pending } from "../SVGICONS/Icons";
 import DriverDetails from "../DriverDetails/DriverDetails";
+import { Link } from "react-router-dom";
 
 const SupportsData = () => {
   const reportsData = [
@@ -141,7 +142,11 @@ const SupportsData = () => {
                 </td>
                 <td className="px-6 py-4 ">{item?.created_at}</td>
                 <td className="px-6 py-4 ">
-                  <ActionIcon />
+                  <Link to="/drivers/details/driverinfo">
+                    <div>
+                      <ActionIcon />
+                    </div>
+                  </Link>
                 </td>
               </tr>
             );
