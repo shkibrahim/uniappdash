@@ -13,7 +13,7 @@ import hamBurger from "../../assets/icons/arrowleft.svg";
 import { useSnapshot } from "valtio";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Notifications, ThemeMode } from "../SVGICONS/Icons";
+import { Notification2, Notifications, ThemeMode } from "../SVGICONS/Icons";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { GoSignOut } from "react-icons/go";
@@ -23,11 +23,7 @@ const Navbar = () => {
   const authCtx = useSnapshot(auth);
 
   const widgets = [
-    // {
-    //   dotCounter: 1,
-    //   counterColor: "#EA7A9A",
-    //   icon: NotificationBell,
-    // },
+    
     {
       dotCounter: 2,
       counterColor: "#EA7A9A",
@@ -60,8 +56,8 @@ const Navbar = () => {
   const [showUserModal, setShowUserModal] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
   return (
-    <div className="m-4">
-      <nav className="flex justify-between items-center  lg:grid lg:grid-cols-[4fr_1fr]">
+    <div className="">
+      <nav className="flex bg-white p-4  rounded-md shadow-md justify-between items-center  lg:grid lg:grid-cols-[4fr_1fr]">
         <div className="lg:hidden">
           <div className="flex items-center">
             <div className="mr-2">
@@ -92,7 +88,7 @@ const Navbar = () => {
               className="relative cursor-pointer"
               onClick={() => setShowNotifications(!showNotifications)}
             >
-              <Notifications color="#000" size="30" />
+              <Notification2 color="#000" size="30" />
               {showNotifications && (
                 <div className="absolute -bottom-44 -right-20 bg-white shadow-custom p-3 px-4 rounded-md w-[300px] md:w-[500px] z-50 max-h-[160px] overflow-y-auto">
                   <h1 className="text-xl font-semibold text-center mb-3">
@@ -124,8 +120,8 @@ const Navbar = () => {
               )}
             </div>
 
-            <div className="flex items-center ml-4 space-x-2 ">
-              <div className="flex space-x-4 items-center">
+            <div className="flex items-center ml-4 space-x-2 bg-white p-4 rounded-lg shadow-md ">
+              <div className="flex space-x-4 items-center ">
                 <img
                   src="https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg"
                   alt="usa-flag"
@@ -244,12 +240,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <div className="m-4 lg:hidden">
-        <h2 className={`font-semibold text-2xl font-primary`}>Dashboard</h2>
-        <p className=" text-[#969BA0] font-primary">
-          Welcome to your dashboard, Ria!
-        </p>
-      </div>
+     
     </div>
   );
 };

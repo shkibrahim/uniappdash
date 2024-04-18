@@ -1,5 +1,5 @@
 import React from "react";
-import { Driver, Earnings, Rides, Users } from "../SVGICONS/Icons";
+import { Driver, Earnings, PieChart2, Rides, Users } from "../SVGICONS/Icons";
 import { IoIosArrowDown, IoMdTrendingUp } from "react-icons/io";
 import BarChart from "../Charts/BarChart";
 import img from "../../assets/img/tableimg.png";
@@ -201,7 +201,7 @@ const Dashboard = () => {
             <div className="flex flex-col  space-y-4 items-center">
               <div className="text-xl font-medium">Average Ratings</div>
 
-              <div>icons</div>
+              <div><PieChart2/></div>
               <div className="flex justify-between   w-[150px] ">
                 <div className="flex items-center">
                   <div className="flex flex-col -space-y-2 items-center">

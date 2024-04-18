@@ -12,6 +12,7 @@ import {
   Support,
   Notifications,
   Settings,
+  Notification2,
 } from "../SVGICONS/Icons";
 import { FaArrowRightLong } from "react-icons/fa6";
 import state from "../../proxyState/store";
@@ -60,7 +61,7 @@ const Sidebar = ({ children }) => {
       link: "/notifications",
       name: `${showSideBar ? "Notifications" : ""}`,
       activeicon: <Notifications color="#fff" size="30" />,
-      icon: <Notifications color="#FFB000" size="30" />,
+      icon: <Notification color="#FFB000" size="30" />,
     },
     {
       link: "/settings",
