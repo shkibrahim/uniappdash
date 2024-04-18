@@ -61,7 +61,7 @@ const Sidebar = ({ children }) => {
       link: "/notifications",
       name: `${showSideBar ? "Notifications" : ""}`,
       activeicon: <Notifications color="#fff" size="30" />,
-      icon: <Notification color="#FFB000" size="30" />,
+      icon: <Notifications color="#FFB000" size="30" />,
     },
     {
       link: "/settings",
