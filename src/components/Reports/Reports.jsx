@@ -15,12 +15,12 @@ const Reports = () => {
           <div className="text-gray-500 text-xl">Analytics</div>
         </div>
       </div>
-      <div className=" my-4  items-center flex justify-between">
+      <div className=" my-4  items-center flex justify-between flex-col md:flex-row space-y-1">
         <div>
           <div className="text-gray-500 text-xl font-semibold">Reports</div>
         </div>
         <div>
-          <div className="w-[400px]">
+          <div className="w-[350px] md:w-[400px]">
             <div className="relative w-full">
               <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                 <IoSearchOutline className=" text-gray-900 text-xl" />
@@ -53,7 +53,7 @@ const Reports = () => {
       </div>
       <ReportsData />
       <div id="PAGINATION" className="mt-10">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-col md:flex-row">
           <div>
             <span className="text-sm text-gray-700 ">
               Showing data<span className=" ml-2 font-semibold ">1</span> to{" "}

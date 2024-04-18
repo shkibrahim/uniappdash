@@ -88,8 +88,8 @@ const Sidebar = ({ children }) => {
         >
           <div
             onClick={() => setShowSideBar(!showSideBar)}
-            className={`bg-primary my-2 py-3 px-3 flex  rounded-full  justify-center ${
-              !showSideBar ? "translate-x-[100%]" : ""
+            className={`bg-primary my-2 py-2 px-3 flex  rounded-full  justify-center ${
+              !showSideBar ? "translate-x-[95%]" : ""
             } ${!showSideBar ? "translate-y-[60%]" : ""} `}
           >
             <img
@@ -167,9 +167,7 @@ const Sidebar = ({ children }) => {
         </div>
       </aside>
 
-      <div className={`${
-          !showSideBar ? "lg:ml-24" : "lg:ml-64"
-        }    `}>
+      <div className={`${!showSideBar ? "lg:ml-24" : "lg:ml-64"}    `}>
         <div className="">
           <Navbar />
         </div>
