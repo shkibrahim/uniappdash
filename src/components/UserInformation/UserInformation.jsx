@@ -25,7 +25,7 @@ const UserInformation = () => {
 
   const EditOptions = () => {
     return (
-      <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-40 z-50 overflow-auto">
+      <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-75 z-50 overflow-auto">
         <div className="bg-white p-4 px-6 rounded-lg relative flex flex-col gap-3 w-[350px] mt-16 ">
           <button
             onClick={() => setShowOptions(false)}

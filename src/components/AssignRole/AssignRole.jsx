@@ -2,7 +2,7 @@ import React from "react";
 import { data } from "../../../data";
 const AssignRole = ({ trigger, setTrigger }) => {
   return (
-    <div className="h-screen w-full bg-black bg-opacity-45 fixed top-0 left-0 overflow-auto">
+    <div className="h-screen w-full bg-black bg-opacity-75 fixed top-0 left-0 overflow-auto">
       <div className="bg-white absolute top-0 right-0 py-4 px-6 w-[400px]">
         <div
           className="text-2xl absolute t-10 l-10 cursor-pointer"

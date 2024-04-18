@@ -35,7 +35,7 @@ const ForgotPass = ({ trigger, setTrigger }) => {
   };
 
   return trigger ? (
-    <div className="fixed top-0 left-0 h-screen w-full bg-black bg-opacity-45 flex items-center justify-center">
+    <div className="fixed top-0 left-0 h-screen w-full bg-black bg-opacity-75 flex items-center justify-center">
       <div className="bg-white px-3 pt-4 pb-10 relative flex flex-col items-center justify-center rounded-md sm:w-[350px] md:w-[400px] gap-6">
         {current === 1 && (
           <>
