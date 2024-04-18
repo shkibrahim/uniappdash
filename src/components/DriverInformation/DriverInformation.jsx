@@ -24,7 +24,7 @@ const DriverInformation = () => {
 
   const MoreDetails = () => {
     return (
-      <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-40 z-50 overflow-auto">
+      <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-75 z-50 overflow-auto">
         <div className="bg-white p-4 px-6 rounded-lg relative flex flex-col gap-3 w-[350px] mt-16 ">
           <button
             onClick={() => setShowDetails(false)}
@@ -80,7 +80,7 @@ const DriverInformation = () => {
     );
   };
   return (
-    <div className="p-7 flex flex-col bg-[#F9F9F9] min-h-[800px] font-primary gap-6">
+    <div className="p-7 flex flex-col bg-[#F9F9F9] min-h-[800px] gap-6">
       {showRideDetails && (
         <RideDetails
           setTrigger={setShowRideDetails}
@@ -98,7 +98,7 @@ const DriverInformation = () => {
           Edit
         </button>
       </div>
-      <div className="flex justify-between bg-white rounded-md shadow-custom p-6 flex-col md-1150:flex-row gap-5">
+      <div className="flex justify-between bg-white rounded-md shadow-custom p-6 flex-col md-1150:flex-row gap-5 font-Manrope">
         <div className="flex flex-col md:flex-row gap-4">
           <div className="flex justify-center w-40 h-50 rounded-md overflow-hidden object-contain bg-gray-400 self-start relative">
             <img src={profile} alt="" className="w-full object-contain" />

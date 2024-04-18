@@ -2,7 +2,7 @@ import React from "react";
 import profile from "../../assets/img/profile.jpeg";
 const SupportQuery = ({ setTrigger }) => {
   return (
-    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-40 z-50">
+    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-75 z-50">
       <div className="bg-white p-4 rounded-lg relative flex flex-col gap-3 w-[350px] md:max-w-[400px]">
         <button
           className="absolute top-4 right-4 text-black"
