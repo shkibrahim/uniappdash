@@ -23,7 +23,6 @@ const Navbar = () => {
   const authCtx = useSnapshot(auth);
 
   const widgets = [
-    
     {
       dotCounter: 2,
       counterColor: "#EA7A9A",
@@ -90,7 +89,7 @@ const Navbar = () => {
             >
               <Notification2 color="#000" size="30" />
               {showNotifications && (
-                <div className="absolute -bottom-44 -right-20 bg-white shadow-custom p-3 px-4 rounded-md w-[300px] md:w-[500px] z-50 max-h-[160px] overflow-y-auto">
+                <div className="absolute -bottom-44 -right-48 bg-white shadow-custom p-3 px-4 rounded-md w-[300px] md:w-[500px] z-50 max-h-[160px] overflow-y-auto">
                   <h1 className="text-xl font-semibold text-center mb-3">
                     Notification
                   </h1>
@@ -240,7 +239,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-     
     </div>
   );
 };
