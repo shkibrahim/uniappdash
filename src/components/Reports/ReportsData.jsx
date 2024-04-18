@@ -125,7 +125,12 @@ const ReportsData = () => {
                 <td className="px-6 py-4 ">{item?.issue_type}</td>
                 <td className="px-6 py-4 ">{item?.created_at}</td>
                 <td className="px-6 py-4 ">
-                  <ActionIcon onClick={() => setFlag(true)} />
+                  <div onClick={() => setFlag(true)} className=" cursor-pointer">
+                  <ActionIcon  />
+                  </div>
+                  {flag&&(
+                  <RideDetails flag={flag} setTrigger={setFlag}/>
+                  )}
                 </td>
               </tr>
             );
