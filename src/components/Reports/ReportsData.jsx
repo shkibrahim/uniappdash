@@ -4,7 +4,7 @@ import { ActionIcon } from "../SVGICONS/Icons";
 import RideDetails from "../RideDetails/RideDetails";
 
 const ReportsData = () => {
-  const [flag, setFlag] = useState(true);
+  const [flag, setFlag] = useState(false);
   const reportsData = [
     {
       id: 1,
