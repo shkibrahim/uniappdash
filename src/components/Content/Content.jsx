@@ -314,57 +314,117 @@ const Content = () => {
                     <FaPen className="text-primary" />
                   </td>
                 </tr>
+                <tr>
+                  <td colSpan="5" className="px-6 py-4 whitespace-nowrap">
+                    <div id="PAGINATION" className="mt-10">
+                      <div className="flex flex-col md:flex-row items-center justify-between">
+                        <div>
+                          <span className="text-sm text-gray-700 ">
+                            Showing data
+                            <span className=" ml-2 font-semibold ">
+                              1
+                            </span> to{" "}
+                            <span className="font-semibold ">10</span> of{" "}
+                            <span className="font-semibold  ">100</span> entries
+                          </span>
+                        </div>
+                        <div>
+                          <ul className="flex items-center space-x-4 h-10 text-base">
+                            <li>
+                              <a
+                                href="#"
+                                className="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500  hover:text-gray-700 "
+                              >
+                                <span className="sr-only">Previous</span>
+                                <svg
+                                  className="w-3 h-3 rtl:rotate-180"
+                                  aria-hidden="true"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 6 10"
+                                >
+                                  <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 1 1 5l4 4"
+                                  />
+                                </svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="flex items-center justify-center px-2 h-10 leading-tight text-white rounded-md bg-primary border  "
+                              >
+                                1
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white"
+                              >
+                                2
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white"
+                              >
+                                3
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white"
+                              >
+                                ..
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white"
+                              >
+                                40
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="#"
+                                className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 hover:text-gray-700"
+                              >
+                                <span className="sr-only">Next</span>
+                                <svg
+                                  className="w-3 h-3 rtl:rotate-180"
+                                  aria-hidden="true"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 6 10"
+                                >
+                                  <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="m1 9 4-4-4-4"
+                                  />
+                                </svg>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
               </tbody>
             </table>
-          </div>
-          <div className="flex flex-col md:flex-row gap-3 mt-5 items-center justify-around">
-            <span>
-              Current Page: {currentPage} of {pages}
-            </span>
-            <div className="flex gap-3 mt-5 items-center justify-around">
-              <button
-                onClick={() =>
-                  setCurrentPage(
-                    currentPage <= 1 ? currentPage : currentPage - 1
-                  )
-                }
-                className="px-3 py-1 bg-gray-200 rounded-md "
-              >
-                Prev
-              </button>
-              {Array.from({ length: Math.min(pages, 4) }, (_, i) => (
-                <button
-                  key={i}
-                  className={`px-3 py-1 ${
-                    i + 1 === currentPage
-                      ? "bg-gray-500 text-white rounded-md"
-                      : "bg-gray-200 rounded-md"
-                  }`}
-                  onClick={() => setCurrentPage(i + 1)}
-                >
-                  {i + 1}
-                </button>
-              ))}
-              {pages > pages - 1 && currentPage == pages ? (
-                <button className="px-3 py-1 bg-gray-500 rounded-md text-white">
-                  {pages}
-                </button>
-              ) : (
-                <button className="px-3 py-1 bg-gray-200 rounded-md ">
-                  ...
-                </button>
-              )}
-              <button
-                onClick={() =>
-                  setCurrentPage(
-                    currentPage < pages ? currentPage + 1 : currentPage
-                  )
-                }
-                className="px-3 py-1 bg-gray-200 rounded-md "
-              >
-                Next
-              </button>
-            </div>
           </div>
         </>
       )}
@@ -483,57 +543,117 @@ const Content = () => {
                     <FaPen className="text-primary" />
                   </td>
                 </tr>
+                <tr>
+                  <td colSpan="5" className="px-6 py-4 whitespace-nowrap">
+                    <div id="PAGINATION" className="mt-10">
+                      <div className="flex flex-col md:flex-row items-center justify-between">
+                        <div>
+                          <span className="text-sm text-gray-700 ">
+                            Showing data
+                            <span className=" ml-2 font-semibold ">
+                              1
+                            </span> to{" "}
+                            <span className="font-semibold ">10</span> of{" "}
+                            <span className="font-semibold  ">100</span> entries
+                          </span>
+                        </div>
+                        <div>
+                          <ul className="flex items-center space-x-4 h-10 text-base">
+                            <li>
+                              <a
+                                href="#"
+                                className="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500  hover:text-gray-700 "
+                              >
+                                <span className="sr-only">Previous</span>
+                                <svg
+                                  className="w-3 h-3 rtl:rotate-180"
+                                  aria-hidden="true"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 6 10"
+                                >
+                                  <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 1 1 5l4 4"
+                                  />
+                                </svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="flex items-center justify-center px-2 h-10 leading-tight text-white rounded-md bg-primary border  "
+                              >
+                                1
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white"
+                              >
+                                2
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white"
+                              >
+                                3
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white"
+                              >
+                                ..
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white"
+                              >
+                                40
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="#"
+                                className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 hover:text-gray-700"
+                              >
+                                <span className="sr-only">Next</span>
+                                <svg
+                                  className="w-3 h-3 rtl:rotate-180"
+                                  aria-hidden="true"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 6 10"
+                                >
+                                  <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="m1 9 4-4-4-4"
+                                  />
+                                </svg>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
               </tbody>
             </table>
-          </div>
-          <div className="flex flex-col md:flex-row gap-3 mt-5 items-center justify-around">
-            <span>
-              Current Page: {currentPage} of {pages}
-            </span>
-            <div className="flex gap-3 mt-5 items-center justify-around">
-              <button
-                onClick={() =>
-                  setCurrentPage(
-                    currentPage <= 1 ? currentPage : currentPage - 1
-                  )
-                }
-                className="px-3 py-1 bg-gray-200 rounded-md "
-              >
-                Prev
-              </button>
-              {Array.from({ length: Math.min(pages, 4) }, (_, i) => (
-                <button
-                  key={i}
-                  className={`px-3 py-1 ${
-                    i + 1 === currentPage
-                      ? "bg-gray-500 text-white rounded-md"
-                      : "bg-gray-200 rounded-md"
-                  }`}
-                  onClick={() => setCurrentPage(i + 1)}
-                >
-                  {i + 1}
-                </button>
-              ))}
-              {pages > pages - 1 && currentPage == pages ? (
-                <button className="px-3 py-1 bg-gray-500 rounded-md text-white">
-                  {pages}
-                </button>
-              ) : (
-                <button className="px-3 py-1 bg-gray-200 rounded-md ">
-                  ...
-                </button>
-              )}
-              <button
-                onClick={() =>
-                  setCurrentPage(
-                    currentPage < pages ? currentPage + 1 : currentPage
-                  )
-                }
-                className="px-3 py-1 bg-gray-200 rounded-md "
-              >
-                Next
-              </button>
-            </div>
           </div>
         </>
       )}
