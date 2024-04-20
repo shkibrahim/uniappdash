@@ -165,7 +165,7 @@ const Sidebar = ({ children }) => {
         <div className="">
           <Navbar />
         </div>
-        <div className="">{children}</div>
+        <div className="pt-20">{children}</div>
       </div>
     </div>
   );

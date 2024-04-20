@@ -55,8 +55,8 @@ const Navbar = () => {
   const [showUserModal, setShowUserModal] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
   return (
-    <div className="">
-      <nav className="flex bg-white p-4  rounded-md shadow-md justify-between items-center  lg:grid lg:grid-cols-[4fr_1fr]">
+    <div className="   fixed top-0  w-full  z-[999] bg-white">
+      <nav className="flex   p-4   rounded-md shadow-md justify-between items-center  lg:grid lg:grid-cols-[4fr_1fr]">
         <div className="lg:hidden">
           <div className="flex items-center">
             <div className="mr-2">
