@@ -10,9 +10,9 @@ const Reports = () => {
       <div>
         <div className=" flex space-x-8 items-center">
           <div className=" text-2xl underline-offset-[10px] decoration-primary decoration-[4px]    underline ">
-            All Users
+            User
           </div>
-          <div className="text-gray-500 text-xl">Analytics</div>
+          <div className="text-gray-500 text-xl">Driver</div>
         </div>
       </div>
       <div className=" my-4  items-center flex justify-between flex-col md:flex-row space-y-1">

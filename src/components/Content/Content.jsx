@@ -171,7 +171,9 @@ const Content = () => {
         <h1
           onClick={() => setCurrent(1)}
           className={`text-xl font-semibold ${
-            current === 1 ? "text-primary" : "text-gray-500"
+            current === 1
+              ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+              : "text-gray-500"
           } cursor-pointer`}
         >
           Legal
@@ -179,7 +181,9 @@ const Content = () => {
         <h1
           onClick={() => setCurrent(2)}
           className={`text-xl font-semibold ${
-            current === 2 ? "text-primary" : "text-gray-500"
+            current === 2
+              ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+              : "text-gray-500"
           } cursor-pointer`}
         >
           Safety
@@ -187,7 +191,9 @@ const Content = () => {
         <h1
           onClick={() => setCurrent(3)}
           className={`text-xl font-semibold ${
-            current === 3 ? "text-primary" : "text-gray-500"
+            current === 3
+              ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+              : "text-gray-500"
           } cursor-pointer`}
         >
           FAQS

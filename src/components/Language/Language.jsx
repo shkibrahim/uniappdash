@@ -7,7 +7,7 @@ const Language = () => {
       <select
         name="language"
         id=""
-        className="bg-transparent p-3 rounded-3xl outline-primary border-primary border-2"
+        className="bg-gray-100 px-3 py-2 rounded-3xl outline-primary border-primary border-2 font-semibold font-OpenSans"
       >
         <option value="english">English</option>
       </select>

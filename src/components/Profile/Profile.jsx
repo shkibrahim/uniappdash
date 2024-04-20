@@ -59,7 +59,7 @@ const Profile = () => {
         </div>
         <button
           onClick={() => setFlag(true)}
-          className="flex gap-3 bg-primary text-white items-center justify-center self-center  py-2 px-3 rounded-md shadow-custom "
+          className="flex gap-3 bg-primary text-white items-center justify-center self-start  py-2 px-3 rounded-md shadow-custom md:translate-y-32 "
         >
           Edit profile <FaPen />
         </button>

@@ -89,15 +89,37 @@ return (
             </h2>
 
             <div
-              className="relative cursor-pointer"
+              className="relative cursor-pointer shadow-md p-5 rounded-md"
               onClick={() => setShowNotifications(!showNotifications)}
             >
               <Notification2 color="#000" size="30" />
               {showNotifications && (
-                <div className="absolute -bottom-44 -right-48 bg-white shadow-custom p-3 px-4 rounded-md w-[300px] md:w-[500px] z-50 max-h-[160px] overflow-y-auto">
+                <div className="absolute -bottom-[520px] -right-[185px] bg-white shadow-2xl p-3 px-4 rounded-md w-[300px] md:w-[450px] z-50 h-[500px] overflow-y-auto ">
                   <h1 className="text-xl font-semibold text-center mb-3">
                     Notification
                   </h1>
+                  <div className="flex items-center justify-between gap-7 text-justify">
+                    <div className="flex flex-col">
+                      <div className="flex gap-2">
+                        <img
+                          src={profile}
+                          alt=""
+                          className="w-12 rounded-full h-12 object-contain"
+                        />
+                        <span className="text-gray-500">
+                          <span className="text-black font-semibold">
+                            David Astol ,
+                          </span>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Sapiente fugiat, aperiam quam in culpa at.
+                        </span>
+                      </div>
+                      <div className="block ml-14 text-gray-300">Just Now</div>
+                    </div>
+                    <div className="block">
+                      <CiMenuKebab className="text-2xl" />
+                    </div>
+                  </div>
                   <div className="flex items-center justify-between gap-7 text-justify">
                     <div className="flex flex-col">
                       <div className="flex gap-2">

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaMagnifyingGlass, FaPen, FaTrash } from "react-icons/fa6";
-import { FaPlusCircle, FaSort } from "react-icons/fa";
+import { FaPlusCircle } from "react-icons/fa";
 import profile from "../../assets/img/profile.jpeg";
 import AssignRole from "../AssignRole/AssignRole";
 import ConfirmDelete from "../ConfirmDelete/ConfirmDelete";
@@ -9,11 +9,13 @@ import Payment from "../Payment/Payment";
 import Language from "../Language/Language";
 import Location from "../Location/Location";
 import Content from "../Content/Content";
+import { Filter } from "../SVGICONS/Icons";
 
 const Settings = () => {
   const [active, setActive] = useState(0);
   const [flag, setFlag] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <>
       {flag && <AssignRole trigger={flag} setTrigger={setFlag} />}
@@ -24,42 +26,66 @@ const Settings = () => {
         <div className="flex md:gap-12 gap-4 flex-wrap text-xl font-semibold">
           <a
             href="#"
-            className={`${active === 0 ? "text-primary" : "text-gray-400"}`}
+            className={`${
+              active === 0
+                ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                : "text-gray-400"
+            } `}
             onClick={() => setActive(0)}
           >
             Profile
           </a>
           <a
             href="#"
-            className={`${active === 1 ? "text-primary" : "text-gray-400"}`}
+            className={`${
+              active === 1
+                ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                : "text-gray-400"
+            }`}
             onClick={() => setActive(1)}
           >
             User and Roles
           </a>
           <a
             href="#"
-            className={`${active === 2 ? "text-primary" : "text-gray-400"}`}
+            className={`${
+              active === 2
+                ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                : "text-gray-400"
+            }`}
             onClick={() => setActive(2)}
           >
             Payment
           </a>
           <a
             href="#"
-            className={`${active === 3 ? "text-primary" : "text-gray-400"}`}
+            className={`${
+              active === 3
+                ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                : "text-gray-400"
+            }`}
             onClick={() => setActive(3)}
           >
             Language
           </a>
           <a
             href="#"
-            className={`${active === 4 ? "text-primary" : "text-gray-400"}`}
+            className={`${
+              active === 4
+                ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                : "text-gray-400"
+            }`}
             onClick={() => setActive(4)}
           >
             Location
           </a>
           <a
             href="#"
-            className={`${active === 5 ? "text-primary" : "text-gray-400"}`}
+            className={`${
+              active === 5
+                ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                : "text-gray-400"
+            }`}
             onClick={() => setActive(5)}
           >
             Content
@@ -85,7 +111,7 @@ const Settings = () => {
                 </div>
                 <div className="flex items-center gap-5 mt-4 md:mt-auto">
                   <div className="flex items-center gap-3 ml-2">
-                    <FaSort />
+                    <Filter />
                     <span className="text-xl  font-semibold">Sort By</span>
                   </div>
                   <button
@@ -96,7 +122,7 @@ const Settings = () => {
                   </button>
                 </div>
               </div>
-              <div className="max-w-full overflow-auto">
+              <div className="max-w-full ">
                 <table className="min-w-full divide-y divide-gray-200">
                   <thead className="bg-gray-50">
                     <tr>
@@ -161,7 +187,19 @@ const Settings = () => {
                             className="text-gray-400 cursor-pointer"
                             onClick={() => setConfirmDelete(true)}
                           />
-                          <FaPen className="text-gray-400 cursor-pointer" />
+                          <div className="relative">
+                            <FaPen
+                              className="text-gray-400 cursor-pointer"
+                              onClick={() => setShowMenu(!showMenu)}
+                            />
+                            {showMenu && (
+                              <div className="absolute blur-0 right-0 bg-white shadow-custom rounded-md flex flex-col gap-2 p-2">
+                                <h2>Super Admin</h2>
+                                <h2>Admin</h2>
+                                <h2>Manager</h2>
+                              </div>
+                            )}
+                          </div>
                         </div>
                       </td>
                     </tr>
