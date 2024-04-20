@@ -4,12 +4,14 @@ import {
   FaArrowDownUpAcrossLine,
   FaCalendarDay,
   FaCashRegister,
+  FaDownload,
   FaLocationPin,
   FaPerson,
   FaPhone,
   FaRegStar,
   FaStar,
 } from "react-icons/fa6";
+import { HiMiniMagnifyingGlassPlus } from "react-icons/hi2";
 import { IoRadioButtonOn } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import profile from "../../assets/img/profile.jpeg";
@@ -17,14 +19,28 @@ import profile from "../../assets/img/profile.jpeg";
 const RideDetails = ({ setTrigger, current, status, flag }) => {
   return (
     <div className="fixed top-0 left-0 w-full h-screen flex  justify-center md:justify-end z-50 bg-black bg-opacity-75">
-      <div className="relative p-4 md:p-9 bg-white rounded-lg flex flex-col items-center overflow-auto gap-7 md:w-[570px] ">
+      <div className="relative p-4 md:p-9 bg-white rounded-lg flex flex-col items-center overflow-auto gap-7 md:w-[480px] ">
         <button
-          className="absolute top-4 right-4 text-3xl"
+          className="absolute top-4 left-4 text-3xl md:flex hidden"
           onClick={() => setTrigger(false)}
         >
           &times;
         </button>
-        <img src={Maps} alt="" />
+        <div className="relative">
+          <button
+            className="absolute top-4 left-4 text-3xl flex md:hidden"
+            onClick={() => setTrigger(false)}
+          >
+            &times;
+          </button>
+          <img src={Maps} alt="" />
+          <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-custom">
+            <HiMiniMagnifyingGlassPlus className="text-2xl text-gray-500" />
+          </div>
+          <div className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-custom">
+            <FaDownload className="text-gray-500" />
+          </div>
+        </div>
         <h1 className="text-3xl font-semibold">Ride Details</h1>
         <div className="flex shadow-custom py-3 px-5 flex-col rounded-md w-full">
           <div className="flex items-center justify-between gap-2">
@@ -100,8 +116,8 @@ const RideDetails = ({ setTrigger, current, status, flag }) => {
                 alt=""
                 className="w-10 h-10 rounded-full object-cover bg-center"
               />
-              <div className="flex flex-col">
-                <h2 className="font-semibold">Ali Abbas</h2>
+              <div className="flex flex-col w-[150px]">
+                <h2 className="font-semibold ">Ali Abbas</h2>
                 <h2 className="font-semibold">Suzuki Alto (LX-340)</h2>
               </div>
             </div>
@@ -136,7 +152,7 @@ const RideDetails = ({ setTrigger, current, status, flag }) => {
                   alt=""
                   className="w-10 h-10 rounded-full object-cover bg-center"
                 />
-                <div className="flex flex-col">
+                <div className="flex flex-col w-[150px]">
                   <h2 className="font-semibold">Ali Abbas</h2>
                   <h2 className="font-semibold">Passenger</h2>
                 </div>

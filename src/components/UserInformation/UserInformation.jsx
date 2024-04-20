@@ -7,9 +7,9 @@ import {
   FaChevronLeft,
   FaExclamation,
   FaPhone,
-  FaSort,
   FaStar,
 } from "react-icons/fa6";
+import { Filter } from "../SVGICONS/Icons";
 import profile from "../../assets/img/profile.jpeg";
 import { MdBarChart, MdOutlineCancel } from "react-icons/md";
 import DriverScheduledCards from "../DriverScheduledCards/DriverScheduledCards";
@@ -265,7 +265,9 @@ const UserInformation = () => {
           <div className="flex gap-10 flex-wrap">
             <h1
               className={`text-xl font-semibold ${
-                current === 1 ? "text-primary" : "text-gray-400"
+                current === 1
+                  ? "text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                  : "text-gray-400"
               } cursor-pointer`}
               onClick={() => setCurrent(1)}
             >
@@ -273,7 +275,9 @@ const UserInformation = () => {
             </h1>
             <h1
               className={`text-xl font-semibold ${
-                current === 2 ? "text-primary" : "text-gray-400"
+                current === 2
+                  ? "text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                  : "text-gray-400"
               } cursor-pointer`}
               onClick={() => setCurrent(2)}
             >
@@ -281,7 +285,9 @@ const UserInformation = () => {
             </h1>
             <h1
               className={`text-xl font-semibold ${
-                current === 3 ? "text-primary" : "text-gray-400"
+                current === 3
+                  ? "text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                  : "text-gray-400"
               } cursor-pointer`}
               onClick={() => setCurrent(3)}
             >
@@ -289,7 +295,7 @@ const UserInformation = () => {
             </h1>
           </div>
           <div className="flex gap-2 items-center">
-            <FaSort />
+            <Filter />
             <span className="text-xl font-semibold">Sort By:</span>
             <FaChevronDown />
           </div>

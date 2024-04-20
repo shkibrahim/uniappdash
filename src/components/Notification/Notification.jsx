@@ -1,16 +1,11 @@
 import React, { useState } from "react";
-import {
-  FaCar,
-  FaChevronDown,
-  FaUser,
-  FaPlusSquare,
-  FaSearch,
-  FaSort,
-} from "react-icons/fa";
+import { FaCar, FaChevronDown, FaUser, FaSearch } from "react-icons/fa";
 import Profile from "../../assets/img/profile.jpeg";
 import Email from "../../assets/img/Email.png";
 import Email1 from "../../assets/img/Email1.png";
 import NewNotification from "../NewNotification/NewNotification";
+import { FaLocationArrow, FaPlus } from "react-icons/fa6";
+import { Filter } from "../SVGICONS/Icons";
 const Notification = () => {
   const [current, setCurrent] = useState(1);
   const [notificationFlag, setNotificationFlag] = useState(false);
@@ -218,7 +213,9 @@ const Notification = () => {
               <h1
                 onClick={() => setCurrent(1)}
                 className={`text-xl font-semibold ${
-                  current === 1 ? "text-primary" : "text-gray-500"
+                  current === 1
+                    ? "text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                    : "text-gray-500"
                 } cursor-pointer`}
               >
                 Notification
@@ -226,7 +223,9 @@ const Notification = () => {
               <h1
                 onClick={() => setCurrent(2)}
                 className={`text-xl font-semibold ${
-                  current === 2 ? "text-primary" : "text-gray-400"
+                  current === 2
+                    ? "text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                    : "text-gray-500"
                 } cursor-pointer`}
               >
                 Promotion
@@ -243,7 +242,7 @@ const Notification = () => {
                   />
                 </div>
                 <div className="flex gap-2 items-center">
-                  <FaSort />
+                  <Filter />
                   Sort By:
                   <span className="text-primary">Latest</span>
                   <FaChevronDown />
@@ -351,15 +350,23 @@ const Notification = () => {
             </div>
           </div>
           <div className="flex flex-col gap-6">
-            <div className="relative">
-              <img src={Email} alt="" className="w-full" />
-              <FaPlusSquare
+            <div className="flex flex-col bg-primary rounded-md text-white py-3 px-4 relative gap-3">
+              <FaLocationArrow className="absolute top-5 right-8 text-3xl" />
+              <h1 className="text-3xl font-bold">
+                Create New <br /> Notification
+              </h1>
+              <p>Alert your Drivers or Users Now</p>
+              <button
+                className="self-end text-primary bg-white px-7 py-1 rounded-md"
                 onClick={() => setNotificationFlag(true)}
-                className="absolute bottom-5 right-10 text-3xl text-white cursor-pointer"
-              />
+              >
+                <FaPlus className="text-2xl" />
+              </button>
             </div>
             <div className="flex justify-around items-center">
-              <h1 className="text-xl font-semibold text-primary">Drafts</h1>
+              <h1 className="text-xl font-semibold text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline">
+                Drafts
+              </h1>
               <h1 className="text-xl font-semibold">Scheduled</h1>
             </div>
             <div className="flex flex-col md-1150:flex-row bg-white shadow-custom rounded-md p-3 justify-between gap-2">
@@ -432,7 +439,7 @@ const Notification = () => {
               <h1
                 onClick={() => setCurrent(1)}
                 className={`text-xl font-semibold ${
-                  current === 1 ? "text-primary" : "text-gray-500"
+                  current === 1 ? "text-primary " : "text-gray-500"
                 } cursor-pointer`}
               >
                 Notification
@@ -440,7 +447,9 @@ const Notification = () => {
               <h1
                 onClick={() => setCurrent(2)}
                 className={`text-xl font-semibold ${
-                  current === 2 ? "text-primary" : "text-gray-400"
+                  current === 2
+                    ? "text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                    : "text-gray-400"
                 } cursor-pointer`}
               >
                 Promotion
@@ -457,7 +466,7 @@ const Notification = () => {
                   />
                 </div>
                 <div className="flex gap-2 items-center">
-                  <FaSort />
+                  <Filter />
                   Sort By:
                   <span className="text-primary">Latest</span>
                   <FaChevronDown />
@@ -565,15 +574,30 @@ const Notification = () => {
             </div>
           </div>
           <div className="flex flex-col gap-6">
-            <div className="relative">
+            {/* <div className="relative">
               <img src={Email1} alt="" className="w-full" />
-              <FaPlusSquare
+              <
                 onClick={() => setPromotionFlag(true)}
                 className="absolute bottom-5 right-10 text-3xl text-white cursor-pointer"
               />
+            </div> */}
+            <div className="flex flex-col bg-primary rounded-md text-white py-3 px-4 relative gap-3">
+              <FaLocationArrow className="absolute top-5 right-8 text-3xl" />
+              <h1 className="text-3xl font-bold">
+                Create New <br /> Promotion
+              </h1>
+              <p>Reward user and drivers to get more orders</p>
+              <button
+                className="self-end text-primary bg-white px-7 py-1 rounded-md"
+                onClick={() => setPromotionFlag(true)}
+              >
+                <FaPlus className="text-2xl" />
+              </button>
             </div>
             <div className="flex justify-around items-center">
-              <h1 className="text-xl font-semibold text-primary">Drafts</h1>
+              <h1 className="text-xl font-semibold text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline">
+                Drafts
+              </h1>
               <h1 className="text-xl font-semibold">Scheduled</h1>
             </div>
             <div className="flex flex-col md-1150:flex-row bg-white shadow-custom rounded-md p-3 justify-between gap-2">

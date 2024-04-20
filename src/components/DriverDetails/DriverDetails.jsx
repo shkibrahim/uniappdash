@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaChevronLeft, FaRegCheckCircle } from "react-icons/fa";
 import { MdOutlineCancel } from "react-icons/md";
+import { HiMiniMagnifyingGlassPlus } from "react-icons/hi2";
 import profile from "../../assets/img/profile.jpeg";
 import SupportQuery from "../SupportQuery/SupportQuery";
 const DriverDetails = () => {
@@ -164,7 +165,7 @@ const DriverDetails = () => {
           <div className="flex flex-col gap-3">
             <h1>ID Card Front Image</h1>
             <div
-              className="bg-gray-200 overflow-hidden rounded-md cursor-pointer"
+              className="bg-gray-200 overflow-hidden rounded-md cursor-pointer relative"
               onClick={handleImageClick}
             >
               <img
@@ -172,6 +173,9 @@ const DriverDetails = () => {
                 alt=""
                 className="w-[330px] h-[150px] object-contain"
               />
+              <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-custom">
+                <HiMiniMagnifyingGlassPlus className="text-2xl text-gray-500" />
+              </div>
             </div>
             {showImagePopup && (
               <ImagePopup imageUrl={profile} onClose={handleCloseImagePopup} />
@@ -180,7 +184,7 @@ const DriverDetails = () => {
           <div className="flex flex-col gap-3">
             <h1>ID Card Back Image</h1>
             <div
-              className="bg-gray-200 overflow-hidden rounded-md cursor-pointer"
+              className="bg-gray-200 overflow-hidden rounded-md cursor-pointer relative"
               onClick={handleImageClick}
             >
               <img
@@ -188,6 +192,9 @@ const DriverDetails = () => {
                 alt=""
                 className="w-[330px] h-[150px] object-contain"
               />
+              <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-custom">
+                <HiMiniMagnifyingGlassPlus className="text-2xl text-gray-500" />
+              </div>
             </div>
             {showImagePopup && (
               <ImagePopup imageUrl={profile} onClose={handleCloseImagePopup} />
@@ -196,7 +203,7 @@ const DriverDetails = () => {
           <div className="flex flex-col gap-3">
             <h1>Student ID Card Image</h1>
             <div
-              className="bg-gray-200 overflow-hidden rounded-md cursor-pointer"
+              className="bg-gray-200 overflow-hidden rounded-md cursor-pointer relative"
               onClick={handleImageClick}
             >
               <img
@@ -204,6 +211,9 @@ const DriverDetails = () => {
                 alt=""
                 className="w-[330px] h-[150px] object-contain"
               />
+              <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-custom">
+                <HiMiniMagnifyingGlassPlus className="text-2xl text-gray-500" />
+              </div>
             </div>
             {showImagePopup && (
               <ImagePopup imageUrl={profile} onClose={handleCloseImagePopup} />
@@ -251,7 +261,7 @@ const DriverDetails = () => {
             <div className="flex flex-col gap-3">
               <h1>Car Front Image</h1>
               <div
-                className="bg-gray-200 overflow-hidden rounded-md cursor-pointer"
+                className="bg-gray-200 overflow-hidden rounded-md cursor-pointer relative"
                 onClick={handleImageClick}
               >
                 <img
@@ -259,6 +269,9 @@ const DriverDetails = () => {
                   alt=""
                   className="w-[330px] h-[150px] object-contain"
                 />
+                <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-custom">
+                  <HiMiniMagnifyingGlassPlus className="text-2xl text-gray-500" />
+                </div>
               </div>
               {showImagePopup && (
                 <ImagePopup
@@ -270,7 +283,7 @@ const DriverDetails = () => {
             <div className="flex flex-col gap-3">
               <h1>Car Back Image</h1>
               <div
-                className="bg-gray-200 overflow-hidden rounded-md cursor-pointer"
+                className="bg-gray-200 overflow-hidden rounded-md cursor-pointer relative"
                 onClick={handleImageClick}
               >
                 <img
@@ -278,6 +291,9 @@ const DriverDetails = () => {
                   alt=""
                   className="w-[330px] h-[150px] object-contain"
                 />
+                <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-custom">
+                  <HiMiniMagnifyingGlassPlus className="text-2xl text-gray-500" />
+                </div>
               </div>
               {showImagePopup && (
                 <ImagePopup

@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/icons/Logo.svg";
 import hamBurger from "../../assets/icons/arrowleft.svg";
+import Vectorwhite from "../../assets/img/Vectorwhite.png";
 import {
   Dashboard,
   Rides,
@@ -94,14 +95,14 @@ const Sidebar = ({ children }) => {
             } ${!showSideBar ? "translate-y-[60%]" : ""} `}
           >
             <img
-              src={hamBurger}
+              src={Vectorwhite}
               alt={"hamburger-Icn"}
-              className={`${!showSideBar ? "rotate-180 invert" : ""} `}
+              className={`${!showSideBar ? "rotate-0 " : ""} `}
             />
             <img
-              src={hamBurger}
+              src={Vectorwhite}
               alt={"hamburger-Icn"}
-              className={`${!showSideBar ? "rotate-180 invert" : ""}  `}
+              className={`${!showSideBar ? "rotate-0 " : ""}  `}
             />
           </div>
         </div>

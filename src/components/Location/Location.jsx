@@ -37,7 +37,9 @@ const Location = () => {
         <h1
           onClick={() => setAccessed(true)}
           className={`text-xl font-semibold ${
-            accessed ? "text-primary" : "text-gray-500"
+            accessed
+              ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+              : "text-gray-500"
           } cursor-pointer`}
         >
           Location Access
@@ -45,7 +47,9 @@ const Location = () => {
         <h1
           onClick={() => setAccessed(false)}
           className={`text-xl font-semibold ${
-            !accessed ? "text-primary" : "text-gray-500"
+            !accessed
+              ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+              : "text-gray-500"
           } cursor-pointer`}
         >
           Restricted
@@ -65,7 +69,7 @@ const Location = () => {
 
             <button
               onClick={() => setFlag(true)}
-              className="flex gap-2 bg-primary items-center justify-center px-2 py-3 rounded-md text-white shadow-custom"
+              className="flex gap-2 bg-primary items-center justify-center px-5 py-3 rounded-md text-white shadow-custom"
             >
               Add New Accessible Location
               <FaPlusCircle className="text-white text-xl" />
@@ -152,57 +156,63 @@ const Location = () => {
                     <FaTrash className="text-primary" />
                   </td>
                 </tr>
+                <tr>
+                  <td colSpan="5" className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex flex-col md:flex-row gap-3 items-center justify-between flex-1">
+                      <span>
+                        Current Page: {currentPage} of {pages}
+                      </span>
+                      <div className="flex gap-3 mt-5 items-center justify-around">
+                        <button
+                          onClick={() =>
+                            setCurrentPage(
+                              currentPage <= 1 ? currentPage : currentPage - 1
+                            )
+                          }
+                          className="px-3 py-1 bg-gray-200 rounded-md "
+                        >
+                          Prev
+                        </button>
+                        {Array.from({ length: Math.min(pages, 4) }, (_, i) => (
+                          <button
+                            key={i}
+                            className={`px-3 py-1 ${
+                              i + 1 === currentPage
+                                ? "bg-primary text-white rounded-md"
+                                : "bg-gray-200 rounded-md"
+                            }`}
+                            onClick={() => setCurrentPage(i + 1)}
+                          >
+                            {i + 1}
+                          </button>
+                        ))}
+                        {pages > pages - 1 && currentPage == pages ? (
+                          <button className="px-3 py-1 bg-gray-500 rounded-md text-white">
+                            {pages}
+                          </button>
+                        ) : (
+                          <button className="px-3 py-1 bg-gray-200 rounded-md ">
+                            ...
+                          </button>
+                        )}
+                        <button
+                          onClick={() =>
+                            setCurrentPage(
+                              currentPage < pages
+                                ? currentPage + 1
+                                : currentPage
+                            )
+                          }
+                          className="px-3 py-1 bg-gray-200 rounded-md "
+                        >
+                          Next
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
               </tbody>
             </table>
-          </div>
-          <div className="flex flex-col md:flex-row gap-3 mt-5 items-center justify-around">
-            <span>
-              Current Page: {currentPage} of {pages}
-            </span>
-            <div className="flex gap-3 mt-5 items-center justify-around">
-              <button
-                onClick={() =>
-                  setCurrentPage(
-                    currentPage <= 1 ? currentPage : currentPage - 1
-                  )
-                }
-                className="px-3 py-1 bg-gray-200 rounded-md "
-              >
-                Prev
-              </button>
-              {Array.from({ length: Math.min(pages, 4) }, (_, i) => (
-                <button
-                  key={i}
-                  className={`px-3 py-1 ${
-                    i + 1 === currentPage
-                      ? "bg-gray-500 text-white rounded-md"
-                      : "bg-gray-200 rounded-md"
-                  }`}
-                  onClick={() => setCurrentPage(i + 1)}
-                >
-                  {i + 1}
-                </button>
-              ))}
-              {pages > pages - 1 && currentPage == pages ? (
-                <button className="px-3 py-1 bg-gray-500 rounded-md text-white">
-                  {pages}
-                </button>
-              ) : (
-                <button className="px-3 py-1 bg-gray-200 rounded-md ">
-                  ...
-                </button>
-              )}
-              <button
-                onClick={() =>
-                  setCurrentPage(
-                    currentPage < pages ? currentPage + 1 : currentPage
-                  )
-                }
-                className="px-3 py-1 bg-gray-200 rounded-md "
-              >
-                Next
-              </button>
-            </div>
           </div>
         </>
       ) : (
@@ -219,7 +229,7 @@ const Location = () => {
 
             <button
               onClick={() => setFlag(true)}
-              className="flex gap-2 bg-primary items-center justify-center px-2 py-3 rounded-md text-white shadow-custom"
+              className="flex gap-2 bg-primary items-center justify-center px-5 py-3 rounded-md text-white shadow-custom"
             >
               Add New Restricted Location
               <FaPlusCircle className="text-white text-xl" />
@@ -295,57 +305,63 @@ const Location = () => {
                     <FaTrash className="text-primary" />
                   </td>
                 </tr>
+                <tr>
+                  <td colSpan="5" className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex flex-col md:flex-row gap-3 items-center justify-between flex-1">
+                      <span>
+                        Current Page: {currentPage} of {pages}
+                      </span>
+                      <div className="flex gap-3 mt-5 items-center justify-around">
+                        <button
+                          onClick={() =>
+                            setCurrentPage(
+                              currentPage <= 1 ? currentPage : currentPage - 1
+                            )
+                          }
+                          className="px-3 py-1 bg-gray-200 rounded-md "
+                        >
+                          Prev
+                        </button>
+                        {Array.from({ length: Math.min(pages, 4) }, (_, i) => (
+                          <button
+                            key={i}
+                            className={`px-3 py-1 ${
+                              i + 1 === currentPage
+                                ? "bg-primary text-white rounded-md"
+                                : "bg-gray-200 rounded-md"
+                            }`}
+                            onClick={() => setCurrentPage(i + 1)}
+                          >
+                            {i + 1}
+                          </button>
+                        ))}
+                        {pages > pages - 1 && currentPage == pages ? (
+                          <button className="px-3 py-1 bg-gray-500 rounded-md text-white">
+                            {pages}
+                          </button>
+                        ) : (
+                          <button className="px-3 py-1 bg-gray-200 rounded-md ">
+                            ...
+                          </button>
+                        )}
+                        <button
+                          onClick={() =>
+                            setCurrentPage(
+                              currentPage < pages
+                                ? currentPage + 1
+                                : currentPage
+                            )
+                          }
+                          className="px-3 py-1 bg-gray-200 rounded-md "
+                        >
+                          Next
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
               </tbody>
             </table>
-          </div>
-          <div className="flex flex-col md:flex-row gap-3 mt-5 items-center justify-around">
-            <span>
-              Current Page: {currentPage} of {pages}
-            </span>
-            <div className="flex gap-3 mt-5 items-center justify-around">
-              <button
-                onClick={() =>
-                  setCurrentPage(
-                    currentPage <= 1 ? currentPage : currentPage - 1
-                  )
-                }
-                className="px-3 py-1 bg-gray-200 rounded-md "
-              >
-                Prev
-              </button>
-              {Array.from({ length: Math.min(pages, 4) }, (_, i) => (
-                <button
-                  key={i}
-                  className={`px-3 py-1 ${
-                    i + 1 === currentPage
-                      ? "bg-gray-500 text-white rounded-md"
-                      : "bg-gray-200 rounded-md"
-                  }`}
-                  onClick={() => setCurrentPage(i + 1)}
-                >
-                  {i + 1}
-                </button>
-              ))}
-              {pages > pages - 1 && currentPage == pages ? (
-                <button className="px-3 py-1 bg-gray-500 rounded-md text-white">
-                  {pages}
-                </button>
-              ) : (
-                <button className="px-3 py-1 bg-gray-200 rounded-md ">
-                  ...
-                </button>
-              )}
-              <button
-                onClick={() =>
-                  setCurrentPage(
-                    currentPage < pages ? currentPage + 1 : currentPage
-                  )
-                }
-                className="px-3 py-1 bg-gray-200 rounded-md "
-              >
-                Next
-              </button>
-            </div>
           </div>
         </>
       )}
