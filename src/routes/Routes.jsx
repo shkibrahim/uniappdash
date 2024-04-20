@@ -36,11 +36,15 @@ const Routes = () => {
           />
           <Route
             path="/drivers/details/driverinfo"
-            element={authCtx.isLogin ? <DriverDetails /> : <Navigate to="/login" />}
+            element={
+              authCtx.isLogin ? <DriverDetails /> : <Navigate to="/login" />
+            }
           />
           <Route
             path="/drivers/details"
-            element={authCtx.isLogin ? <DriverInformation /> : <Navigate to="/login" />}
+            element={
+              authCtx.isLogin ? <DriverInformation /> : <Navigate to="/login" />
+            }
           />
           <Route
             path="/rides"
@@ -55,7 +59,9 @@ const Routes = () => {
           />
           <Route
             path="/users/details"
-            element={authCtx.isLogin ? <UserInformation /> : <Navigate to="/login" />}
+            element={
+              authCtx.isLogin ? <UserInformation /> : <Navigate to="/login" />
+            }
             // element={
             //   authCtx.isLogin ? <UserInformation /> : <Navigate to="/login" />
             // }

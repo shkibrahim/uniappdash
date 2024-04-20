@@ -273,7 +273,7 @@ const DriverInformation = () => {
           </div>
         </div>
         {current === 1 && (
-          <div className="grid md:grid-cols-2 gap-3 grid-cols-1">
+          <div className="grid md:grid-cols-3 gap-3 grid-cols-1">
             <DriverScheduledCards
               status={"completed"}
               current={current}
@@ -287,7 +287,7 @@ const DriverInformation = () => {
           </div>
         )}
         {current === 2 && (
-          <div className="grid md:grid-cols-2 gap-3 grid-cols-1">
+          <div className="grid md:grid-cols-3 gap-3 grid-cols-1">
             <DriverScheduledCards onClick={() => setShowRideDetails(true)} />
             <DriverScheduledCards />
             <DriverScheduledCards />

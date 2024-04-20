@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { data } from "../../../data";
 import { FaPlusCircle, FaSearch } from "react-icons/fa";
 import { FaTrash } from "react-icons/fa6";
+import Delete from "../../assets/icons/Delete.png";
 import AddLocation from "../AddLocation/AddLocation";
 
 const Location = () => {
@@ -20,7 +21,7 @@ const Location = () => {
         <select
           name="country"
           id=""
-          className="border-2 border-[#FFB000] outline-[#FFB000] rounded-lg py-3 px-5 my-2 w-[300px] md:w-auto "
+          className="border-2 border-[#FFB000] outline-[#FFB000] rounded-3xl py-3 px-5 my-2 w-[200px] max-w-screen-sm bg-gray-100"
           required
         >
           {data.map((item, index) => {
@@ -38,7 +39,7 @@ const Location = () => {
           onClick={() => setAccessed(true)}
           className={`text-xl font-semibold ${
             accessed
-              ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+              ? "text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
               : "text-gray-500"
           } cursor-pointer`}
         >
@@ -48,7 +49,7 @@ const Location = () => {
           onClick={() => setAccessed(false)}
           className={`text-xl font-semibold ${
             !accessed
-              ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+              ? "text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
               : "text-gray-500"
           } cursor-pointer`}
         >
@@ -120,7 +121,7 @@ const Location = () => {
                   <td className="px-6 py-4 whitespace-nowrap">State Name</td>
                   <td className="px-6 py-4 whitespace-nowrap">123456</td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <FaTrash className="text-primary" />
+                    <img src={Delete} alt="" />
                   </td>
                 </tr>
                 <tr>
@@ -131,7 +132,7 @@ const Location = () => {
                   <td className="px-6 py-4 whitespace-nowrap">State Name</td>
                   <td className="px-6 py-4 whitespace-nowrap">123456</td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <FaTrash className="text-primary" />
+                    <img src={Delete} alt="" />
                   </td>
                 </tr>
                 <tr>
@@ -142,7 +143,7 @@ const Location = () => {
                   <td className="px-6 py-4 whitespace-nowrap">State Name</td>
                   <td className="px-6 py-4 whitespace-nowrap">123456</td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <FaTrash className="text-primary" />
+                    <img src={Delete} alt="" />
                   </td>
                 </tr>
                 <tr>
@@ -153,7 +154,7 @@ const Location = () => {
                   <td className="px-6 py-4 whitespace-nowrap">State Name</td>
                   <td className="px-6 py-4 whitespace-nowrap">123456</td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <FaTrash className="text-primary" />
+                    <img src={Delete} alt="" />
                   </td>
                 </tr>
                 <tr>
@@ -214,7 +215,9 @@ const Location = () => {
                         <div>
                           <span className="text-sm text-gray-700 ">
                             Showing data
-                            <span className=" ml-2 font-semibold ">1</span> to{" "}
+                            <span className=" ml-2 font-semibold ">
+                              1
+                            </span> to{" "}
                             <span className="font-semibold ">10</span> of{" "}
                             <span className="font-semibold  ">100</span> entries
                           </span>
@@ -383,7 +386,7 @@ const Location = () => {
                   <td className="px-6 py-4 whitespace-nowrap">State Name</td>
                   <td className="px-6 py-4 whitespace-nowrap">123456</td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <FaTrash className="text-primary" />
+                    <img src={Delete} alt="" />
                   </td>
                 </tr>
                 <tr>
@@ -394,7 +397,7 @@ const Location = () => {
                   <td className="px-6 py-4 whitespace-nowrap">State Name</td>
                   <td className="px-6 py-4 whitespace-nowrap">123456</td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <FaTrash className="text-primary" />
+                    <img src={Delete} alt="" />
                   </td>
                 </tr>
                 <tr>
@@ -405,7 +408,7 @@ const Location = () => {
                   <td className="px-6 py-4 whitespace-nowrap">State Name</td>
                   <td className="px-6 py-4 whitespace-nowrap">123456</td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <FaTrash className="text-primary" />
+                    <img src={Delete} alt="" />
                   </td>
                 </tr>
                 <tr>
