@@ -54,8 +54,13 @@ const Navbar = () => {
   // ];
   const [showUserModal, setShowUserModal] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
-  return (
-    <div className="   fixed top-0  w-full  z-[999] bg-white">
+  const windowWidth = `${window.screen.width}px`; // Get the width of the window screen
+console.log(windowWidth);
+
+const styleWidth = `w-[${windowWidth}]`; // Construct Tailwind CSS class for width
+
+return (
+  <div className={`fixed top-0  w-[82%] z-[999] bg-white`}>
       <nav className="flex   p-4   rounded-md shadow-md justify-between items-center  lg:grid lg:grid-cols-[4fr_1fr]">
         <div className="lg:hidden">
           <div className="flex items-center">
