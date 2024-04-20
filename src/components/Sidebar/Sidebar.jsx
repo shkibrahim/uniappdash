@@ -40,6 +40,7 @@ const Sidebar = ({ children }) => {
       activeicon: <Driver color="#fff" size="30" />,
       icon: <Driver color="#FFB000" size="30" />,
     },
+    
     {
       link: "/users",
       name: `${showSideBar ? "Users" : ""}`,
@@ -150,19 +151,11 @@ const Sidebar = ({ children }) => {
             {list.map((item, index) => {
               return (
                 <Link key={index} to={item.link}>
-                  <li
-                    className={` font-medium font-primary flex text-xl my-8 items-center ${
-                      path === item.link
-                        ? " bg-white font-semibold text-primary rounded-lg py-3 px-2 items-center "
-                        : "text-[#fff]"
-                    }`}
-                  >
-                    <div className="mt-2 ml-2">
-                      {path === item.link ? item?.icon : item.activeicon}
-                    </div>
-                    <div className=" ml-2">{item.name}</div>
-                  </li>
-                </Link>
+                <li className={` font-medium font-primary flex text-xl my-8 items-center ${path === item.link ? " bg-white font-semibold text-primary rounded-lg py-3 px-2 items-center " : "text-[#fff]"}`}>
+                  <div className="mt-2 ml-2">{path === item.link ? item?.icon : item.activeicon}</div>
+                  <div className=" ml-2">{item.name}</div>
+                </li>
+              </Link>
               );
             })}
           </ul>
@@ -173,7 +166,7 @@ const Sidebar = ({ children }) => {
         <div className="">
           <Navbar />
         </div>
-        <div className="">{children}</div>
+        <div className="pt-20">{children}</div>
       </div>
     </div>
   );
