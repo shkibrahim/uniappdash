@@ -6,7 +6,7 @@ const auth = proxy({
   user: {},
   token: cookies.get("jwt_authorization"),
   login: (token, expirationTime, user) => {
-    auth.isLogin = true;
+    auth.isLogin = false;
     auth.user = user;
     cookies.set("jwt_authorization", token, { expires: expirationTime });
   },

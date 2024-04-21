@@ -9,7 +9,7 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import Layout from "../components/Layout/Layout";
 import auth from "../proxyState/auth";
 import { useSnapshot } from "valtio";
-import Login from "../pages/Auth/login/Login";
+import Login from "../pages/Login/Login.jsx";
 import Rides from "../pages/Rides/index";
 import Users from "../pages/Users/index";
 import Driver from "../pages/Driver/Driver";
@@ -24,11 +24,12 @@ const Routes = () => {
   const authCtx = useSnapshot(auth);
   return (
     <Router>
-      <Layout>
+          <Layout>
         <Routing>
           <Route
             path="/login"
-            element={authCtx.isLogin ? <Navigate to="/" /> : <Login />}
+            // element={authCtx.isLogin ? <Navigate to="/" /> : <Login />}
+            element={ <Login />}
           />
           <Route
             path="/"

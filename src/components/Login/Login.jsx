@@ -1,11 +1,32 @@
 import React, { useEffect, useState, useRef } from "react";
-import { home } from "../../../data";
 import { FaArrowLeft, FaArrowRight, FaEye } from "react-icons/fa";
 import ForgotPass from "../ForgotPass/ForgotPass";
 import Group2 from "../../assets/img/Group 2.png";
 import Logo from "../../assets/img/Logo copy.png";
 import Vector1 from "../../assets/img/Vector1.png";
+import login1 from "../../assets/img/login1.png"
+import login2 from "../../assets/img/login2.png"
+import login3 from "../../assets/img/login3.png"
+
 const Login = () => {
+
+  const home = [
+    {
+      img: login1,
+      heading: "Request Ride",
+      desc: "Request a ride get picked up by a nearby community driver"
+    },
+    {
+      img: login2,
+      heading: "Confirm Your Driver",
+      desc: "Huge drivers network helps you find comforable, safe and cheap ride"
+    },
+    {
+      img: login3,
+      heading: "Track your ride",
+      desc: "Know your driver in advance and be able to view current location in real time on the map"
+    },
+  ]
   const [showPass, setShowPass] = useState(false);
   const userRef = useRef("");
   const [selected, setSelected] = useState(0);
@@ -43,9 +64,8 @@ const Login = () => {
   return (
     <div className={` flex items-center justify-center h-screen`}>
       <div
-        className={`${
-          isMobile ? (hidden ? "" : "hidden") : ""
-        } flex items-center justify-between p-2 relative flex-1 h-screen`}
+        className={`${isMobile ? (hidden ? "" : "hidden") : ""
+          } flex items-center justify-between p-2 relative flex-1 h-screen`}
       >
         <img src={Vector1} alt="" className="absolute top-0 left-0" />
         <FaArrowLeft
@@ -58,7 +78,7 @@ const Login = () => {
         >
           SKIP
         </h1>
-        <div className="flex items-center justify-center flex-col w-[300px]">
+        <div className="flex  text-wh items-center justify-center flex-col w-[300px]">
           <img src={home[selected].img} alt="" className="my-7" />
           <h1 className="font-[600] text-[30px] my-4">
             {home[selected].heading}
@@ -71,9 +91,8 @@ const Login = () => {
         />
       </div>
       <div
-        className={`${
-          isMobile ? (hidden ? "hidden" : "") : ""
-        }  flex h-screen flex-1 bg-[#FFB000] items-center justify-center px-2 w-full relative`}
+        className={`${isMobile ? (hidden ? "hidden" : "") : ""
+          }  flex h-screen flex-1 bg-[#FFB000] items-center justify-center px-2 w-full relative`}
       >
         <div className="flex items-center justify-center flex-col">
           <img src={Logo} alt="" />
