@@ -14,7 +14,7 @@ const Location = () => {
   const [flag, setFlag] = useState(false);
 
   return (
-    <div className="flex flex-col font-primary">
+    <div className="flex flex-col  font-primary">
       {flag && <AddLocation setTrigger={setFlag} />}
       <div className="flex flex-col md:flex-row w-full shadow-custom rounded-md p-6 bg-white items-center gap-5 md:gap-14 mt-10 mb-5 ">
         <h2>Select Country</h2>

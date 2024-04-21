@@ -2,16 +2,16 @@ import React from "react";
 
 const AddLocation = ({ setTrigger }) => {
   return (
-    <div className="fixed flex h-screen w-full items-center justify-center bg-black bg-opacity-75 top-0 left-0 z-50">
-      <div className="flex flex-col bg-white p-4 rounded-md relative md:w-[400px] w-[300px] items-center justify-center">
+    <div className="fixed flex h-screen w-full items-center justify-center bg-black bg-opacity-75 top-0 left-0   z-50">
+      <div className="  h-[100vh] overflow-auto  flex flex-col bg-white p-4 rounded-md relative   items-center justify-center">
         <div
           onClick={() => setTrigger(false)}
           className="absolute top-3 right-5 text-3xl cursor-pointer"
         >
           &times;
         </div>
-        <h1 className="text-xl font-semibold mb-3">Add Location</h1>
-        <form action="" className="flex flex-col w-full gap-3">
+        <h1 className="text-xl  font-semibold mt-32 mb-3">Add Location</h1>
+        <form action="" className="flex flex-col">
           <label htmlFor="select" className="text-primary font-bold">
             Select Type:
           </label>
@@ -58,7 +58,7 @@ const AddLocation = ({ setTrigger }) => {
           ></iframe>
           <button
             type="submit"
-            className=" bg-primary items-center justify-center px-2 py-3 rounded-md text-white shadow-custom"
+            className=" bg-primary my-8 items-center justify-center px-2 py-3 rounded-md text-white shadow-custom"
           >
             Add
           </button>

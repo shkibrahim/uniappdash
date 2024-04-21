@@ -231,7 +231,7 @@ return (
                       <FaRegCircleUser className="text-2xl hover:text-primary" />
                     </div>
                     <Link
-                      to="/"
+                      to="/settings"
                       className=" px-4 py-2  hover:text-buttonPrimary"
                     >
                       Profile
