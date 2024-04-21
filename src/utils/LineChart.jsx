@@ -54,7 +54,7 @@ const LineChart = () => {
     <div>
       <div id="chart">
         <div className="flex gap-10">
-          <h1 className="text-xl font-semibold font-primary">Driver & Rider</h1>
+          <h1 className="text-xl font-semibold text-[#48525B] font-primary">Driver & Rider</h1>
           <div className="flex gap-10">
             <div className="flex gap-2 items-center rounded-sm">
               <div className="w-4 h-1 bg-[#48525B]"></div>

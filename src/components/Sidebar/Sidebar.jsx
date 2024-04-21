@@ -79,7 +79,7 @@ const Sidebar = ({ children }) => {
       <aside
         className={`bg-[#FFB000]  ${
           snap.mobileSidebar === false ? " sidebarHide " : ""
-        } lg:block fixed top-0 lg:left-0 left-0 z-50 ${
+        } lg:block fixed  top-0 lg:left-0 left-0 z-50 ${
           !showSideBar ? "w-20" : "w-64"
         } h-screen  translate-x-0 transition-all duration-500 `}
         aria-label="Sidebar"
@@ -107,7 +107,7 @@ const Sidebar = ({ children }) => {
             />
           </div>
         </div>
-        <div id="scrollBar" className="h-full px-3 py-4 overflow-y-auto ">
+        <div id="scrollBar" className="h-full px-3 py-4  overflow-y-auto ">
           <div className="flex items-center  justify-between">
             <div className="flex items-center w-full flex-col ">
               <div>
@@ -139,7 +139,6 @@ const Sidebar = ({ children }) => {
                 state.mobileSidebar = false;
               }}
             >
-              {/* <FaArrowRightLong className="text-3xl  text-primary bg-white p-2 rounded-full" /> */}
               <img
                 src={hamBurger}
                 alt={"hamburger-Icn"}
@@ -152,9 +151,9 @@ const Sidebar = ({ children }) => {
               return (
                 <Link key={index} to={item.link}>
                   <li
-                    className={` font-medium font-primary flex text-xl my-8 items-center ${
+                    className={` font-medium font-primary flex  text-xl my-8 items-center ${
                       path === item.link
-                        ? " bg-white font-semibold text-primary rounded-lg py-3 px-2 items-center "
+                        ? " bg-white font-semibold text-primary rounded-2xl py-3 px-2 w-[95%] items-center "
                         : "text-[#fff]"
                     }`}
                   >
@@ -174,7 +173,7 @@ const Sidebar = ({ children }) => {
 
       </aside>
 
-      <div className={`${!showSideBar ? "lg:ml-[80px]" : "lg:ml-64"}    `}>
+      <div className={`${!showSideBar ? "lg:ml-[80px]" : "lg:ml-64"}     `}>
         <div className="">
           <Navbar showSideBare={showSideBar} />
         </div>

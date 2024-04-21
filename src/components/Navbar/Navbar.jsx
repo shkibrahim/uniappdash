@@ -93,7 +93,7 @@ const Navbar = ({ showSideBare }) => {
         </div>
         <div className=" lg:flex justify-between items-center">
           <div className="lg:flex items-center ml-2 hidden  w-full">
-            <h2 className={`font-medium text-2xl mr-12 font-primary`}>
+            <h2 className={`font-medium text-[#00261C] text-2xl mr-12 font-primary`}>
               Hello Admin
             </h2>
 
@@ -204,7 +204,7 @@ const Navbar = ({ showSideBare }) => {
             className=" cursor-pointer flex"
           >
             <div className="flex space-x-2 items-center">
-              <div>Alex Hales</div>
+              <div className=" font-primary font-semibold text-[#00261C]">Alex Hales</div>
               <img
                 src={authCtx.user.image ? authCtx.user.image : profile}
                 alt="user-img"

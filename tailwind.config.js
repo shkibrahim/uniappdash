@@ -11,6 +11,10 @@ module.exports = {
       fontFamily: {
         primary: "Manrope, sans-serif",
         secondary: "",
+        dmsans: "DM Sans, sans-serif",
+        inter:"Inter",
+        opensans:"Open Sans"
+
       },
       backgroundImage: {
         "feature-cardbg": "url('/src/assets/img/cardBg.png')",

@@ -55,6 +55,36 @@ const Rider = () => {
       earnings: 62,
     },
     {
+      id: 1,
+      carno: 299,
+      driver: {
+        img: driverImage,
+        name: "Alex Noman",
+      },
+      status: "Completed",
+      earnings: 62,
+    },
+    {
+      id: 1,
+      carno: 299,
+      driver: {
+        img: driverImage,
+        name: "Alex Noman",
+      },
+      status: "Completed",
+      earnings: 62,
+    },
+    {
+      id: 1,
+      carno: 299,
+      driver: {
+        img: driverImage,
+        name: "Alex Noman",
+      },
+      status: "Completed",
+      earnings: 62,
+    },
+    {
       id: 2,
       carno: 299,
       driver: {
@@ -124,300 +154,308 @@ const Rider = () => {
   };
 
   return (
-    <main className="mx-10">
-      <div className="flex my-10 flex-wrap items-center justify-between ">
-        {showRideDetails && (
-          <RideDetails setTrigger={setShowRideDetails} flag={showRideDetails} />
-        )}
-        <div className="">
-          <div className="flex items-center space-x-4">
-            <div className=" sm:text-xl text-lg md:text-2xl font-medium">
-              All Rides
-            </div>
-            <div className="flex relative sm:w-[180px] w-[150px]  md:w-[200px] ">
-              <div
-                className="flex items-center space-x-4 cursor-pointer"
-                onClick={() => setRange(!showRange)}
-              >
-                <div>{activeRange}</div>
-                <div>
-                  <IoIosArrowDown />
-                </div>
+    <main className="sm:mx-8 mx-4 md:mx-10 mb-10">
+      <div className="grid md:grid-cols-[1fr_3fr] md:gap-x-8 mt-10">
+        <section className="mb-10 md:mb-0" id="1">
+          {showRideDetails && (
+            <RideDetails setTrigger={setShowRideDetails} flag={showRideDetails} />
+          )}
+          <div className="mb-8">
+            <div className="flex items-center justify-between mx-4 md:mx-0 ">
+              <div className=" sm:text-xl text-lg md:text-2xl text-[#48525B]  font-semibold font-primary">
+                All Rides
               </div>
-              {showRange && (
-                <div className="absolute mt-4 top-2 bg-gray-100 rounded-md p-4">
-                  <ul className="flex flex-col space-y-2">
-                    {ranges.map((item) => {
-                      if (item.name !== activeRange) {
-                        return (
-                          <li
-                            className="cursor-pointer"
-                            key={item.id}
-                            onClick={() => handleRangeSelect(item.name)}
-                          >
-                            {item.name}
-                          </li>
-                        );
-                      }
-                      return null;
-                    })}
-                  </ul>
-                </div>
-              )}
-            </div>
-            <div></div>
-          </div>
-        </div>
-
-        <div className=" sm:w-[300px] w-[250px] md:w-[400px]">
-          <div className="relative w-full">
-            <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-              <IoSearchOutline className=" text-gray-900 text-xl" />
-            </div>
-            <input
-              type="text"
-              id="voice-search"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5  "
-              placeholder="Search ..."
-              required
-            />
-            <button
-              type="button"
-              className="absolute inset-y-0 end-0 flex items-center pe-3"
-            ></button>
-          </div>
-        </div>
-        <div>
-          <div className="flex items-center space-x-2">
-            <Filter />
-            <div className="flex items-center space-x-2">
-              <div >Sort By</div>
-              <div>
-                <IoMdArrowDropdown />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="my-10 md:flex justify-between ">
-        <div>
-          <div className="flex   flex-col items-center space-y-4">
-            <div className="">
-              <div className="flex flex-col space-y-4 p-4 border-2 border-gray-200 rounded-md shadow-md shadow-gray-300">
-                <div className="flex  space-x-8">
-                  <div className="text-gray-500 font-medium text-lg">
-                    Hire Vs Cancel
-                  </div>
-                  <div className=" bg-gray-200 px-2 text-gray-600 text-sm p-1 rounded-md">
-                    Today
-                  </div>
-                </div>
-                <div className="flex justify-center">
-                  <div className="">
-                    <PieChart />
-                  </div>
-                </div>
-                <div>
+              <div className="flex relative  ">
+                <div
+                  className="flex items-center space-x-4 cursor-pointer"
+                  onClick={() => setRange(!showRange)}
+                >
+                  <div className="text-[#343A40 text-sm">{activeRange}</div>
                   <div>
-                    <div className="flex flex-col space-y-2">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center  space-x-1">
-                          <div className=" bg-green-600 w-4 h-4 rounded-full" />
-                          <div>Total Hired</div>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <div>54%</div>
-                          <div>
-                            <FaArrowUpLong className="text-green-500" />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center  space-x-1">
-                          <div className=" bg-red-600 w-4 h-4 rounded-full" />
-                          <div>Total Canceled</div>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <div>20%</div>
-                          <div>
-                            <FaArrowUpLong className="text-red-500" />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center  space-x-1">
-                          <div className=" bg-primary w-4 h-4 rounded-full" />
-                          <div>Total Pending</div>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <div>21%</div>
-                          <div>
-                            <FaArrowDownLong className="text-primary" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <IoIosArrowDown />
                   </div>
                 </div>
+                {showRange && (
+                  <div className="absolute mt-4 top-2 bg-gray-100 rounded-xl p-4">
+                    <ul className="flex flex-col  text-[#343A40] space-y-2">
+                      {ranges.map((item) => {
+                        if (item.name !== activeRange) {
+                          return (
+                            <li
+                              className="cursor-pointer text-sm"
+                              key={item.id}
+                              onClick={() => handleRangeSelect(item.name)}
+                            >
+                              {item.name}
+                            </li>
+                          );
+                        }
+                        return null;
+                      })}
+                    </ul>
+                  </div>
+                )}
               </div>
-            </div>
 
-            <div>
-              <div className="flex flex-col space-y-4 p-4  border-2 border-gray-200 rounded-md shadow-md shadow-gray-300">
-                <div className="flex  justify-between">
-                  <div className="text-gray-500 font-medium text-lg">
-                    Income
-                  </div>
-                  <div className=" bg-gray-200 px-2 text-gray-600 text-sm p-1 rounded-md">
-                    Today
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <div className="flex flex-col space-y-2">
-                      <div className="flex items-center justify-between">
-                        <div className=" text-2xl font-semibold">$ 9460.00</div>
-                        <div className="flex items-center">
-                          <FaArrowDownLong className="text-red-500" />
-                          <div className="text-red-500">1.5%</div>
-                        </div>
-                      </div>
-                      <div className=" text-gray-500 text-sm">
-                        Compared to $9940 yesterday
-                      </div>
-                      <div className="flex items-center w-[200px] justify-between">
-                        <div className="text-gray-500 text-sm">
-                          Last week Income
-                        </div>
-                        <div>$25658.00</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-
-            <div>
-              <div className="flex flex-col space-y-4 p-4  border-2 border-gray-200 rounded-md shadow-md shadow-gray-300">
-                <div className="flex  justify-between">
-                  <div className="text-gray-500 font-medium text-lg">
-                    Active Drivers
-                  </div>
-                  <div className=" bg-gray-200 px-2 text-gray-600 text-sm p-1 rounded-md">
-                    Today
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <div className="flex flex-col space-y-2">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-4">
-                          <div className=" text-2xl font-semibold">340</div>
-                          <div>
-                            <Active />
-                          </div>
-                        </div>
-                        <div className="flex items-center">
-                          <FaArrowDownLong className="text-red-500" />
-                          <div className="text-red-500">1.5%</div>
-                        </div>
-                      </div>
-                      <div className=" text-gray-500 text-sm">
-                        Compared to 440 yesterday{" "}
-                      </div>
-                      <div className="flex items-center w-[200px] justify-between">
-                        <div className="text-gray-500 text-sm">
-                          Already booked
-                        </div>
-                        <div>120</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="md:w-[70%]">
-          <div className="text-center text-lg font-semibold my-10">
-            Live Car Status
           </div>
           <div>
-            <div>
-              <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-                <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                  <thead className="text-xs text-gray-700 uppercase dark:text-gray-400">
-                    <tr className="text-gray-800">
-                      <th scope="col" className="px-6 py-3 ">
-                        No.
-                      </th>
-                      <th scope="col" className="px-6 py-3">
-                        Car no.
-                      </th>
-                      <th scope="col" className="px-6 py-3 ">
-                        Driver
-                      </th>
-                      <th scope="col" className="px-6 py-3">
-                        Status
-                      </th>
-                      <th scope="col" className="px-6 py-3">
-                        Earning
-                      </th>
-                      <th scope="col" className="px-6 py-3">
-                        Action
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {tableData?.map((item, index) => {
-                      return (
-                        <tr
-                          key={index}
-                          className="border-b border-gray-200 text-gray-800"
-                        >
-                          <td className="px-6 py-4">{index + 1}</td>
-                          <td className="px-6 py-4 bg-gray-50">
-                            {item?.carno}
-                          </td>
-                          <td className="px-6 py-4">
-                            <div className="flex items-center space-x-2">
-                              <div>{item?.driver?.name}</div>
-                              <div>
-                                <img
-                                  className="w-6 h-6 rounded-full"
-                                  src={item?.driver?.img}
-                                  alt={item?.driver?.name}
-                                />
-                              </div>
+            <div className="flex   flex-col items-center space-y-4">
+              <div className="">
+                <div className="flex flex-col space-y-4 p-4 border-2 border-[#F5F5F5] rounded-xl shadow-md shadow-gray-300">
+                  <div className="flex  space-x-8">
+                    <div className="text-[#656575] font-medium font-primary text-lg">
+                      Hire Vs Cancel
+                    </div>
+                    <div className="  px-2 text-[#656575] text-sm p-1 rounded-xl">
+                      Today
+                    </div>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="">
+                      <PieChart />
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div className="flex flex-col space-y-2">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center  space-x-1">
+                            <div className=" bg-green-600 w-4 h-4 rounded-full" />
+                            <div className="text-[#1A1919] font-primary">Total Hired</div>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <div className="text-[#1A1919]  font-inter">54%</div>
+                            <div>
+                              <FaArrowUpLong className="text-green-500" />
                             </div>
-                          </td>
-                          <td className="px-6 py-4 flex space-x-2">
+                          </div>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center  space-x-1">
+                            <div className=" bg-red-600  w-4 h-4 rounded-full" />
+                            <div className="text-[#1A1919] font-primary">Total Canceled</div>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <div className="text-[#1A1919]  font-inter">20%</div>
+                            <div>
+                              <FaArrowUpLong className="text-red-500" />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center  space-x-1">
+                            <div className=" bg-primary w-4 h-4 rounded-full" />
+                            <div className="text-[#1A1919] font-primary">Total Pending</div>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <div className="text-[#1A1919]  font-inter">21%</div>
+                            <div>
+                              <FaArrowDownLong className="text-primary" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex flex-col space-y-4 p-4  border-2 border-[#F5F5F5] rounded-xl shadow-md shadow-gray-300">
+                  <div className="flex  justify-between">
+                    <div className="text-[#656575] font-inter font-medium text-lg">
+                      Income
+                    </div>
+                    <div className="  px-2 text-[#656575] text-sm ">
+                      Today
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div className="flex flex-col space-y-2">
+                        <div className="flex items-center justify-between">
+                          <div className="sm:text-xl   md:text-2xl font-semibold text-[#01150C] font-inter">$ 9460.00</div>
+                          <div className="flex items-center">
+                            <FaArrowDownLong className="text-red-500" />
+                            <div className="text-red-500 font-inter">1.5%</div>
+                          </div>
+                        </div>
+                        <div className=" text-gray-800 font-thin text-sm">
+                          Compared to $9940 yesterday
+                        </div>
+                        <div className="flex items-center w-[200px] justify-between">
+                          <div className="text-[#525256] text-sm">
+                            Last week Income
+                          </div>
+                          <div className="text-[#525256] font-inter  "> $25658.00</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex flex-col space-y-4 p-4  border-2 border-[#F5F5F5] rounded-xl shadow-md shadow-gray-300">
+                  <div className="flex  justify-between">
+                    <div className="text-[#656575] font-inter font-medium text-lg">
+                      Active Drivers
+                    </div>
+                    <div className="   text-[#656575] text-sm ">
+                      Today
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div className="flex flex-col space-y-2">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center space-x-4">
+                            <div className=" text-2xl font-semibold font-inter text-[#01150C]">340</div>
                             <div>
                               <Active />
                             </div>
-                            <div>{item?.status}</div>
-                          </td>
-                          <td className="px-6 py-4 ">$ {item?.earnings}</td>
-                          <td className="px-6 py-4 ">
-                            <div className=" cursor-pointer" onClick={() => setShowRideDetails(true)}>
-                            <ActionIcon />
-                            </div>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
+                          </div>
+                          <div className="flex items-center">
+                            <FaArrowDownLong className="text-red-500" />
+                            <div className="text-red-500 font-inter ">1.5%</div>
+                          </div>
+                        </div>
+                        <div className=" text-[#48525B] font-thin text-sm">
+                          Compared to 440 yesterday{" "}
+                        </div>
+                        <div className="flex items-center w-[200px] justify-between">
+                          <div className="text-[#525256]  font-inter text-sm">
+                            Already booked
+                          </div>
+                          <div className="font-inter text-[#525256] text-sm">120</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div id="PAGINATION" className="mt-10">
+          </div>
+        </section>
+        <section id="2">
+          <div className="flex justify-between  items-center ">
+
+
+            <div className=" sm:w-[350px] w-[200px] md:w-[400px]">
+              <div className="relative w-full">
+                <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <IoSearchOutline className=" text-[#AFAFAF]  text-xl" />
+                </div>
+                <input
+                  type="text"
+                  className="bg-white  shadow-md    text-sm  text-[#48525B] rounded-xl  placeholder:text-[#AFAFAF] focus:outline-none  block w-full ps-10 p-2.5  "
+                  placeholder="Search ..."
+                  required
+                />
+                <button
+                  type="button"
+                  className="absolute inset-y-0 end-0 flex items-center pe-3"
+                ></button>
+              </div>
+            </div>
+            <div>
+              <div className="flex items-center space-x-2">
+                <Filter />
+                <div className="flex items-center space-x-2">
+                  <div className=" text-[#343A40] font-primary sm:text-base text-sm font-semibold" >Sort By</div>
+                  <div>
+                    <IoMdArrowDropdown />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className=" my-6 sm:my-8 md:my-10   ">
+
+            <div className=" bg-white rounded-xl shadow-md ">
+              <div className="text-center  text-[#1A1919] font-primary text-lg font-semibold my-10">
+                Live Car Status
+              </div>
+              <div>
+                <div>
+                  <div className="relative overflow-x-auto w-[100vw] md:w-auto  sm:rounded-lg">
+                    <table className=" overflow-auto  text-sm text-left rtl:text-right ">
+                      <thead className="  ">
+                        <tr className=" font-normal font-primary">
+                          <th scope="col" className="px-6 py-3 ">
+                            No.
+                          </th>
+                          <th scope="col" className="px-6 py-3">
+                            Car no.
+                          </th>
+                          <th scope="col" className="px-6 py-3 ">
+                            Driver
+                          </th>
+                          <th scope="col" className="px-6 py-3">
+                            Status
+                          </th>
+                          <th scope="col" className="px-6 py-3">
+                            Earning
+                          </th>
+                          <th scope="col" className="px-6 py-3">
+                            Action
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {tableData?.map((item, index) => {
+                          return (
+                            <tr
+                              key={index}
+                              className="border-b  font-inter text-[#1A1919]"
+                            >
+                              <td className="px-6 py-4">{index + 1}</td>
+                              <td className="px-6 py-4 ">
+                                {item?.carno}
+                              </td>
+                              <td className="px-6 py-4">
+                                <div className="flex items-center space-x-2">
+                                  <div>{item?.driver?.name}</div>
+                                  <div>
+                                    <img
+                                      className="w-6 h-6 rounded-full"
+                                      src={item?.driver?.img}
+                                      alt={item?.driver?.name}
+                                    />
+                                  </div>
+                                </div>
+                              </td>
+                              <td className="px-6 py-4 flex space-x-2">
+                                <div>
+                                  <Active />
+                                </div>
+                                <div className="text-[#656575] font-light">{item?.status}</div>
+                              </td>
+                              <td className="px-6 py-4 ">$ {item?.earnings}</td>
+                              <td className="px-6 py-4 ">
+                                <div className=" cursor-pointer" onClick={() => setShowRideDetails(true)}>
+                                  <ActionIcon />
+                                </div>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div id="PAGINATION" className="  mt-10 ">
               <div className="flex items-center flex-wrap justify-between">
                 <div>
-                  <span className="text-sm text-gray-700 ">
-                    Showing data<span className=" ml-2 font-semibold ">1</span>{" "}
-                    to <span className="font-semibold ">10</span> of{" "}
-                    <span className="font-semibold  ">100</span> entries
+                  <span className="text-sm text-[#48525B] font-[Poppins] ">
+                    Showing data<span className=" ml-2  ">1</span>{" "}
+                    to <span className=" ">10</span> of{" "}
+                    <span className="">100</span> entries
                   </span>
                 </div>
                 <div>
@@ -425,7 +463,7 @@ const Rider = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500  hover:text-gray-700 "
+                        className="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-[#656575]  hover:text-[#48525B] "
                       >
                         <span className="sr-only">Previous</span>
                         <svg
@@ -448,7 +486,7 @@ const Rider = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex items-center justify-center px-2 h-10 leading-tight text-white rounded-md bg-primary border  "
+                        className="flex items-center justify-center px-2 h-10 leading-tight text-white rounded-xl bg-primary border  "
                       >
                         1
                       </a>
@@ -456,7 +494,7 @@ const Rider = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white"
+                        className="flex items-center justify-center px-2 h-10 leading-tight text-[#656575] rounded-xl bg-[#F5F5F5] hover:bg-primary transition-all duration-300 hover:text-white"
                       >
                         2
                       </a>
@@ -464,7 +502,7 @@ const Rider = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white"
+                        className="flex items-center justify-center px-2 h-10 leading-tight text-[#656575] rounded-xl bg-[#F5F5F5] hover:bg-primary transition-all duration-300 hover:text-white"
                       >
                         3
                       </a>
@@ -472,7 +510,7 @@ const Rider = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white"
+                        className="flex items-center justify-center px-2 h-10 leading-tight text-[#656575] rounded-xl bg-[#F5F5F5] hover:bg-primary transition-all duration-300 hover:text-white"
                       >
                         ..
                       </a>
@@ -480,7 +518,7 @@ const Rider = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white"
+                        className="flex items-center justify-center px-2 h-10 leading-tight text-[#656575] rounded-xl bg-[#F5F5F5] hover:bg-primary transition-all duration-300 hover:text-white"
                       >
                         40
                       </a>
@@ -489,7 +527,7 @@ const Rider = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 hover:text-gray-700"
+                        className="flex items-center justify-center px-4 h-10 leading-tight text-[#656575] hover:text-[#48525B]"
                       >
                         <span className="sr-only">Next</span>
                         <svg
@@ -514,8 +552,9 @@ const Rider = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
+
     </main>
   );
 };
