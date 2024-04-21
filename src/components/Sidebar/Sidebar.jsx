@@ -170,9 +170,9 @@ const Sidebar = ({ children }) => {
         </div>
       </aside>
 
-      <div className={`${!showSideBar ? "lg:ml-24" : "lg:ml-64"}    `}>
+      <div className={`${!showSideBar ? "lg:ml-[80px]" : "lg:ml-64"}    `}>
         <div className="">
-          <Navbar />
+          <Navbar showSideBare={showSideBar} />
         </div>
         <div className="pt-20">{children}</div>
       </div>

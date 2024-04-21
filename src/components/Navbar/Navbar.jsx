@@ -19,7 +19,7 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { GoSignOut } from "react-icons/go";
 import { CiMenuKebab } from "react-icons/ci";
 
-const Navbar = () => {
+const Navbar = ({showSideBare}) => {
   const authCtx = useSnapshot(auth);
   const [showSideBar, setShowSideBar] = useState(false);
 
@@ -58,9 +58,9 @@ const Navbar = () => {
   const windowWidth = `${window.screen.width}px`; // Get the width of the window screen
 
   const styleWidth = `w-[${windowWidth}]`; // Construct Tailwind CSS class for width
-
+console.log(showSideBar)
 return (
-  <div className={`fixed top-0 w-[100vw] lg:w-[80vw] z-[10] bg-white`}>
+  <div className={`fixed top-0 w-[100vw] ${showSideBare?"lg:w-[80vw]":"lg:w-[93vw]"}  z-[10] bg-white`}>
       <nav className="flex   p-4   rounded-md shadow-md justify-between items-center  lg:grid lg:grid-cols-[4fr_1fr]">
         <div className="lg:hidden">
           <div className="flex items-center">
