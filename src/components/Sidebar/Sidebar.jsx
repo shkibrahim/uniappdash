@@ -167,7 +167,11 @@ const Sidebar = ({ children }) => {
               );
             })}
           </ul>
+          <div className={`${showSideBar?"text-lg ":""} font-primary text-white text-center  mt-20`}>
+          Version 1.0
         </div>
+        </div>
+
       </aside>
 
       <div className={`${!showSideBar ? "lg:ml-[80px]" : "lg:ml-64"}    `}>
@@ -176,6 +180,7 @@ const Sidebar = ({ children }) => {
         </div>
         <div className="pt-20">{children}</div>
       </div>
+
     </div>
   );
 };

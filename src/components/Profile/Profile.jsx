@@ -14,7 +14,7 @@ const Profile = () => {
           <img
             src={profile}
             alt=""
-            className="w-[120px] rounded-full bg-center mt-12 mb-4 ml-4 z-10 border-solid border-white border-[3px] shadow-custom"
+            className="w-[120px] rounded-full bg-center mt-12 mb-4 ml-4 z-[2] border-solid border-white border-[3px] shadow-custom"
           />
           <table className="min-w-full">
             <tbody className="divide-y divide-gray-200">

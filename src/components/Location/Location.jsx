@@ -4,6 +4,7 @@ import { FaPlusCircle, FaSearch } from "react-icons/fa";
 import { FaTrash } from "react-icons/fa6";
 import Delete from "../../assets/icons/Delete.png";
 import AddLocation from "../AddLocation/AddLocation";
+import { IoIosArrowDown } from "react-icons/io";
 
 const Location = () => {
   const entriesPerPage = 5;
@@ -18,7 +19,21 @@ const Location = () => {
       {flag && <AddLocation setTrigger={setFlag} />}
       <div className="flex flex-col md:flex-row w-full shadow-custom rounded-md p-6 bg-white items-center gap-5 md:gap-14 mt-10 mb-5 ">
         <h2>Select Country</h2>
-        <select
+        <div className="flex items-center ml-4 space-x-2 bg-white p-4 rounded-lg shadow-md ">
+              <div className="flex cursor-pointer space-x-4 items-center ">
+                <img
+                  src="https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg"
+                  alt="usa-flag"
+                  className=" rounded-full w-8 h-8"
+                />
+                <div className=" font-medium">US</div>
+              </div>
+              <div>
+                <IoIosArrowDown className=" text-gray-500 font-semibold text-lg" />
+              </div>
+              <div></div>
+            </div>
+        {/* <select
           name="country"
           id=""
           className="border-2 border-[#FFB000] outline-[#FFB000] rounded-3xl py-3 px-5 my-2 w-[200px] max-w-screen-sm bg-gray-100"
@@ -31,7 +46,7 @@ const Location = () => {
               </option>
             );
           })}
-        </select>
+        </select> */}
       </div>
 
       <div className="flex gap-10 mb-5">
