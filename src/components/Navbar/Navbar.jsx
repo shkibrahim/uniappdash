@@ -19,7 +19,7 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { GoSignOut } from "react-icons/go";
 import { CiMenuKebab } from "react-icons/ci";
 
-const Navbar = ({showSideBare}) => {
+const Navbar = ({ showSideBare }) => {
   const authCtx = useSnapshot(auth);
   const [showSideBar, setShowSideBar] = useState(false);
 
@@ -58,9 +58,9 @@ const Navbar = ({showSideBare}) => {
   const windowWidth = `${window.screen.width}px`; // Get the width of the window screen
 
   const styleWidth = `w-[${windowWidth}]`; // Construct Tailwind CSS class for width
-console.log(showSideBar)
-return (
-  <div className={`fixed top-0 w-[100vw] ${showSideBare?"lg:w-[80vw]":"lg:w-[93vw]"}  z-[10] bg-white`}>
+  console.log(showSideBar)
+  return (
+    <div className={`fixed top-0 w-[100vw] ${showSideBare ? "lg:w-[80vw]" : "lg:w-[93vw]"}  z-[10] bg-white`}>
       <nav className="flex   p-4   rounded-md shadow-md justify-between items-center  lg:grid lg:grid-cols-[4fr_1fr]">
         <div className="lg:hidden">
           <div className="flex items-center">
@@ -97,13 +97,16 @@ return (
               Hello Admin
             </h2>
 
-            <div
-              className="relative cursor-pointer shadow-md p-5 rounded-md"
-              onClick={() => setShowNotifications(!showNotifications)}
-            >
-              <Notification2 color="#000" size="30" />
+            <div className="relative">
+              <div
+                className=" cursor-pointer shadow-md p-5 rounded-md"
+                onClick={() => setShowNotifications(!showNotifications)}
+              >
+                <Notification2 color="#000" size="30" />
+              </div>
+
               {showNotifications && (
-                <div className="absolute -bottom-[520px] -right-[185px] bg-white shadow-2xl p-3 px-4 rounded-md w-[300px] md:w-[450px] z-50 h-[500px] overflow-y-auto ">
+                <div className=" top-20 -left-20 absolute   bg-white shadow-2xl p-3 px-4 rounded-md w-[300px] md:w-[450px]  z-[200] h-[300px] overflow-y-auto ">
                   <h1 className="text-xl font-semibold text-center mb-3">
                     Notification
                   </h1>
@@ -154,7 +157,6 @@ return (
                 </div>
               )}
             </div>
-
             <div className="flex items-center ml-4 space-x-2 bg-white p-4 rounded-lg shadow-md ">
               <div className="flex space-x-4 items-center ">
                 <img
@@ -213,9 +215,8 @@ return (
             <div className="relative font-primary">
               <div
                 id="userDropDown"
-                className={`z-[200] -left-[8.5rem] sm:-left-[11rem] top-12 md:top-14  absolute bg-white rounded-lg   border-[1px] border-gray-300 w-36 sm:w-44 md:w-42 ${
-                  showUserModal ? "" : "hidden"
-                }`}
+                className={`z-[200] -left-[8.5rem] sm:-left-[11rem] top-12 md:top-14  absolute bg-white rounded-lg   border-[1px] border-gray-300 w-36 sm:w-44 md:w-42 ${showUserModal ? "" : "hidden"
+                  }`}
               >
                 <ul
                   className="py-2 text-sm text-gray-700 "
