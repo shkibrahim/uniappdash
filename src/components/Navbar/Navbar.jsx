@@ -60,7 +60,7 @@ console.log(windowWidth);
 const styleWidth = `w-[${windowWidth}]`; // Construct Tailwind CSS class for width
 
 return (
-  <div className={`fixed top-0  w-[82%] z-[999] bg-white`}>
+  <div className={`fixed top-0 w-[100vw] lg:w-[80vw] z-[10] bg-white`}>
       <nav className="flex   p-4   rounded-md shadow-md justify-between items-center  lg:grid lg:grid-cols-[4fr_1fr]">
         <div className="lg:hidden">
           <div className="flex items-center">
