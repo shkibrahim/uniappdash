@@ -40,7 +40,7 @@ const Sidebar = ({ children }) => {
       activeicon: <Driver color="#fff" size="30" />,
       icon: <Driver color="#FFB000" size="30" />,
     },
-    
+
     {
       link: "/users",
       name: `${showSideBar ? "Users" : ""}`,
@@ -79,7 +79,7 @@ const Sidebar = ({ children }) => {
       <aside
         className={`bg-[#FFB000]  ${
           snap.mobileSidebar === false ? " sidebarHide " : ""
-        } lg:block fixed top-0 lg:left-0 left-0 z-40 ${
+        } lg:block fixed top-0 lg:left-0 left-0 z-50 ${
           !showSideBar ? "w-20" : "w-64"
         } h-screen  translate-x-0 transition-all duration-500 `}
         aria-label="Sidebar"
@@ -151,11 +151,19 @@ const Sidebar = ({ children }) => {
             {list.map((item, index) => {
               return (
                 <Link key={index} to={item.link}>
-                <li className={` font-medium font-primary flex text-xl my-8 items-center ${path === item.link ? " bg-white font-semibold text-primary rounded-lg py-3 px-2 items-center " : "text-[#fff]"}`}>
-                  <div className="mt-2 ml-2">{path === item.link ? item?.icon : item.activeicon}</div>
-                  <div className=" ml-2">{item.name}</div>
-                </li>
-              </Link>
+                  <li
+                    className={` font-medium font-primary flex text-xl my-8 items-center ${
+                      path === item.link
+                        ? " bg-white font-semibold text-primary rounded-lg py-3 px-2 items-center "
+                        : "text-[#fff]"
+                    }`}
+                  >
+                    <div className="mt-2 ml-2">
+                      {path === item.link ? item?.icon : item.activeicon}
+                    </div>
+                    <div className=" ml-2">{item.name}</div>
+                  </li>
+                </Link>
               );
             })}
           </ul>

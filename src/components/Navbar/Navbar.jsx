@@ -21,6 +21,7 @@ import { CiMenuKebab } from "react-icons/ci";
 
 const Navbar = () => {
   const authCtx = useSnapshot(auth);
+  const [showSideBar, setShowSideBar] = useState(false);
 
   const widgets = [
     {
@@ -55,9 +56,8 @@ const Navbar = () => {
   const [showUserModal, setShowUserModal] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
   const windowWidth = `${window.screen.width}px`; // Get the width of the window screen
-console.log(windowWidth);
 
-const styleWidth = `w-[${windowWidth}]`; // Construct Tailwind CSS class for width
+  const styleWidth = `w-[${windowWidth}]`; // Construct Tailwind CSS class for width
 
 return (
   <div className={`fixed top-0 w-[100vw] lg:w-[80vw] z-[10] bg-white`}>
@@ -70,14 +70,23 @@ return (
             <div
               className="-mt-8"
               onClick={() => {
-                state.mobileSidebar = true;
+                state.mobileSidebar = !state.mobileSidebar;
+                setShowSideBar(!showSideBar);
               }}
             >
               <div
                 className={` px-3 flex  rounded-full  justify-center translate-y-4`}
               >
-                <img src={hamBurger} alt={"hamburger-Icn"} />
-                <img src={hamBurger} alt={"hamburger-Icn"} />
+                <img
+                  src={hamBurger}
+                  alt={"hamburger-Icn"}
+                  className={`${showSideBar ? "rotate-0 " : "rotate-180"}`}
+                />
+                <img
+                  src={hamBurger}
+                  alt={"hamburger-Icn"}
+                  className={`${showSideBar ? "rotate-0 " : "rotate-180"}`}
+                />
               </div>
             </div>
           </div>

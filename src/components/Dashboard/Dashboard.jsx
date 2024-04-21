@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Driver, Earnings, PieChart2, Rides, Users } from "../SVGICONS/Icons";
 import { IoIosArrowDown, IoMdTrendingUp } from "react-icons/io";
 import BarChart from "../Charts/BarChart";
@@ -62,6 +62,7 @@ const Dashboard = () => {
       rating: 5,
     },
   ];
+  const [showTimeFrame, setShowTimeFrame] = useState(false);
   return (
     <div className="m-10">
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -119,8 +120,95 @@ const Dashboard = () => {
           <div className="text-xs sm:text-base text-gray-600">
             Mar 2022 - Oct 2022
           </div>
-          <div>
-            <IoIosArrowDown className="text-gray-800 text-sm md:text-base" />
+          <div className="relative">
+            <IoIosArrowDown
+              onClick={() => setShowTimeFrame(!showTimeFrame)}
+              className={`text-gray-800 text-sm md:text-base ${
+                showTimeFrame ? "rotate-180" : ""
+              } cursor-pointer`}
+            />
+            {showTimeFrame && (
+              <div className="absolute -bottom-56 z-50 -right-32 flex flex-col shadow-custom bg-white p-3 items-center justify-center w-auto rounded-md gap-4">
+                <h1 className="text-xl">Select time frame</h1>
+                <div className="flex gap-3 items-center">
+                  <h1 className="font-semibold w-10">From</h1>
+                  <select
+                    name="month"
+                    id=""
+                    className="bg-gray-100 px-3 py-1 rounded-3xl border-primary border-2 outline-none font-semibold font-OpenSans text-primary"
+                  >
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                  </select>
+                  <select
+                    name="year"
+                    id=""
+                    className="bg-gray-100 px-3 py-1 rounded-3xl border-primary border-2 font-semibold font-OpenSans text-gray-500 outline-none"
+                  >
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                  </select>
+                </div>
+                <div className="flex gap-3 items-center">
+                  <h1 className="font-semibold w-10">To</h1>
+                  <select
+                    name="month"
+                    id=""
+                    className="bg-gray-100 px-3 py-1 rounded-3xl border-primary outline-none border-2 font-semibold font-OpenSans text-primary"
+                  >
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                  </select>
+                  <select
+                    name="year"
+                    id=""
+                    className="bg-gray-100 px-3 py-1 rounded-3xl border-primary border-2 font-semibold font-OpenSans text-gray-500 outline-none"
+                  >
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                  </select>
+                </div>
+                <button className="p-2 bg-primary rounded-xl px-5 text-white font-semibold">
+                  Apply
+                </button>
+              </div>
+            )}
           </div>
         </div>
         <div className="flex  space-x-4 md:space-x-8 items-center ">
@@ -152,7 +240,7 @@ const Dashboard = () => {
           id="stats "
           className="border-2 my-4 border-gray-200 shadow-lg shadow-gray-200 p-4  rounded-md  "
         >
-          <div className=" flex items-center justify-between space-x-2 sm:space-x-4 md:space-x-8 font-Manrope">
+          <div className=" flex items-center justify-around space-x-2 sm:space-x-4 md:space-x-8 font-Manrope">
             <div className="text-gray-800 sm:text-lg md:text-xl font-medium">
               Other Stats
             </div>
@@ -198,10 +286,14 @@ const Dashboard = () => {
                 <div>43000</div>
               </div>
             </div>
+          </div>
+          <div className="flex flex-col mt-5 items-center border-2 border-gray-200 shadow-lg shadow-gray-200 p-2 px-8 rounded-md space-y-8 font-Manrope">
             <div className="flex flex-col  space-y-4 items-center">
               <div className="text-xl font-medium">Average Ratings</div>
 
-              <div><PieChart2/></div>
+              <div>
+                <PieChart2 />
+              </div>
               <div className="flex justify-between   w-[150px] ">
                 <div className="flex items-center">
                   <div className="flex flex-col -space-y-2 items-center">
