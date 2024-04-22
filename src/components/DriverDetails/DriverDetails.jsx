@@ -4,11 +4,13 @@ import { MdOutlineCancel } from "react-icons/md";
 import { HiMiniMagnifyingGlassPlus } from "react-icons/hi2";
 import profile from "../../assets/img/profile.jpeg";
 import SupportQuery from "../SupportQuery/SupportQuery";
+import Image from "../../assets/img/im.png";
+import Zoom from "../../assets/img/zoom.svg";
 const DriverDetails = () => {
   const ImagePopup = ({ imageUrl, onClose }) => {
     return (
       <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-75 z-50">
-        <div className="bg-white p-4 rounded-lg">
+        <div className="bg-gray-200 p-4 rounded-lg md:w-[616px] md:h-[387px] flex justify-center items-center border-4 border-primary border-solid">
           <img src={imageUrl} alt="Image" className="max-w-full max-h-full" />
           <button
             className="absolute top-4 right-4 text-white"
@@ -40,7 +42,7 @@ const DriverDetails = () => {
               name="rejection"
               id=""
               cols="40"
-              rows="8"
+              rows="6"
               className="border border-1 border-primary rounded-md outline-primary"
             ></textarea>
             <button className="px-3 py-2 bg-primary text-white rounded-md">
@@ -164,59 +166,47 @@ const DriverDetails = () => {
         <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-between p-7 gap-3">
           <div className="flex flex-col gap-3">
             <h1>ID Card Front Image</h1>
-            <div
-              className="bg-gray-200 overflow-hidden rounded-md cursor-pointer relative"
-              onClick={handleImageClick}
-            >
+            <div className=" overflow-hidden rounded-md relative cursor-pointer w-[327px] h-[124px] flex items-center justify-center border border-primary border-solid">
+              <img src={Image} alt="" className="w-[55px] h-[55px] " />
               <img
-                src={profile}
+                src={Zoom}
                 alt=""
-                className="w-[330px] h-[150px] object-contain"
+                className="absolute bottom-1 right-1"
+                onClick={() => setShowImagePopup(true)}
               />
-              <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-custom">
-                <HiMiniMagnifyingGlassPlus className="text-2xl text-gray-500" />
-              </div>
             </div>
             {showImagePopup && (
-              <ImagePopup imageUrl={profile} onClose={handleCloseImagePopup} />
+              <ImagePopup imageUrl={Image} onClose={handleCloseImagePopup} />
             )}
           </div>
           <div className="flex flex-col gap-3">
             <h1>ID Card Back Image</h1>
-            <div
-              className="bg-gray-200 overflow-hidden rounded-md cursor-pointer relative"
-              onClick={handleImageClick}
-            >
+            <div className=" overflow-hidden rounded-md relative cursor-pointer w-[327px] h-[124px] flex items-center justify-center border border-primary border-solid">
+              <img src={Image} alt="" className="w-[55px] h-[55px] " />
               <img
-                src={profile}
+                src={Zoom}
                 alt=""
-                className="w-[330px] h-[150px] object-contain"
+                className="absolute bottom-1 right-1"
+                onClick={() => setShowImagePopup(true)}
               />
-              <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-custom">
-                <HiMiniMagnifyingGlassPlus className="text-2xl text-gray-500" />
-              </div>
             </div>
             {showImagePopup && (
-              <ImagePopup imageUrl={profile} onClose={handleCloseImagePopup} />
+              <ImagePopup imageUrl={Image} onClose={handleCloseImagePopup} />
             )}
           </div>
           <div className="flex flex-col gap-3">
             <h1>Student ID Card Image</h1>
-            <div
-              className="bg-gray-200 overflow-hidden rounded-md cursor-pointer relative"
-              onClick={handleImageClick}
-            >
+            <div className=" overflow-hidden rounded-md relative cursor-pointer w-[327px] h-[124px] flex items-center justify-center border border-primary border-solid">
+              <img src={Image} alt="" className="w-[55px] h-[55px] " />
               <img
-                src={profile}
+                src={Zoom}
                 alt=""
-                className="w-[330px] h-[150px] object-contain"
+                className="absolute bottom-1 right-1"
+                onClick={() => setShowImagePopup(true)}
               />
-              <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-custom">
-                <HiMiniMagnifyingGlassPlus className="text-2xl text-gray-500" />
-              </div>
             </div>
             {showImagePopup && (
-              <ImagePopup imageUrl={profile} onClose={handleCloseImagePopup} />
+              <ImagePopup imageUrl={Image} onClose={handleCloseImagePopup} />
             )}
           </div>
         </div>
@@ -260,68 +250,53 @@ const DriverDetails = () => {
           <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-between p-7 gap-3">
             <div className="flex flex-col gap-3">
               <h1>Car Front Image</h1>
-              <div
-                className="bg-gray-200 overflow-hidden rounded-md cursor-pointer relative"
-                onClick={handleImageClick}
-              >
-                <img
-                  src={profile}
-                  alt=""
-                  className="w-[330px] h-[150px] object-contain"
-                />
-                <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-custom">
-                  <HiMiniMagnifyingGlassPlus className="text-2xl text-gray-500" />
-                </div>
+              <div className=" overflow-hidden rounded-md relative cursor-pointer w-[327px] h-[124px] flex items-center justify-center border border-primary border-solid">
+                <img src={Image} alt="" className="w-[55px] h-[55px] " />
+                <img src={Zoom} alt="" className="absolute bottom-1 right-1" />
               </div>
               {showImagePopup && (
-                <ImagePopup
-                  imageUrl={profile}
-                  onClose={handleCloseImagePopup}
-                />
+                <ImagePopup imageUrl={Image} onClose={handleCloseImagePopup} />
               )}
             </div>
             <div className="flex flex-col gap-3">
               <h1>Car Back Image</h1>
-              <div
-                className="bg-gray-200 overflow-hidden rounded-md cursor-pointer relative"
-                onClick={handleImageClick}
-              >
+              <div className=" overflow-hidden rounded-md relative cursor-pointer w-[327px] h-[124px] flex items-center justify-center border border-primary border-solid">
+                <img src={Image} alt="" className="w-[55px] h-[55px] " />
                 <img
-                  src={profile}
+                  src={Zoom}
                   alt=""
-                  className="w-[330px] h-[150px] object-contain"
+                  className="absolute bottom-1 right-1"
+                  onClick={() => setShowImagePopup(true)}
                 />
-                <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-custom">
-                  <HiMiniMagnifyingGlassPlus className="text-2xl text-gray-500" />
-                </div>
               </div>
               {showImagePopup && (
-                <ImagePopup
-                  imageUrl={profile}
-                  onClose={handleCloseImagePopup}
-                />
+                <ImagePopup imageUrl={Image} onClose={handleCloseImagePopup} />
               )}
             </div>
           </div>
         </div>
         <div className="flex flex-col shadow-custom py-4 px-5 bg-white rounded-md items-center gap-5 ">
           <h1>License Image</h1>
-          <div className="bg-gray-200 overflow-hidden rounded-md cursor-pointer">
+          <div className=" overflow-hidden rounded-md relative cursor-pointer w-[327px] h-[124px] flex items-center justify-center border border-primary border-solid">
+            <img src={Image} alt="" className="w-[55px] h-[55px] " />
             <img
-              src={profile}
+              src={Zoom}
               alt=""
-              className="w-[330px] h-[150px] object-contain"
+              className="absolute bottom-1 right-1"
+              onClick={() => setShowImagePopup(true)}
             />
           </div>
           <h1>
             Insurance: <span className="text-gray-400 ml-3">Yes</span>
           </h1>
           <h1>Insurance Document Image</h1>
-          <div className="bg-gray-200 overflow-hidden rounded-md cursor-pointer">
+          <div className=" overflow-hidden rounded-md relative cursor-pointer w-[327px] h-[124px] flex items-center justify-center border border-primary border-solid">
+            <img src={Image} alt="" className="w-[55px] h-[55px] " />
             <img
-              src={profile}
+              src={Zoom}
               alt=""
-              className="w-[330px] h-[150px] object-contain"
+              className="absolute bottom-1 right-1"
+              onClick={() => setShowImagePopup(true)}
             />
           </div>
         </div>

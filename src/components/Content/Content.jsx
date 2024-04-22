@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { data } from "../../../data";
 import { FaPlusCircle, FaSearch } from "react-icons/fa";
-import { FaCar, FaTrash, FaUser } from "react-icons/fa6";
-import { FaPen } from "react-icons/fa6";
+import Delete from "../../assets/icons/Delete.png";
+import Pen from "../../assets/img/Pen.png";
+import { FaCar, FaPlus, FaTrash, FaUser } from "react-icons/fa6";
 import SafetyTip from "../SafetyTip/SafetyTip";
 
 const Content = () => {
@@ -21,73 +22,54 @@ const Content = () => {
             Create New Legal Document
           </h1>
           <form action="" className="flex flex-col w-full gap-3">
-            <label htmlFor="select" className="text-primary font-bold">
+            <label htmlFor="select" className=" font-bold">
               Select Audience:
             </label>
             <div className="flex gap-3 flex-col md:flex-row">
               <div className="flex px-3 py-2 bg-gray-100 rounded-3xl border-2 border-solid border-primary gap-2 items-center justify-between flex-1">
                 <FaCar />
-                <span>Driver</span>
+                <span className="font-semibold">Driver</span>
                 <input type="radio" name="audience" id="driver" />
               </div>
               <div className="flex px-3 py-2 bg-gray-100 rounded-3xl border-2 border-solid border-primary gap-2 items-center justify-between flex-1">
                 <FaUser />
-                <span>Users</span>
+                <span className="font-semibold">Users</span>
                 <input type="radio" name="audience" id="user" />
               </div>
               <div className="flex px-3 py-2 bg-gray-100 rounded-3xl border-2 border-solid border-primary gap-2 items-center justify-between flex-1">
                 <FaUser />
-                <span>Everyone</span>
+                <span className="font-semibold">Everyone</span>
                 <input type="radio" name="audience" id="everyone" />
               </div>
             </div>
-            <label htmlFor="type" className="text-primary font-bold">
+            <label htmlFor="type" className=" font-bold">
               Choose Legal Document Type
             </label>
             <div className="flex gap-3">
               <div className="flex px-3 py-2 bg-gray-100 rounded-3xl border-2 border-solid border-primary gap-2 items-center">
-                <span>Terms & Conditions</span>
+                <span className="font-semibold">Terms & Conditions</span>
                 <input type="radio" name="type" id="terms" />
               </div>
               <div className="flex px-3 py-2 bg-gray-100 rounded-3xl border-2 border-solid border-primary gap-2 items-center">
-                <span>Privacy Policy</span>
+                <span className="font-semibold">Privacy Policy</span>
                 <input type="radio" name="type" id="privacy" />
               </div>
             </div>
 
             <label className="flex items-center justify-between">
-              <span className="text-primary font-bold">
-                Upload Image:(Optional)
-              </span>
-              <input
-                type="file"
-                accept="image/*"
-                className="hidden"
-                onChange={(e) => console.log(e.target.files[0])} // Handle file selection
-              />
-              <div className="mt-2 flex items-center justify-center bg-gray-100 border border-gray-300 rounded-md cursor-pointer p-1">
-                <svg
-                  className="w-6 h-6 text-gray-600"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M12 5v14m-4-4H8a2 2 0 012-2V9a2 2 0 00-2-2H6V5h2zm10 0v14m-4-4h2a2 2 0 00-2-2V9a2 2 0 012-2h.5V5h-.5z"></path>
-                </svg>
-                <span className="ml-2 text-gray-600">Select an image</span>
+              <span className=" font-bold">Upload Image:(Optional)</span>
+              <div className="bg-primary p-2 rounded-full">
+                <FaPlus className="text-white bg-primary " />
               </div>
             </label>
-            <label htmlFor="promotion" className="text-primary font-bold">
+            <label htmlFor="promotion" className=" font-bold">
               What do you want to promote?
             </label>
             <textarea
               name="promotion"
               id=""
-              cols="30"
-              rows="10"
+              cols="10"
+              rows="4"
               className="border border-solid border-gray-300 rounded-sm p-3"
               placeholder="Note"
             ></textarea>
@@ -103,60 +85,41 @@ const Content = () => {
             Create New Safety Tip
           </h1>
           <form action="" className="flex flex-col w-full gap-3">
-            <label htmlFor="select" className="text-primary font-bold">
+            <label htmlFor="select" className=" font-bold">
               Select Audience:
             </label>
             <div className="flex gap-3 flex-col md:flex-row">
               <div className="flex px-3 py-2 bg-gray-100 rounded-3xl border-2 border-solid border-primary gap-2 items-center justify-between flex-1">
                 <FaCar />
-                <span>Driver</span>
+                <span className="font-semibold">Driver</span>
                 <input type="radio" name="audience" id="driver" />
               </div>
               <div className="flex px-3 py-2 bg-gray-100 rounded-3xl border-2 border-solid border-primary gap-2 items-center justify-between flex-1">
                 <FaUser />
-                <span>Users</span>
+                <span className="font-semibold">Users</span>
                 <input type="radio" name="audience" id="user" />
               </div>
               <div className="flex px-3 py-2 bg-gray-100 rounded-3xl border-2 border-solid border-primary gap-2 items-center justify-between flex-1">
                 <FaUser />
-                <span>Everyone</span>
+                <span className="font-semibold">Everyone</span>
                 <input type="radio" name="audience" id="everyone" />
               </div>
             </div>
 
             <label className="flex items-center justify-between">
-              <span className="text-primary font-bold">
-                Upload Image:(Optional)
-              </span>
-              <input
-                type="file"
-                accept="image/*"
-                className="hidden"
-                onChange={(e) => console.log(e.target.files[0])} // Handle file selection
-              />
-              <div className="mt-2 flex items-center justify-center bg-gray-100 border border-gray-300 rounded-md cursor-pointer p-1">
-                <svg
-                  className="w-6 h-6 text-gray-600"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M12 5v14m-4-4H8a2 2 0 012-2V9a2 2 0 00-2-2H6V5h2zm10 0v14m-4-4h2a2 2 0 00-2-2V9a2 2 0 012-2h.5V5h-.5z"></path>
-                </svg>
-                <span className="ml-2 text-gray-600">Select an image</span>
+              <span className=" font-bold">Upload Image:(Optional)</span>
+              <div className="bg-primary p-2 rounded-full">
+                <FaPlus className="text-white bg-primary " />
               </div>
             </label>
-            <label htmlFor="promotion" className="text-primary font-bold">
+            <label htmlFor="promotion" className=" font-bold">
               What do you want to promote?
             </label>
             <textarea
               name="promotion"
               id=""
-              cols="30"
-              rows="10"
+              cols="10"
+              rows="4"
               className="border border-solid border-gray-300 rounded-sm p-3"
               placeholder="Note"
             ></textarea>
@@ -172,7 +135,7 @@ const Content = () => {
           onClick={() => setCurrent(1)}
           className={`text-xl font-semibold ${
             current === 1
-              ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+              ? " text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
               : "text-gray-500"
           } cursor-pointer`}
         >
@@ -182,7 +145,7 @@ const Content = () => {
           onClick={() => setCurrent(2)}
           className={`text-xl font-semibold ${
             current === 2
-              ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+              ? " text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
               : "text-gray-500"
           } cursor-pointer`}
         >
@@ -192,7 +155,7 @@ const Content = () => {
           onClick={() => setCurrent(3)}
           className={`text-xl font-semibold ${
             current === 3
-              ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+              ? " text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
               : "text-gray-500"
           } cursor-pointer`}
         >
@@ -262,8 +225,8 @@ const Content = () => {
                     September 9 2023
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap flex gap-3">
-                    <FaTrash className="text-primary" />
-                    <FaPen className="text-primary" />
+                    <img src={Delete} alt="" />
+                    <img src={Pen} alt="" />
                   </td>
                 </tr>
                 <tr>
@@ -278,8 +241,8 @@ const Content = () => {
                     September 9 2023
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap flex gap-3">
-                    <FaTrash className="text-primary" />
-                    <FaPen className="text-primary" />
+                    <img src={Delete} alt="" />
+                    <img src={Pen} alt="" />
                   </td>
                 </tr>
                 <tr>
@@ -294,8 +257,8 @@ const Content = () => {
                     September 9 2023
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap flex gap-3">
-                    <FaTrash className="text-primary" />
-                    <FaPen className="text-primary" />
+                    <img src={Delete} alt="" />
+                    <img src={Pen} alt="" />
                   </td>
                 </tr>
                 <tr>
@@ -310,8 +273,8 @@ const Content = () => {
                     September 9 2023
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap flex gap-3">
-                    <FaTrash className="text-primary" />
-                    <FaPen className="text-primary" />
+                    <img src={Delete} alt="" />
+                    <img src={Pen} alt="" />
                   </td>
                 </tr>
                 <tr>
@@ -491,8 +454,8 @@ const Content = () => {
                     September 9 2023
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap flex gap-3">
-                    <FaTrash className="text-primary" />
-                    <FaPen className="text-primary" />
+                    <img src={Delete} alt="" />
+                    <img src={Pen} alt="" />
                   </td>
                 </tr>
                 <tr>
@@ -507,8 +470,8 @@ const Content = () => {
                     September 9 2023
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap flex gap-3">
-                    <FaTrash className="text-primary" />
-                    <FaPen className="text-primary" />
+                    <img src={Delete} alt="" />
+                    <img src={Pen} alt="" />
                   </td>
                 </tr>
                 <tr>
@@ -523,8 +486,8 @@ const Content = () => {
                     September 9 2023
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap flex gap-3">
-                    <FaTrash className="text-primary" />
-                    <FaPen className="text-primary" />
+                    <img src={Delete} alt="" />
+                    <img src={Pen} alt="" />
                   </td>
                 </tr>
                 <tr>
@@ -539,8 +502,8 @@ const Content = () => {
                     September 9 2023
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap flex gap-3">
-                    <FaTrash className="text-primary" />
-                    <FaPen className="text-primary" />
+                    <img src={Delete} alt="" />
+                    <img src={Pen} alt="" />
                   </td>
                 </tr>
                 <tr>

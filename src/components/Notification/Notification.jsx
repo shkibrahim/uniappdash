@@ -3,6 +3,8 @@ import { FaCar, FaChevronDown, FaUser, FaSearch } from "react-icons/fa";
 import Profile from "../../assets/img/profile.jpeg";
 import Email from "../../assets/img/Email.png";
 import Email1 from "../../assets/img/Email1.png";
+import Image from "../../assets/img/im.png";
+import Zoom from "../../assets/img/zoom.svg";
 import NewNotification from "../NewNotification/NewNotification";
 import { FaLocationArrow, FaPlus } from "react-icons/fa6";
 import { Filter } from "../SVGICONS/Icons";
@@ -43,25 +45,14 @@ const Notification = () => {
               <span className="text-primary font-semibold text-xs">
                 Image size upto 5MB
               </span>
-              <input
-                type="file"
-                accept="image/*"
-                className="hidden"
-                onChange={(e) => console.log(e.target.files[0])} // Handle file selection
-              />
-              <div className="mt-2 flex items-center justify-center bg-gray-100 border border-gray-300 rounded-md cursor-pointer p-1">
-                <svg
-                  className="w-6 h-6 text-gray-600"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M12 5v14m-4-4H8a2 2 0 012-2V9a2 2 0 00-2-2H6V5h2zm10 0v14m-4-4h2a2 2 0 00-2-2V9a2 2 0 012-2h.5V5h-.5z"></path>
-                </svg>
-                <span className="ml-2 text-gray-600">Select an image</span>
+              <div className=" overflow-hidden rounded-md relative cursor-pointer w-[327px] h-[124px] flex items-center justify-center border border-primary border-solid mx-auto">
+                <img src={Image} alt="" className="w-[55px] h-[55px] " />
+                <img
+                  src={Zoom}
+                  alt=""
+                  className="absolute bottom-1 right-1"
+                  onClick={() => setShowImagePopup(true)}
+                />
               </div>
             </label>
             <div className="flex items-center justify-between">
@@ -140,25 +131,14 @@ const Notification = () => {
               <span className="text-primary font-semibold text-xs">
                 Image size upto 5MB
               </span>
-              <input
-                type="file"
-                accept="image/*"
-                className="hidden"
-                onChange={(e) => console.log(e.target.files[0])} // Handle file selection
-              />
-              <div className="mt-2 flex items-center justify-center bg-gray-100 border border-gray-300 rounded-md cursor-pointer p-1">
-                <svg
-                  className="w-6 h-6 text-gray-600"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M12 5v14m-4-4H8a2 2 0 012-2V9a2 2 0 00-2-2H6V5h2zm10 0v14m-4-4h2a2 2 0 00-2-2V9a2 2 0 012-2h.5V5h-.5z"></path>
-                </svg>
-                <span className="ml-2 text-gray-600">Select an image</span>
+              <div className=" overflow-hidden rounded-md relative cursor-pointer w-[327px] h-[124px] flex items-center justify-center border border-primary border-solid mx-auto">
+                <img src={Image} alt="" className="w-[55px] h-[55px] " />
+                <img
+                  src={Zoom}
+                  alt=""
+                  className="absolute bottom-1 right-1"
+                  onClick={() => setShowImagePopup(true)}
+                />
               </div>
             </label>
             <div className="flex items-center justify-between">
@@ -214,7 +194,7 @@ const Notification = () => {
                 onClick={() => setCurrent(1)}
                 className={`text-xl font-semibold ${
                   current === 1
-                    ? "text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                    ? " underline-offset-[10px] decoration-primary decoration-[4px] underline"
                     : "text-gray-500"
                 } cursor-pointer`}
               >
@@ -224,7 +204,7 @@ const Notification = () => {
                 onClick={() => setCurrent(2)}
                 className={`text-xl font-semibold ${
                   current === 2
-                    ? "text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                    ? " underline-offset-[10px] decoration-primary decoration-[4px] underline"
                     : "text-gray-500"
                 } cursor-pointer`}
               >
@@ -364,7 +344,7 @@ const Notification = () => {
               </button>
             </div>
             <div className="flex justify-around items-center">
-              <h1 className="text-xl font-semibold text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline">
+              <h1 className="text-xl font-semibold underline-offset-[10px] decoration-primary decoration-[4px] underline">
                 Drafts
               </h1>
               <h1 className="text-xl font-semibold">Scheduled</h1>
@@ -439,7 +419,7 @@ const Notification = () => {
               <h1
                 onClick={() => setCurrent(1)}
                 className={`text-xl font-semibold ${
-                  current === 1 ? "text-primary " : "text-gray-500"
+                  current === 1 ? "" : "text-gray-500"
                 } cursor-pointer`}
               >
                 Notification
@@ -448,7 +428,7 @@ const Notification = () => {
                 onClick={() => setCurrent(2)}
                 className={`text-xl font-semibold ${
                   current === 2
-                    ? "text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                    ? " underline-offset-[10px] decoration-primary decoration-[4px] underline"
                     : "text-gray-400"
                 } cursor-pointer`}
               >
@@ -595,7 +575,7 @@ const Notification = () => {
               </button>
             </div>
             <div className="flex justify-around items-center">
-              <h1 className="text-xl font-semibold text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline">
+              <h1 className="text-xl font-semibold  underline-offset-[10px] decoration-primary decoration-[4px] underline">
                 Drafts
               </h1>
               <h1 className="text-xl font-semibold">Scheduled</h1>

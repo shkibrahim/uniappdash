@@ -56,7 +56,7 @@ const DriverScheduledCards = ({ status, current, onClick }) => {
           )}
         </div>
         <div className="flex flex-col text-white ml-4 gap-2 relative">
-          <div className="absolute top-[15px] md:top-[19px] left-[7px] bg-white h-4 w-[0.5px]"></div>
+          <div className="absolute top-[19px] md:top-[19px] left-[7px] bg-white h-4 w-[0.5px]"></div>
           <div className="flex items-center gap-2 font-opensans">
             <FaRegCircle className="text-white -translate-y-2" />
 

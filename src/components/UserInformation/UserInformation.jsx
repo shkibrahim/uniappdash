@@ -9,6 +9,8 @@ import {
   FaPhone,
   FaStar,
 } from "react-icons/fa6";
+import Image from "../../assets/img/im.png";
+import Zoom from "../../assets/img/zoom.svg";
 import { Filter } from "../SVGICONS/Icons";
 import profile from "../../assets/img/profile.jpeg";
 import { MdBarChart, MdOutlineCancel } from "react-icons/md";
@@ -26,7 +28,7 @@ const UserInformation = () => {
   const EditOptions = () => {
     return (
       <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-75 z-50 overflow-auto">
-        <div className="bg-white p-4 px-6 rounded-lg relative flex flex-col gap-3 w-[350px] mt-16 ">
+        <div className="bg-white p-4 px-6 rounded-lg relative flex flex-col gap-3 w-[350px] mt-16 md:w-[441px]">
           <button
             onClick={() => setShowOptions(false)}
             className="absolute top-4 right-4 text-black"
@@ -73,25 +75,14 @@ const UserInformation = () => {
               <span className="text-primary font-semibold text-xs">
                 Image size upto 5MB
               </span>
-              <input
-                type="file"
-                accept="image/*"
-                className="hidden"
-                onChange={(e) => console.log(e.target.files[0])} // Handle file selection
-              />
-              <div className="mt-2 flex items-center justify-center bg-gray-100 border border-gray-300 rounded-md cursor-pointer p-1">
-                <svg
-                  className="w-6 h-6 text-gray-600"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M12 5v14m-4-4H8a2 2 0 012-2V9a2 2 0 00-2-2H6V5h2zm10 0v14m-4-4h2a2 2 0 00-2-2V9a2 2 0 012-2h.5V5h-.5z"></path>
-                </svg>
-                <span className="ml-2 text-gray-600">Select an image</span>
+              <div className=" overflow-hidden rounded-md relative cursor-pointer w-[327px] h-[124px] flex items-center justify-center border border-primary border-solid mx-auto">
+                <img src={Image} alt="" className="w-[55px] h-[55px] " />
+                <img
+                  src={Zoom}
+                  alt=""
+                  className="absolute bottom-1 right-1"
+                  onClick={() => setShowImagePopup(true)}
+                />
               </div>
             </label>
             <label htmlFor="date" className="text-primary font-bold">

@@ -158,7 +158,10 @@ const Rider = () => {
       <div className="grid md:grid-cols-[1fr_3fr] md:gap-x-8 mt-10">
         <section className="mb-10 md:mb-0" id="1">
           {showRideDetails && (
-            <RideDetails setTrigger={setShowRideDetails} flag={showRideDetails} />
+            <RideDetails
+              setTrigger={setShowRideDetails}
+              flag={showRideDetails}
+            />
           )}
           <div className="mb-8">
             <div className="flex items-center justify-between mx-4 md:mx-0 ">
@@ -196,7 +199,6 @@ const Rider = () => {
                   </div>
                 )}
               </div>
-
             </div>
           </div>
           <div>
@@ -222,10 +224,14 @@ const Rider = () => {
                         <div className="flex items-center justify-between">
                           <div className="flex items-center  space-x-1">
                             <div className=" bg-green-600 w-4 h-4 rounded-full" />
-                            <div className="text-[#1A1919] font-primary">Total Hired</div>
+                            <div className="text-[#1A1919] font-primary">
+                              Total Hired
+                            </div>
                           </div>
                           <div className="flex items-center space-x-2">
-                            <div className="text-[#1A1919]  font-inter">54%</div>
+                            <div className="text-[#1A1919]  font-inter">
+                              54%
+                            </div>
                             <div>
                               <FaArrowUpLong className="text-green-500" />
                             </div>
@@ -234,10 +240,14 @@ const Rider = () => {
                         <div className="flex items-center justify-between">
                           <div className="flex items-center  space-x-1">
                             <div className=" bg-red-600  w-4 h-4 rounded-full" />
-                            <div className="text-[#1A1919] font-primary">Total Canceled</div>
+                            <div className="text-[#1A1919] font-primary">
+                              Total Canceled
+                            </div>
                           </div>
                           <div className="flex items-center space-x-2">
-                            <div className="text-[#1A1919]  font-inter">20%</div>
+                            <div className="text-[#1A1919]  font-inter">
+                              20%
+                            </div>
                             <div>
                               <FaArrowUpLong className="text-red-500" />
                             </div>
@@ -246,10 +256,14 @@ const Rider = () => {
                         <div className="flex items-center justify-between">
                           <div className="flex items-center  space-x-1">
                             <div className=" bg-primary w-4 h-4 rounded-full" />
-                            <div className="text-[#1A1919] font-primary">Total Pending</div>
+                            <div className="text-[#1A1919] font-primary">
+                              Total Pending
+                            </div>
                           </div>
                           <div className="flex items-center space-x-2">
-                            <div className="text-[#1A1919]  font-inter">21%</div>
+                            <div className="text-[#1A1919]  font-inter">
+                              21%
+                            </div>
                             <div>
                               <FaArrowDownLong className="text-primary" />
                             </div>
@@ -267,15 +281,15 @@ const Rider = () => {
                     <div className="text-[#656575] font-inter font-medium text-lg">
                       Income
                     </div>
-                    <div className="  px-2 text-[#656575] text-sm ">
-                      Today
-                    </div>
+                    <div className="  px-2 text-[#656575] text-sm ">Today</div>
                   </div>
                   <div>
                     <div>
                       <div className="flex flex-col space-y-2">
                         <div className="flex items-center justify-between">
-                          <div className="sm:text-xl   md:text-2xl font-semibold text-[#01150C] font-inter">$ 9460.00</div>
+                          <div className="sm:text-xl   md:text-2xl font-semibold text-[#01150C] font-inter">
+                            $ 9460.00
+                          </div>
                           <div className="flex items-center">
                             <FaArrowDownLong className="text-red-500" />
                             <div className="text-red-500 font-inter">1.5%</div>
@@ -288,7 +302,10 @@ const Rider = () => {
                           <div className="text-[#525256] text-sm">
                             Last week Income
                           </div>
-                          <div className="text-[#525256] font-inter  "> $25658.00</div>
+                          <div className="text-[#525256] font-inter  ">
+                            {" "}
+                            $25658.00
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -302,16 +319,16 @@ const Rider = () => {
                     <div className="text-[#656575] font-inter font-medium text-lg">
                       Active Drivers
                     </div>
-                    <div className="   text-[#656575] text-sm ">
-                      Today
-                    </div>
+                    <div className="   text-[#656575] text-sm ">Today</div>
                   </div>
                   <div>
                     <div>
                       <div className="flex flex-col space-y-2">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-4">
-                            <div className=" text-2xl font-semibold font-inter text-[#01150C]">340</div>
+                            <div className=" text-2xl font-semibold font-inter text-[#01150C]">
+                              340
+                            </div>
                             <div>
                               <Active />
                             </div>
@@ -328,7 +345,9 @@ const Rider = () => {
                           <div className="text-[#525256]  font-inter text-sm">
                             Already booked
                           </div>
-                          <div className="font-inter text-[#525256] text-sm">120</div>
+                          <div className="font-inter text-[#525256] text-sm">
+                            120
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -340,8 +359,6 @@ const Rider = () => {
         </section>
         <section id="2">
           <div className="flex justify-between  items-center ">
-
-
             <div className=" sm:w-[350px] w-[200px] md:w-[400px]">
               <div className="relative w-full">
                 <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -363,7 +380,9 @@ const Rider = () => {
               <div className="flex items-center space-x-2">
                 <Filter />
                 <div className="flex items-center space-x-2">
-                  <div className=" text-[#343A40] font-primary sm:text-base text-sm font-semibold" >Sort By</div>
+                  <div className=" text-[#343A40] font-primary sm:text-base text-sm font-semibold">
+                    Sort By
+                  </div>
                   <div>
                     <IoMdArrowDropdown />
                   </div>
@@ -373,15 +392,14 @@ const Rider = () => {
           </div>
 
           <div className=" my-6 sm:my-8 md:my-10   ">
-
             <div className=" bg-white rounded-xl shadow-md ">
               <div className="text-center  text-[#1A1919] font-primary text-lg font-semibold my-10">
                 Live Car Status
               </div>
               <div>
-                <div>
-                  <div className="relative overflow-x-auto w-[100vw] md:w-auto  sm:rounded-lg">
-                    <table className=" overflow-auto  text-sm text-left rtl:text-right ">
+                <div className="">
+                  <div className="relative overflow-x-auto w-[100vw] md:w-full  sm:rounded-lg">
+                    <table className=" overflow-auto  text-sm text-left rtl:text-right w-full">
                       <thead className="  ">
                         <tr className=" font-normal font-primary">
                           <th scope="col" className="px-6 py-3 ">
@@ -412,9 +430,7 @@ const Rider = () => {
                               className="border-b  font-inter text-[#1A1919]"
                             >
                               <td className="px-6 py-4">{index + 1}</td>
-                              <td className="px-6 py-4 ">
-                                {item?.carno}
-                              </td>
+                              <td className="px-6 py-4 ">{item?.carno}</td>
                               <td className="px-6 py-4">
                                 <div className="flex items-center space-x-2">
                                   <div>{item?.driver?.name}</div>
@@ -431,11 +447,16 @@ const Rider = () => {
                                 <div>
                                   <Active />
                                 </div>
-                                <div className="text-[#656575] font-light">{item?.status}</div>
+                                <div className="text-[#656575] font-light">
+                                  {item?.status}
+                                </div>
                               </td>
                               <td className="px-6 py-4 ">$ {item?.earnings}</td>
                               <td className="px-6 py-4 ">
-                                <div className=" cursor-pointer" onClick={() => setShowRideDetails(true)}>
+                                <div
+                                  className=" cursor-pointer"
+                                  onClick={() => setShowRideDetails(true)}
+                                >
                                   <ActionIcon />
                                 </div>
                               </td>
@@ -446,15 +467,14 @@ const Rider = () => {
                     </table>
                   </div>
                 </div>
-
               </div>
             </div>
             <div id="PAGINATION" className="  mt-10 ">
               <div className="flex items-center flex-wrap justify-between">
                 <div>
                   <span className="text-sm text-[#48525B] font-[Poppins] ">
-                    Showing data<span className=" ml-2  ">1</span>{" "}
-                    to <span className=" ">10</span> of{" "}
+                    Showing data<span className=" ml-2  ">1</span> to{" "}
+                    <span className=" ">10</span> of{" "}
                     <span className="">100</span> entries
                   </span>
                 </div>
@@ -554,7 +574,6 @@ const Rider = () => {
           </div>
         </section>
       </div>
-
     </main>
   );
 };

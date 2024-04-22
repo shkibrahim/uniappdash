@@ -10,6 +10,8 @@ import Language from "../Language/Language";
 import Location from "../Location/Location";
 import Content from "../Content/Content";
 import { Filter } from "../SVGICONS/Icons";
+import Delete from "../../assets/icons/Delete.png";
+import Pen from "../../assets/img/Pen.png";
 
 const Settings = () => {
   const [active, setActive] = useState(0);
@@ -28,7 +30,7 @@ const Settings = () => {
             href="#"
             className={`${
               active === 0
-                ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                ? " text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
                 : "text-gray-400"
             } `}
             onClick={() => setActive(0)}
@@ -39,7 +41,7 @@ const Settings = () => {
             href="#"
             className={`${
               active === 1
-                ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                ? " text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
                 : "text-gray-400"
             }`}
             onClick={() => setActive(1)}
@@ -50,7 +52,7 @@ const Settings = () => {
             href="#"
             className={`${
               active === 2
-                ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                ? " text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
                 : "text-gray-400"
             }`}
             onClick={() => setActive(2)}
@@ -61,7 +63,7 @@ const Settings = () => {
             href="#"
             className={`${
               active === 3
-                ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                ? " text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
                 : "text-gray-400"
             }`}
             onClick={() => setActive(3)}
@@ -72,7 +74,7 @@ const Settings = () => {
             href="#"
             className={`${
               active === 4
-                ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                ? " text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
                 : "text-gray-400"
             }`}
             onClick={() => setActive(4)}
@@ -83,7 +85,7 @@ const Settings = () => {
             href="#"
             className={`${
               active === 5
-                ? "text-primary text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                ? " text-2xl underline-offset-[10px] decoration-primary decoration-[4px] underline"
                 : "text-gray-400"
             }`}
             onClick={() => setActive(5)}
@@ -183,15 +185,18 @@ const Settings = () => {
                       <td className="px-6 py-4 whitespace-nowrap">Admin</td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex gap-5">
-                          <FaTrash
-                            className="text-gray-400 cursor-pointer"
+                          <img
+                            src={Delete}
+                            alt=""
                             onClick={() => setConfirmDelete(true)}
                           />
                           <div className="relative">
-                            <FaPen
-                              className="text-gray-400 cursor-pointer"
+                            <img
+                              src={Pen}
+                              alt=""
                               onClick={() => setShowMenu(!showMenu)}
                             />
+
                             {showMenu && (
                               <div className="absolute blur-0 right-0 bg-white shadow-custom rounded-md flex flex-col gap-2 p-2">
                                 <h2>Super Admin</h2>

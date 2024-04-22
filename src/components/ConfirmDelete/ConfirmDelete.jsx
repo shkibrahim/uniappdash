@@ -2,7 +2,7 @@ import React from "react";
 
 const ConfirmDelete = ({ setTrigger }) => {
   return (
-    <div className="h-screen w-full bg-black bg-opacity-75 fixed top-0 left-0 flex items-center justify-center">
+    <div className="h-screen w-full bg-black bg-opacity-75 fixed top-0 left-0 flex items-center justify-center z-50">
       <div className="flex items-center justify-center bg-white py-4 px-6 w-[500px] relative flex-col rounded-md gap-8">
         <div
           className="absolute top-0 right-5 text-3xl cursor-pointer"
