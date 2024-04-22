@@ -17,7 +17,7 @@ const Users = () => {
           </div>
         </div>
         <div>
-          <div className="w-[350px] md:w-[400px]">
+        <div className="w-[350px] md:w-[400px]">
             <div className="relative w-full">
               <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                 <IoSearchOutline className=" text-gray-900 text-xl" />

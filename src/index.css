@@ -41,3 +41,9 @@
     @apply hidden !important
   }
   
+  .action1{
+    margin-left: -11.5px;
+  }
+  .action2{
+    margin-left: -7.5px;
+  }
