@@ -20,15 +20,14 @@ const Reports = () => {
           <div className="text-gray-500 text-xl font-semibold">Reports</div>
         </div>
         <div>
-        <div className="w-[350px] md:w-[400px]">
+          <div className="w-[350px] md:w-[400px]">
             <div className="relative w-full">
               <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                 <IoSearchOutline className=" text-gray-900 text-xl" />
               </div>
               <input
                 type="text"
-                id="voice-search"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5  "
+                className="bg-white  shadow-md    text-sm  text-[#48525B] rounded-xl  placeholder:text-[#AFAFAF] focus:outline-none  block w-full ps-10 p-2.5  "
                 placeholder="Search ..."
                 required
               />

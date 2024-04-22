@@ -79,8 +79,7 @@ const Driver = () => {
               </div>
               <input
                 type="text"
-                id="voice-search"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5  "
+                className="bg-white  shadow-md    text-sm  text-[#48525B] rounded-xl  placeholder:text-[#AFAFAF] focus:outline-none  block w-full ps-10 p-2.5  "
                 placeholder="Search ..."
                 required
               />

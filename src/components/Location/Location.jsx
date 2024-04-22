@@ -19,20 +19,20 @@ const Location = () => {
       {flag && <AddLocation setTrigger={setFlag} />}
       <div className="flex flex-col md:flex-row w-full shadow-custom rounded-md p-6 bg-white items-center gap-5 md:gap-14 mt-10 mb-5 ">
         <h2>Select Country</h2>
-        <div className="flex items-center ml-4 space-x-2 bg-[#D8D8D8] p-4 px-6 rounded-full border-2 border-primary shadow-md ">
-              <div className="flex cursor-pointer space-x-4 items-center ">
-                <img
-                  src="https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg"
-                  alt="usa-flag"
-                  className=" rounded-full w-8 h-8"
-                />
-                <div className=" font-medium">US</div>
-              </div>
-              <div>
-                <IoIosArrowDown className=" text-gray-500 font-semibold text-2xl" />
-              </div>
-              <div></div>
-            </div>
+        <div className="flex items-center ml-4 space-x-2 bg-[#D8D8D8] p-2 px-1 rounded-full border-2 border-primary shadow-md ">
+          <div className="flex cursor-pointer space-x-2 items-center ">
+            <img
+              src="https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg"
+              alt="usa-flag"
+              className=" rounded-full w-5 h-5"
+            />
+            <div className=" font-medium">US</div>
+          </div>
+          <div>
+            <IoIosArrowDown className=" text-gray-500 font-semibold text-2xl" />
+          </div>
+          <div></div>
+        </div>
         {/* <select
           name="country"
           id=""

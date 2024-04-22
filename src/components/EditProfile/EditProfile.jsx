@@ -67,6 +67,7 @@ const EditProfile = ({ trigger, setTrigger }) => {
             className="border-2 border-[#FFB000] outline-[#FFB000] rounded-sm py-3 px-5 my-2"
             required
           >
+            <option value="">Select Country</option>
             {data.map((item, index) => {
               return (
                 <option key={index} value={item.name}>

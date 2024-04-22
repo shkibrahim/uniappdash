@@ -79,57 +79,57 @@ const DriverDetails = () => {
               <table className="min-w-full">
                 <tbody className="divide-y divide-gray-200">
                   <tr>
-                    <td className="px-4 py-2 font-semibold text-gray-600">
+                    <td className="px-2 py-1 font-semibold text-gray-600">
                       Name
                     </td>
-                    <td className="px-4 py-2 text-gray-500">John Doe</td>
+                    <td className="px-2 py-1 text-gray-500">John Doe</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-2 font-semibold text-gray-600">
+                    <td className="px-2 py-1 font-semibold text-gray-600">
                       Email
                     </td>
-                    <td className="px-4 py-2 text-gray-500">
+                    <td className="px-2 py-1 text-gray-500">
                       john.doe@example.com
                     </td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-2 font-semibold text-gray-600">
+                    <td className="px-2 py-1 font-semibold text-gray-600">
                       Date of Birth
                     </td>
-                    <td className="px-4 py-2 text-gray-500">24-06-2000</td>
+                    <td className="px-2 py-1 text-gray-500">24-06-2000</td>
                   </tr>
 
                   <tr>
-                    <td className="px-4 py-2 font-semibold text-gray-600">
+                    <td className="px-2 py-1 font-semibold text-gray-600">
                       Phone Number
                     </td>
-                    <td className="px-4 py-2 text-gray-500">
+                    <td className="px-2 py-1 text-gray-500">
                       (99) 436-46-4666
                     </td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-2 font-semibold text-gray-600">
+                    <td className="px-2 py-1 font-semibold text-gray-600">
                       Gender
                     </td>
-                    <td className="px-4 py-2 text-gray-500">Male</td>
+                    <td className="px-2 py-1 text-gray-500">Male</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-2 font-semibold text-gray-600">
+                    <td className="px-2 py-1 font-semibold text-gray-600">
                       Student
                     </td>
-                    <td className="px-4 py-2 text-gray-500">Yes</td>
+                    <td className="px-2 py-1 text-gray-500">Yes</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-2 font-semibold text-gray-600">
+                    <td className="px-2 py-1 font-semibold text-gray-600">
                       College Address
                     </td>
-                    <td className="px-4 py-2 text-gray-500">Oxford College</td>
+                    <td className="px-2 py-1 text-gray-500">Oxford College</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-2 font-semibold text-gray-600">
+                    <td className="px-2 py-1 font-semibold text-gray-600">
                       Country
                     </td>
-                    <td className="px-4 py-2 text-gray-500">United States</td>
+                    <td className="px-2 py-1 text-gray-500">United States</td>
                   </tr>
                 </tbody>
               </table>
