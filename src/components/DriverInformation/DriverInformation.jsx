@@ -17,6 +17,10 @@ import { useState } from "react";
 import Reviews from "../Reviews/Reviews";
 import Vehicles from "../Vehicles/Vehicles";
 import RideDetails from "../RideDetails/RideDetails";
+import Image from "../../assets/img/im.png";
+import Zoom from "../../assets/img/zoom.svg";
+import Report from "../../assets/img/report.svg";
+import Star from "../../assets/img/star.svg";
 const DriverInformation = () => {
   const [showDetails, setShowDetails] = useState(false);
   const [current, setCurrent] = useState(1);
@@ -24,8 +28,8 @@ const DriverInformation = () => {
 
   const MoreDetails = () => {
     return (
-      <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-75 z-50 overflow-auto">
-        <div className="bg-white p-4 px-6 rounded-lg relative flex flex-col gap-3 w-[350px] mt-16 ">
+      <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50 z-50 overflow-auto">
+        <div className="bg-white p-4 px-6 rounded-lg relative flex flex-col gap-3 w-[440px]  h-[670px] ">
           <button
             onClick={() => setShowDetails(false)}
             className="absolute top-4 right-4 text-black"
@@ -38,42 +42,30 @@ const DriverInformation = () => {
           <label htmlFor="front" className="text-primary font-semibold">
             ID Card Front Image
           </label>
-          <div className="bg-gray-200 overflow-hidden rounded-md cursor-pointer">
-            <img
-              src={profile}
-              alt=""
-              className="w-[330px] h-[150px] object-contain"
-            />
+          <div className=" overflow-hidden rounded-md relative cursor-pointer w-[407px] h-[120px] flex items-center justify-center border border-primary border-solid">
+            <img src={Image} alt="" className="w-[55px] h-[55px] " />
+            <img src={Zoom} alt="" className="absolute bottom-1 right-1" />
           </div>
           <label htmlFor="front" className="text-primary font-semibold">
             ID Card Back Image
           </label>
-          <div className="bg-gray-200 overflow-hidden rounded-md cursor-pointer">
-            <img
-              src={profile}
-              alt=""
-              className="w-[330px] h-[150px] object-contain"
-            />
+          <div className=" overflow-hidden rounded-md relative cursor-pointer w-[407px] h-[120px] flex items-center justify-center border border-primary border-solid">
+            <img src={Image} alt="" className="w-[55px] h-[55px] " />
+            <img src={Zoom} alt="" className="absolute bottom-1 right-1" />
           </div>
           <label htmlFor="front" className="text-primary font-semibold">
             Student Id Card Image
           </label>
-          <div className="bg-gray-200 overflow-hidden rounded-md cursor-pointer">
-            <img
-              src={profile}
-              alt=""
-              className="w-[330px] h-[150px] object-contain"
-            />
+          <div className=" overflow-hidden rounded-md relative cursor-pointer w-[407px] h-[120px] flex items-center justify-center border border-primary border-solid">
+            <img src={Image} alt="" className="w-[55px] h-[55px] " />
+            <img src={Zoom} alt="" className="absolute bottom-1 right-1" />
           </div>
           <label htmlFor="front" className="text-primary font-semibold">
             Liscense Image
           </label>
-          <div className="bg-gray-200 overflow-hidden rounded-md cursor-pointer">
-            <img
-              src={profile}
-              alt=""
-              className="w-[330px] h-[150px] object-contain"
-            />
+          <div className=" overflow-hidden rounded-md relative cursor-pointer w-[407px] h-[120px] flex items-center justify-center border border-primary border-solid">
+            <img src={Image} alt="" className="w-[55px] h-[55px] " />
+            <img src={Zoom} alt="" className="absolute bottom-1 right-1" />
           </div>
         </div>
       </div>
@@ -100,51 +92,50 @@ const DriverInformation = () => {
       </div>
       <div className="flex justify-between bg-white rounded-md shadow-custom p-6 flex-col md-1150:flex-row gap-5 font-Manrope">
         <div className="flex flex-col md:flex-row gap-4">
-          <div className="flex justify-center w-40 h-50 rounded-md overflow-hidden object-contain bg-gray-400 self-start relative">
-            <img src={profile} alt="" className="w-full object-contain" />
+          <div className="flex justify-center w-[171px] h-[144px] rounded-md overflow-hidden self-start relative">
+            <img src={profile} alt="" className="w-full h-full" />
             <FaCheck className="absolute top-2 right-2 text-green-500 text-xl border-2 border-solid border-green-500 rounded-full" />
           </div>
           <div className="flex">
             <table className="min-w-full">
               <tbody className="divide-y divide-gray-200">
                 <tr>
-                  <td className="px-4 py-2 font-semibold text-gray-600">
+                  <td className="px-2 py-1 font-semibold text-gray-600">
                     Name
                   </td>
-                  <td className="px-4 py-2 text-gray-500">John Doe</td>
+                  <td className="px-2 py-1 text-gray-500">John Doe</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-2 font-semibold text-gray-600">
+                  <td className="px-2 py-1 font-semibold text-gray-600">
                     Email
                   </td>
-                  <td className="px-4 py-2 text-gray-500">
+                  <td className="px-2 py-2 text-gray-500">
                     john.doe@example.com
                   </td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-2 font-semibold text-gray-600">
+                  <td className="px-2 py-1 font-semibold text-gray-600">
                     Gender
                   </td>
-                  <td className="px-4 py-2 text-gray-500">Male</td>
+                  <td className="px-2 py-1 text-gray-500">Male</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-2 font-semibold text-gray-600">
+                  <td className="px-2 py-1 font-semibold text-gray-600">
                     Date of Birth
                   </td>
-                  <td className="px-4 py-2 text-gray-500">24-06-2000</td>
+                  <td className="px-2 py-1 text-gray-500">24-06-2000</td>
                 </tr>
-
                 <tr>
-                  <td className="px-4 py-2 font-semibold text-gray-600">
+                  <td className="px-2 py-1 font-semibold text-gray-600">
                     Phone Number
                   </td>
-                  <td className="px-4 py-2 text-gray-500">(99) 436-46-4666</td>
+                  <td className="px-2 py-1 text-gray-500">(99) 436-46-4666</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-2 font-semibold text-gray-600">
+                  <td className="px-2 py-1 font-semibold text-gray-600">
                     Country & City
                   </td>
-                  <td className="px-4 py-2 text-gray-500">
+                  <td className="px-2 py-1 text-gray-500">
                     United States, Chicago
                   </td>
                 </tr>
@@ -157,17 +148,17 @@ const DriverInformation = () => {
         </div>
         <div className="flex flex-col items-center justify-between gap-4">
           <div className="flex gap-6">
-            <button className="p-5 bg-gray-300 rounded-2xl shadow-md">
+            <button className="py-2 px-4 bg-gray-100 rounded-2xl shadow-lg w-[51px] h-[46px]">
               <FaBell className="text-gray-500 text-xl" />
             </button>
-            <button className="p-5 bg-gray-300 rounded-2xl shadow-md">
+            <button className="py-2 px-4 bg-gray-100 rounded-2xl shadow-lg w-[51px] h-[46px]">
               <FaPhone className="text-gray-500 text-xl" />
             </button>
           </div>
           <div className="block">
             <button
               onClick={() => setShowDetails(true)}
-              className="p-2 px-6 bg-gray-300 rounded-2xl shadow-md text-gray-500 text-xl"
+              className=" bg-gray-100 rounded-2xl shadow-md text-gray-500 text-base md:-translate-y-7 h-[46px] w-[125px]"
             >
               Show More
             </button>
@@ -205,7 +196,7 @@ const DriverInformation = () => {
         </div>
         <div className="flex px-7 py-4 rounded-md bg-white items-center gap-5 w-[200px] h-[100px] shadow-custom">
           <div className="block p-3 bg-gray-100 rounded-full">
-            <FaExclamation className="text-2xl text-primary" />
+            <img src={Report} alt="" />
           </div>
           <div className="flex flex-col gap-1">
             <span className="text-gray-400 text-xs">Reports:</span>
@@ -214,7 +205,7 @@ const DriverInformation = () => {
         </div>
         <div className="flex px-7 py-4 rounded-md bg-white items-center gap-5 w-[200px] h-[100px] shadow-custom">
           <div className="block p-3 bg-gray-100 rounded-full">
-            <FaStar className="text-2xl text-primary" />
+            <img src={Star} alt="" />
           </div>
           <div className="flex flex-col gap-1">
             <span className="text-gray-400 text-xs">Ratings:</span>
@@ -228,7 +219,7 @@ const DriverInformation = () => {
             <h1
               className={`text-xl font-semibold ${
                 current === 1
-                  ? "text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                  ? " underline-offset-[10px] decoration-primary decoration-[4px] underline"
                   : "text-gray-400"
               } cursor-pointer`}
               onClick={() => setCurrent(1)}
@@ -238,7 +229,7 @@ const DriverInformation = () => {
             <h1
               className={`text-xl font-semibold ${
                 current === 2
-                  ? "text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                  ? " underline-offset-[10px] decoration-primary decoration-[4px] underline"
                   : "text-gray-400"
               } cursor-pointer`}
               onClick={() => setCurrent(2)}
@@ -248,7 +239,7 @@ const DriverInformation = () => {
             <h1
               className={`text-xl font-semibold ${
                 current === 3
-                  ? "text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                  ? " underline-offset-[10px] decoration-primary decoration-[4px] underline"
                   : "text-gray-400"
               } cursor-pointer`}
               onClick={() => setCurrent(3)}
@@ -258,7 +249,7 @@ const DriverInformation = () => {
             <h1
               className={`text-xl font-semibold ${
                 current === 4
-                  ? "text-primary  underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                  ? "  underline-offset-[10px] decoration-primary decoration-[4px] underline"
                   : "text-gray-400"
               } cursor-pointer`}
               onClick={() => setCurrent(4)}
@@ -275,15 +266,15 @@ const DriverInformation = () => {
         {current === 1 && (
           <div className="grid md:grid-cols-3 gap-3 grid-cols-1">
             <DriverScheduledCards
-              status={"completed"}
+              status={"Complete"}
               current={current}
               onClick={() => setShowRideDetails(true)}
             />
-            <DriverScheduledCards status={"completed"} current={current} />
+            <DriverScheduledCards status={"Complete"} current={current} />
             <DriverScheduledCards status={"cancelled"} current={current} />
-            <DriverScheduledCards status={"completed"} current={current} />
+            <DriverScheduledCards status={"Complete"} current={current} />
             <DriverScheduledCards status={"cancelled"} current={current} />
-            <DriverScheduledCards status={"completed"} current={current} />
+            <DriverScheduledCards status={"Complete"} current={current} />
           </div>
         )}
         {current === 2 && (

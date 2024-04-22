@@ -266,7 +266,7 @@ const UserInformation = () => {
             <h1
               className={`text-xl font-semibold ${
                 current === 1
-                  ? "text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                  ? " underline-offset-[10px] decoration-primary decoration-[4px] underline"
                   : "text-gray-400"
               } cursor-pointer`}
               onClick={() => setCurrent(1)}
@@ -276,7 +276,7 @@ const UserInformation = () => {
             <h1
               className={`text-xl font-semibold ${
                 current === 2
-                  ? "text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                  ? " underline-offset-[10px] decoration-primary decoration-[4px] underline"
                   : "text-gray-400"
               } cursor-pointer`}
               onClick={() => setCurrent(2)}
@@ -286,7 +286,7 @@ const UserInformation = () => {
             <h1
               className={`text-xl font-semibold ${
                 current === 3
-                  ? "text-primary underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                  ? " underline-offset-[10px] decoration-primary decoration-[4px] underline"
                   : "text-gray-400"
               } cursor-pointer`}
               onClick={() => setCurrent(3)}

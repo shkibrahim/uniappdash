@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa6";
 const Reviews = () => {
   return (
     <div className="flex gap-10 md:flex-row flex-col">
-      <div className="bg-primary rounded-md text-white p-5 flex flex-col items-center justify-center gap-2">
+      <div className="bg-primary rounded-3xl text-white p-5 flex flex-col items-center justify-center gap-2">
         <h1 className="font-semibold">Priority</h1>
         <h1 className="text-2xl font-semibold">Normal</h1>
         <div className="flex items-center justify-between gap-2 md:flex-row flex-col">
