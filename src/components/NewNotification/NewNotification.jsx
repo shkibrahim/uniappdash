@@ -3,7 +3,7 @@ import React from "react";
 const NewNotification = ({ setTrigger, children }) => {
   return (
     <div className="fixed top-0 left-0 w-full h-screen bg-[rgba(0,0,0,0.4)] flex  justify-center md:justify-end z-50">
-      <div className="relative p-4 md:p-9 w-[90%] md:w-[450px] bg-white rounded-lg flex flex-col items-center ">
+      <div className="relative p-4 md:p-9 w-[90%] md:w-[450px] bg-white rounded-lg flex flex-col items-center overflow-auto">
         <button
           className="absolute top-4 right-4"
           onClick={() => setTrigger(false)}
