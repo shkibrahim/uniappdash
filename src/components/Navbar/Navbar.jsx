@@ -58,9 +58,13 @@ const Navbar = ({ showSideBare }) => {
   const windowWidth = `${window.screen.width}px`; // Get the width of the window screen
 
   const styleWidth = `w-[${windowWidth}]`; // Construct Tailwind CSS class for width
-  console.log(showSideBar)
+  console.log(showSideBar);
   return (
-    <div className={`fixed top-0 w-[100vw] ${showSideBare ? "lg:w-[80vw]" : "lg:w-[93vw]"}  z-[10] bg-white`}>
+    <div
+      className={`fixed top-0 w-[100vw] ${
+        showSideBare ? "lg:w-[83vw]" : "lg:w-[94vw]"
+      }  z-[10] bg-white`}
+    >
       <nav className="flex   p-4   rounded-md shadow-md justify-between items-center  lg:grid lg:grid-cols-[4fr_1fr]">
         <div className="lg:hidden">
           <div className="flex items-center">
@@ -93,7 +97,9 @@ const Navbar = ({ showSideBare }) => {
         </div>
         <div className=" lg:flex justify-between items-center">
           <div className="lg:flex items-center ml-2 hidden  w-full">
-            <h2 className={`font-medium text-[#00261C] text-2xl mr-12 font-primary`}>
+            <h2
+              className={`font-[600] text-[#00261C] text-2xl mr-12 font-primary`}
+            >
               Hello Admin
             </h2>
 
@@ -204,7 +210,9 @@ const Navbar = ({ showSideBare }) => {
             className=" cursor-pointer flex"
           >
             <div className="flex space-x-2 items-center">
-              <div className=" font-primary font-semibold text-[#00261C]">Alex Hales</div>
+              <div className=" font-primary font-semibold text-[#00261C]">
+                Alex Hales
+              </div>
               <img
                 src={authCtx.user.image ? authCtx.user.image : profile}
                 alt="user-img"
@@ -215,8 +223,9 @@ const Navbar = ({ showSideBare }) => {
             <div className="relative font-primary">
               <div
                 id="userDropDown"
-                className={`z-[200] -left-[8.5rem] sm:-left-[11rem] top-12 md:top-14  absolute bg-white rounded-lg   border-[1px] border-gray-300 w-36 sm:w-44 md:w-42 ${showUserModal ? "" : "hidden"
-                  }`}
+                className={`z-[200] -left-[8.5rem] sm:-left-[11rem] top-12 md:top-14  absolute bg-white rounded-lg   border-[1px] border-gray-300 w-36 sm:w-44 md:w-42 ${
+                  showUserModal ? "" : "hidden"
+                }`}
               >
                 <ul
                   className="py-2 text-sm text-gray-700 "
@@ -233,7 +242,7 @@ const Navbar = ({ showSideBare }) => {
                     </div>
                     <Link
                       to="/settings"
-                      className=" px-4 py-2  hover:text-buttonPrimary"
+                      className=" px-4 py-2  hover:text-buttonPrimary text-[#00261C] text-[12px]"
                     >
                       Profile
                     </Link>
@@ -249,7 +258,7 @@ const Navbar = ({ showSideBare }) => {
                     </div>
                     <Link
                       to="/"
-                      className=" px-4 py-2  hover:text-buttonPrimary"
+                      className=" px-4 py-2  hover:text-buttonPrimary text-[#00261C] text-[12px]"
                     >
                       Download Stats
                     </Link>
@@ -265,7 +274,7 @@ const Navbar = ({ showSideBare }) => {
                     </div>
                     <Link
                       to="/"
-                      className=" px-4 py-2  hover:text-buttonPrimary"
+                      className=" px-4 py-2  hover:text-buttonPrimary text-[#00261C] text-[12px]"
                     >
                       Sign Out
                     </Link>

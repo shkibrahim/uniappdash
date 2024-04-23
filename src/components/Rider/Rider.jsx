@@ -179,13 +179,13 @@ const Rider = () => {
                   </div>
                 </div>
                 {showRange && (
-                  <div className="absolute mt-4 top-2 bg-gray-100 rounded-xl p-4">
+                  <div className="absolute mt-4 top-2 shadow-lg rounded-xl p-2 py-4 font-semibold font-primary bg-white">
                     <ul className="flex flex-col  text-[#343A40] space-y-2">
                       {ranges.map((item) => {
                         if (item.name !== activeRange) {
                           return (
                             <li
-                              className="cursor-pointer text-sm"
+                              className="cursor-pointer text-[12px]"
                               key={item.id}
                               onClick={() => handleRangeSelect(item.name)}
                             >
@@ -206,10 +206,10 @@ const Rider = () => {
               <div className="">
                 <div className="flex flex-col space-y-4 p-4 border-2 border-[#F5F5F5] rounded-xl shadow-md shadow-gray-300">
                   <div className="flex  space-x-8">
-                    <div className="text-[#656575] font-medium font-primary text-lg">
+                    <div className="text-[#48525B] font-medium font-primary text-lg">
                       Hire Vs Cancel
                     </div>
-                    <div className="  px-2 text-[#656575] text-sm p-1 rounded-xl">
+                    <div className="  px-2 text-[#48525B] text-sm p-1 rounded-xl">
                       Today
                     </div>
                   </div>
@@ -278,10 +278,10 @@ const Rider = () => {
               <div>
                 <div className="flex flex-col space-y-4 p-4  border-2 border-[#F5F5F5] rounded-xl shadow-md shadow-gray-300">
                   <div className="flex  justify-between">
-                    <div className="text-[#656575] font-inter font-medium text-lg">
+                    <div className="text-[#48525B] font-inter font-medium text-lg">
                       Income
                     </div>
-                    <div className="  px-2 text-[#656575] text-sm ">Today</div>
+                    <div className="  px-2 text-[#48525B] text-sm ">Today</div>
                   </div>
                   <div>
                     <div>
@@ -316,10 +316,10 @@ const Rider = () => {
               <div>
                 <div className="flex flex-col space-y-4 p-4  border-2 border-[#F5F5F5] rounded-xl shadow-md shadow-gray-300">
                   <div className="flex  justify-between">
-                    <div className="text-[#656575] font-inter font-medium text-lg">
+                    <div className="text-[#48525B] font-inter font-medium text-lg">
                       Active Drivers
                     </div>
-                    <div className="   text-[#656575] text-sm ">Today</div>
+                    <div className="   text-[#48525B] text-sm ">Today</div>
                   </div>
                   <div>
                     <div>
@@ -447,7 +447,7 @@ const Rider = () => {
                                 <div>
                                   <Active />
                                 </div>
-                                <div className="text-[#656575] font-light">
+                                <div className="text-[#48525B] font-light">
                                   {item?.status}
                                 </div>
                               </td>
@@ -483,7 +483,7 @@ const Rider = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-[#656575]  hover:text-[#48525B] "
+                        className="flex items-center justify-center px-4 h-8 ms-0 leading-tight text-[#48525B]  hover:text-[#48525B] "
                       >
                         <span className="sr-only">Previous</span>
                         <svg
@@ -506,7 +506,7 @@ const Rider = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex items-center justify-center px-2 h-10 leading-tight text-white rounded-xl bg-primary border  "
+                        className="flex items-center justify-center px-2 h-7 leading-tight text-white rounded-md bg-primary border  "
                       >
                         1
                       </a>
@@ -514,7 +514,7 @@ const Rider = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex items-center justify-center px-2 h-10 leading-tight text-[#656575] rounded-xl bg-[#F5F5F5] hover:bg-primary transition-all duration-300 hover:text-white"
+                        className="flex items-center justify-center px-2 h-7 leading-tight text-[#48525B] rounded-md bg-[#F5F5F5] hover:bg-primary transition-all duration-300 hover:text-white"
                       >
                         2
                       </a>
@@ -522,7 +522,7 @@ const Rider = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex items-center justify-center px-2 h-10 leading-tight text-[#656575] rounded-xl bg-[#F5F5F5] hover:bg-primary transition-all duration-300 hover:text-white"
+                        className="flex items-center justify-center px-2 h-7 leading-tight text-[#48525B] rounded-md bg-[#F5F5F5] hover:bg-primary transition-all duration-300 hover:text-white"
                       >
                         3
                       </a>
@@ -530,7 +530,7 @@ const Rider = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex items-center justify-center px-2 h-10 leading-tight text-[#656575] rounded-xl bg-[#F5F5F5] hover:bg-primary transition-all duration-300 hover:text-white"
+                        className="flex items-center justify-center px-2 h-7 leading-tight text-[#48525B] rounded-md bg-[#F5F5F5] hover:bg-primary transition-all duration-300 hover:text-white"
                       >
                         ..
                       </a>
@@ -538,7 +538,7 @@ const Rider = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex items-center justify-center px-2 h-10 leading-tight text-[#656575] rounded-xl bg-[#F5F5F5] hover:bg-primary transition-all duration-300 hover:text-white"
+                        className="flex items-center justify-center px-2 h-7 leading-tight text-[#48525B] rounded-md bg-[#F5F5F5] hover:bg-primary transition-all duration-300 hover:text-white"
                       >
                         40
                       </a>
@@ -547,7 +547,7 @@ const Rider = () => {
                     <li>
                       <a
                         href="#"
-                        className="flex items-center justify-center px-4 h-10 leading-tight text-[#656575] hover:text-[#48525B]"
+                        className="flex items-center justify-center px-4 h-7 leading-tight text-[#48525B] hover:text-[#48525B]"
                       >
                         <span className="sr-only">Next</span>
                         <svg

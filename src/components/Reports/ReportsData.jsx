@@ -71,7 +71,7 @@ const ReportsData = () => {
     },
   ];
   return (
-    <div className="overflow-auto">
+    <div className="overflow-auto shadow-lg">
       <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 font-primary">
         <thead className="text-[14px] text-gray-700 dark:text-gray-400">
           <tr className="text-gray-800">
@@ -119,7 +119,7 @@ const ReportsData = () => {
                     className="w-6 h-6 rounded-full"
                   />
                 </td>
-                <td className="px-6 py-4 bg-gray-50">{item?.customer_name}</td>
+                <td className="px-6 py-4 ">{item?.customer_name}</td>
                 <td className="px-6 py-4">{item?.driver_name}</td>
                 <td className="px-6 py-4 flex space-x-2">{item?.report}</td>
                 <td className="px-6 py-4 ">{item?.issue_type}</td>

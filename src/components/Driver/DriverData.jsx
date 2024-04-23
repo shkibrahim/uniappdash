@@ -97,8 +97,8 @@ const DriverData = () => {
     },
   ];
   return (
-    <div className="overflow-auto">
-      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 font-primary">
+    <div className="overflow-auto shadow-lg">
+      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 font-primary shadow-lg">
         <thead className="text-[14px] text-gray-700 dark:text-gray-400">
           <tr className="text-gray-800">
             <th scope="col" className="px-6 py-3 ">
@@ -145,7 +145,7 @@ const DriverData = () => {
                     className="w-6 h-6 rounded-full"
                   />
                 </td>
-                <td className="px-6 py-4 bg-gray-50">{item?.name}</td>
+                <td className="px-6 py-4">{item?.name}</td>
                 <td className="px-6 py-4">{item?.email}</td>
                 <td className="px-6 py-4 ">{item?.created_at}</td>
                 <td className="px-6 py-4">{item?.rides}</td>

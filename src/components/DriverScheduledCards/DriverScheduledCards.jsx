@@ -22,7 +22,7 @@ import { BsFillStoplightsFill } from "react-icons/bs";
 const DriverScheduledCards = ({ status, current, onClick }) => {
   return (
     <div
-      className="bg-primary shadow-custom p-2 rounded-md flex gap-3 justify-between cursor-pointer max-w-[323px]"
+      className="bg-primary shadow-custom p-2 rounded-md flex gap-3 justify-between cursor-pointer max-w-[323px] mx-auto md:mx-5 md-1150:mx-10"
       onClick={onClick}
     >
       <div className="flex flex-col gap-3">

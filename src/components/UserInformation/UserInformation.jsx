@@ -17,6 +17,8 @@ import { MdBarChart, MdOutlineCancel } from "react-icons/md";
 import DriverScheduledCards from "../DriverScheduledCards/DriverScheduledCards";
 import { useState } from "react";
 import Reviews from "../Reviews/Reviews";
+import Report from "../../assets/img/report.svg";
+import Star from "../../assets/img/star.svg";
 import RideDetails from "../RideDetails/RideDetails";
 import NewNotification from "../NewNotification/NewNotification";
 const UserInformation = () => {
@@ -204,48 +206,48 @@ const UserInformation = () => {
       </div>
       <h1 className="text-xl font-semibold">Ride Details</h1>
       <div className="flex md:justify-between flex-wrap gap-4 items-center justify-center">
-        <div className="flex px-7 py-4 rounded-md bg-white items-center gap-5 w-[200px] h-[100px] shadow-custom">
+        <div className="flex px-4 py-2 rounded-md bg-white items-center gap-5 w-[200px] h-[100px] shadow-custom">
           <div className="block p-3 bg-gray-100 rounded-full">
             <MdBarChart className="text-2xl text-primary" />
           </div>
           <div className="flex flex-col gap-1">
-            <span className="text-gray-400 text-xs">Earnings Made:</span>
+            <span className="text-gray-400 text-[14px]">Earnings Made:</span>
             <span className="text-2xl font-semibold">$350.4</span>
           </div>
         </div>
-        <div className="flex px-7 py-4 rounded-md bg-white items-center gap-5 w-[200px] h-[100px] shadow-custom">
+        <div className="flex px-4 py-2 rounded-md bg-white items-center gap-5 w-[200px] h-[100px] shadow-custom">
           <div className="block p-3 bg-gray-100 rounded-full">
             <FaCar className="text-2xl text-primary" />
           </div>
           <div className="flex flex-col gap-1">
-            <span className="text-gray-400 text-xs">Rides:</span>
+            <span className="text-gray-400 text-[14px]">Rides:</span>
             <span className="text-2xl font-semibold">1150</span>
           </div>
         </div>
-        <div className="flex px-7 py-4 rounded-md bg-white items-center gap-5 w-[200px] h-[100px] shadow-custom">
+        <div className="flex px-4 py-2 rounded-md bg-white items-center gap-5 w-[200px] h-[100px] shadow-custom">
           <div className="block p-3 bg-gray-100 rounded-full">
             <MdOutlineCancel className="text-2xl text-primary" />
           </div>
           <div className="flex flex-col gap-1">
-            <span className="text-gray-400 text-xs">Cancelled:</span>
+            <span className="text-gray-400 text-[14px]">Cancelled:</span>
             <span className="text-2xl font-semibold">12</span>
           </div>
         </div>
-        <div className="flex px-7 py-4 rounded-md bg-white items-center gap-5 w-[200px] h-[100px] shadow-custom">
+        <div className="flex px-4 py-2 rounded-md bg-white items-center gap-5 w-[200px] h-[100px] shadow-custom">
           <div className="block p-3 bg-gray-100 rounded-full">
-            <FaExclamation className="text-2xl text-primary" />
+            <img src={Report} alt="" />
           </div>
           <div className="flex flex-col gap-1">
-            <span className="text-gray-400 text-xs">Reports:</span>
+            <span className="text-gray-400 text-[14px]">Reports:</span>
             <span className="text-2xl font-semibold">4</span>
           </div>
         </div>
-        <div className="flex px-7 py-4 rounded-md bg-white items-center gap-5 w-[200px] h-[100px] shadow-custom">
+        <div className="flex px-4 py-2 rounded-md bg-white items-center gap-5 w-[200px] h-[100px] shadow-custom">
           <div className="block p-3 bg-gray-100 rounded-full">
-            <FaStar className="text-2xl text-primary" />
+            <img src={Star} alt="" />
           </div>
           <div className="flex flex-col gap-1">
-            <span className="text-gray-400 text-xs">Ratings:</span>
+            <span className="text-gray-400 text-[14px]">Ratings:</span>
             <span className="text-2xl font-semibold">4.5</span>
           </div>
         </div>
@@ -291,7 +293,7 @@ const UserInformation = () => {
           </div>
         </div>
         {current === 1 && (
-          <div className="grid md:grid-cols-3 gap-3 grid-cols-1">
+          <div className="grid md:grid-cols-2 gap-3 grid-cols-1  md-1150:grid-cols-3 mx-auto">
             <DriverScheduledCards
               status={"completed"}
               current={current}
@@ -305,7 +307,7 @@ const UserInformation = () => {
           </div>
         )}
         {current === 2 && (
-          <div className="grid md:grid-cols-3 gap-3 grid-cols-1">
+          <div className="grid md:grid-cols-2 gap-3 grid-cols-1  md-1150:grid-cols-3 mx-auto">
             <DriverScheduledCards onClick={() => setShowRideDetails(true)} />
             <DriverScheduledCards />
             <DriverScheduledCards />

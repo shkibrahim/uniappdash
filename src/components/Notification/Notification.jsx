@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { FaCar, FaChevronDown, FaUser, FaSearch } from "react-icons/fa";
-import Profile from "../../assets/img/profile.jpeg";
+// import Avatar from "../../assets/img/profile.jpeg";
 import Email from "../../assets/img/Email.png";
 import Email1 from "../../assets/img/Email1.png";
 import Image from "../../assets/img/im.png";
 import Zoom from "../../assets/img/zoom.svg";
 import NewNotification from "../NewNotification/NewNotification";
+import Avatar from "../../assets/img/Avatar.png";
 import { FaLocationArrow, FaPlus } from "react-icons/fa6";
 import { Filter } from "../SVGICONS/Icons";
 const Notification = () => {
@@ -192,20 +193,20 @@ const Notification = () => {
             <div className="flex gap-10">
               <h1
                 onClick={() => setCurrent(1)}
-                className={`text-xl font-semibold ${
+                className={`text-[21px] font-[700] ${
                   current === 1
-                    ? " underline-offset-[10px] decoration-primary decoration-[4px] underline"
-                    : "text-gray-500"
+                    ? "underline-offset-[10px] decoration-primary decoration-[4px] underline"
+                    : "text-[#AFAFAF]"
                 } cursor-pointer`}
               >
                 Notification
               </h1>
               <h1
                 onClick={() => setCurrent(2)}
-                className={`text-xl font-semibold ${
+                className={`text-[21px] font-[700] ${
                   current === 2
                     ? " underline-offset-[10px] decoration-primary decoration-[4px] underline"
-                    : "text-gray-500"
+                    : "text-[#AFAFAF]"
                 } cursor-pointer`}
               >
                 Promotion
@@ -229,21 +230,23 @@ const Notification = () => {
                 </div>
               </div>
               <div className="flex flex-col md:flex-row border border-1 border-solid border-gray-300 rounded-md p-3 justify-between gap-2">
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-2">
                   <div className="flex flex-col md:flex-row items-center gap-3">
                     <img
-                      src={Profile}
+                      src={Avatar}
                       alt=""
                       className="w-10 h-10 rounded-full object-cover bg-center"
                     />
-                    <span>Admin.xyz</span>
-                    <button className="bg-primary px-6 py-1 rounded-3xl text-white shadow-custom ">
+                    <span className="font-[500] text-[14px]">Admin.xyz</span>
+                    <button className="bg-primary px-6 rounded-3xl text-white ">
                       Active
                     </button>
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-1">
                     <div className="flex items-center justify-around md:justify-between">
-                      <h1 className="text-xl font-semibold">Admin</h1>
+                      <h1 className="text-[18px] font-[700] font-primary">
+                        Admin
+                      </h1>
                       <div className="flex gap-2 items-center text-blue-400">
                         <FaCar />
                         <span>Driver</span>
@@ -257,26 +260,28 @@ const Notification = () => {
                     </p>
                   </div>
                 </div>
-                <button className="bg-primary px-4 py-1 rounded-md text-white shadow-custom md:self-start self-center">
+                <button className="bg-primary px-10 py-1 rounded-xl text-white  md:self-start self-center">
                   Delete
                 </button>
               </div>
               <div className="flex flex-col md:flex-row border border-1 border-solid border-gray-300 rounded-md p-3 justify-between gap-2">
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-2">
                   <div className="flex flex-col md:flex-row items-center gap-3">
                     <img
-                      src={Profile}
+                      src={Avatar}
                       alt=""
                       className="w-10 h-10 rounded-full object-cover bg-center"
                     />
-                    <span>Admin.xyz</span>
-                    <button className="bg-white px-6 py-1 rounded-3xl text-primary border border-1 border-primary">
+                    <span className="font-[500] text-[14px]">Admin.xyz</span>
+                    <button className="bg-white px-4 rounded-3xl text-primary border border-1 border-primary">
                       Scheduled
                     </button>
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-1">
                     <div className="flex items-center justify-around md:justify-between">
-                      <h1 className="text-xl font-semibold">Admin</h1>
+                      <h1 className="text-[18px] font-[700] font-primary">
+                        Admin
+                      </h1>
                       <div className="flex gap-2 items-center text-blue-400">
                         <FaCar />
                         <span>Driver</span>
@@ -290,26 +295,28 @@ const Notification = () => {
                     </p>
                   </div>
                 </div>
-                <button className="bg-primary px-4 py-1 rounded-md text-white shadow-custom md:self-start self-center">
+                <button className="bg-primary px-10 py-1 rounded-xl text-white  md:self-start self-center">
                   Delete
                 </button>
               </div>
               <div className="flex flex-col md:flex-row border border-1 border-solid border-gray-300 rounded-md p-3 justify-between gap-2">
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-2">
                   <div className="flex flex-col md:flex-row items-center gap-3">
                     <img
-                      src={Profile}
+                      src={Avatar}
                       alt=""
                       className="w-10 h-10 rounded-full object-cover bg-center"
                     />
-                    <span>Admin.xyz</span>
-                    <button className="bg-white px-6 py-1 rounded-3xl text-primary border border-1 border-primary">
+                    <span className="font-[500] text-[14px]">Admin.xyz</span>
+                    <button className="bg-white px-4  rounded-3xl text-primary border border-1 border-primary">
                       Scheduled
                     </button>
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-1">
                     <div className="flex items-center justify-around md:justify-between">
-                      <h1 className="text-xl font-semibold">Admin</h1>
+                      <h1 className="text-[18px] font-[700] font-primary">
+                        Admin
+                      </h1>
                       <div className="flex gap-2 items-center text-blue-400">
                         <FaCar />
                         <span>Driver</span>
@@ -323,7 +330,7 @@ const Notification = () => {
                     </p>
                   </div>
                 </div>
-                <button className="bg-primary px-4 py-1 rounded-md text-white shadow-custom md:self-start self-center">
+                <button className="bg-primary px-10 py-1 rounded-xl text-white  md:self-start self-center">
                   Delete
                 </button>
               </div>
@@ -331,7 +338,7 @@ const Notification = () => {
           </div>
           <div className="flex flex-col gap-6">
             <div className="flex flex-col bg-primary rounded-md text-white py-3 px-4 relative gap-3">
-              <FaLocationArrow className="absolute top-5 right-8 text-3xl" />
+              <FaLocationArrow className="absolute top-5 right-8 text-[40px] rotate-[65deg]" />
               <h1 className="text-3xl font-bold">
                 Create New <br /> Notification
               </h1>
@@ -344,21 +351,21 @@ const Notification = () => {
               </button>
             </div>
             <div className="flex justify-around items-center">
-              <h1 className="text-xl font-semibold underline-offset-[10px] decoration-primary decoration-[4px] underline">
+              <h1 className="text-[18px] font-[1000] underline-offset-[10px] decoration-primary decoration-[4px] underline">
                 Drafts
               </h1>
-              <h1 className="text-xl font-semibold">Scheduled</h1>
+              <h1 className="text-[18px] font-[1000]">Scheduled</h1>
             </div>
             <div className="flex flex-col md-1150:flex-row bg-white shadow-custom rounded-md p-3 justify-between gap-2">
               <div className="flex flex-col gap-3">
                 <div className="flex flex-col md:flex-row items-center gap-3">
                   <img
-                    src={Profile}
+                    src={Avatar}
                     alt=""
                     className="w-10 h-10 rounded-full object-cover bg-center"
                   />
                   <div className="flex flex-col">
-                    <h1 className="text-xl font-semibold">Admin</h1>
+                    <h1 className="text-base font-[600] font-primary">Admin</h1>
                     <p>60 Rides</p>
                   </div>
                   <div className="flex gap-2 items-center text-blue-400">
@@ -383,12 +390,12 @@ const Notification = () => {
               <div className="flex flex-col gap-3">
                 <div className="flex flex-col md:flex-row items-center gap-3">
                   <img
-                    src={Profile}
+                    src={Avatar}
                     alt=""
                     className="w-10 h-10 rounded-full object-cover bg-center"
                   />
                   <div className="flex flex-col">
-                    <h1 className="text-xl font-semibold">Admin</h1>
+                    <h1 className="text-base font-[600] font-primary">Admin</h1>
                     <p>60 Rides</p>
                   </div>
                   <div className="flex gap-2 items-center text-blue-400">
@@ -418,18 +425,18 @@ const Notification = () => {
             <div className="flex gap-10">
               <h1
                 onClick={() => setCurrent(1)}
-                className={`text-xl font-semibold ${
-                  current === 1 ? "" : "text-gray-500"
+                className={`text-[21px] font-[700] ${
+                  current === 1 ? "" : "text-[#AFAFAF]"
                 } cursor-pointer`}
               >
                 Notification
               </h1>
               <h1
                 onClick={() => setCurrent(2)}
-                className={`text-xl font-semibold ${
+                className={`text-[21px] font-[700] ${
                   current === 2
                     ? " underline-offset-[10px] decoration-primary decoration-[4px] underline"
-                    : "text-gray-400"
+                    : "text-[#AFAFAF]"
                 } cursor-pointer`}
               >
                 Promotion
@@ -453,21 +460,23 @@ const Notification = () => {
                 </div>
               </div>
               <div className="flex flex-col md:flex-row border border-1 border-solid border-gray-300 rounded-md p-3 justify-between gap-2">
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-2">
                   <div className="flex flex-col md:flex-row items-center gap-3">
                     <img
-                      src={Profile}
+                      src={Avatar}
                       alt=""
                       className="w-10 h-10 rounded-full object-cover bg-center"
                     />
-                    <span>Admin.xyz</span>
-                    <button className="bg-primary px-6 py-1 rounded-3xl text-white shadow-custom ">
+                    <span className="font-[500] text-[14px]">Admin.xyz</span>
+                    <button className="bg-primary px-6 rounded-3xl text-white ">
                       Active
                     </button>
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-1">
                     <div className="flex items-center justify-around md:justify-between">
-                      <h1 className="text-xl font-semibold">Admin</h1>
+                      <h1 className="text-[18px] font-[700] font-primary">
+                        Admin
+                      </h1>
                       <div className="flex gap-2 items-center text-blue-400">
                         <FaCar />
                         <span>Driver</span>
@@ -481,26 +490,28 @@ const Notification = () => {
                     </p>
                   </div>
                 </div>
-                <button className="bg-primary px-4 py-1 rounded-md text-white shadow-custom md:self-start self-center">
+                <button className="bg-primary px-10 py-1 rounded-xl text-white  md:self-start self-center">
                   Delete
                 </button>
               </div>
               <div className="flex flex-col md:flex-row border border-1 border-solid border-gray-300 rounded-md p-3 justify-between gap-2">
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-2">
                   <div className="flex flex-col md:flex-row items-center gap-3">
                     <img
-                      src={Profile}
+                      src={Avatar}
                       alt=""
                       className="w-10 h-10 rounded-full object-cover bg-center"
                     />
-                    <span>Admin.xyz</span>
-                    <button className="bg-white px-6 py-1 rounded-3xl text-primary border border-1 border-primary">
+                    <span className="font-[500] text-[14px]">Admin.xyz</span>
+                    <button className="bg-white px-4  rounded-3xl text-primary border border-1 border-primary">
                       Scheduled
                     </button>
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-1">
                     <div className="flex items-center justify-around md:justify-between">
-                      <h1 className="text-xl font-semibold">Admin</h1>
+                      <h1 className="text-[18px] font-[700] font-primary">
+                        Admin
+                      </h1>
                       <div className="flex gap-2 items-center text-blue-400">
                         <FaCar />
                         <span>Driver</span>
@@ -514,26 +525,28 @@ const Notification = () => {
                     </p>
                   </div>
                 </div>
-                <button className="bg-primary px-4 py-1 rounded-md text-white shadow-custom md:self-start self-center">
+                <button className="bg-primary px-10 py-1 rounded-xl text-white  md:self-start self-center">
                   Delete
                 </button>
               </div>
               <div className="flex flex-col md:flex-row border border-1 border-solid border-gray-300 rounded-md p-3 justify-between gap-2">
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-2">
                   <div className="flex flex-col md:flex-row items-center gap-3">
                     <img
-                      src={Profile}
+                      src={Avatar}
                       alt=""
                       className="w-10 h-10 rounded-full object-cover bg-center"
                     />
-                    <span>Admin.xyz</span>
-                    <button className="bg-white px-6 py-1 rounded-3xl text-primary border border-1 border-primary">
+                    <span className="font-[500] text-[14px]">Admin.xyz</span>
+                    <button className="bg-white px-4 rounded-3xl text-primary border border-1 border-primary">
                       Scheduled
                     </button>
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-1">
                     <div className="flex items-center justify-around md:justify-between">
-                      <h1 className="text-xl font-semibold">Admin</h1>
+                      <h1 className="text-[18px] font-[700] font-primary">
+                        Admin
+                      </h1>
                       <div className="flex gap-2 items-center text-blue-400">
                         <FaCar />
                         <span>Driver</span>
@@ -547,7 +560,7 @@ const Notification = () => {
                     </p>
                   </div>
                 </div>
-                <button className="bg-primary px-4 py-1 rounded-md text-white shadow-custom md:self-start self-center">
+                <button className="bg-primary px-10 py-1 rounded-xl text-white  md:self-start self-center">
                   Delete
                 </button>
               </div>
@@ -562,7 +575,7 @@ const Notification = () => {
               />
             </div> */}
             <div className="flex flex-col bg-primary rounded-md text-white py-3 px-4 relative gap-3">
-              <FaLocationArrow className="absolute top-5 right-8 text-3xl" />
+              <FaLocationArrow className="absolute top-5 right-8 text-[40px] rotate-[65deg]" />
               <h1 className="text-3xl font-bold">
                 Create New <br /> Promotion
               </h1>
@@ -575,21 +588,21 @@ const Notification = () => {
               </button>
             </div>
             <div className="flex justify-around items-center">
-              <h1 className="text-xl font-semibold  underline-offset-[10px] decoration-primary decoration-[4px] underline">
+              <h1 className="text-[18px] font-[1000]  underline-offset-[10px] decoration-primary decoration-[4px] underline">
                 Drafts
               </h1>
-              <h1 className="text-xl font-semibold">Scheduled</h1>
+              <h1 className="text-[18px] font-[1000]">Scheduled</h1>
             </div>
             <div className="flex flex-col md-1150:flex-row bg-white shadow-custom rounded-md p-3 justify-between gap-2">
               <div className="flex flex-col gap-3">
                 <div className="flex flex-col md:flex-row items-center gap-3">
                   <img
-                    src={Profile}
+                    src={Avatar}
                     alt=""
                     className="w-10 h-10 rounded-full object-cover bg-center"
                   />
                   <div className="flex flex-col">
-                    <h1 className="text-xl font-semibold">Admin</h1>
+                    <h1 className="text-base font-[600] font-primary">Admin</h1>
                     <p>60 Rides</p>
                   </div>
                   <div className="flex gap-2 items-center text-blue-400">
@@ -614,12 +627,12 @@ const Notification = () => {
               <div className="flex flex-col gap-3">
                 <div className="flex flex-col md:flex-row items-center gap-3">
                   <img
-                    src={Profile}
+                    src={Avatar}
                     alt=""
                     className="w-10 h-10 rounded-full object-cover bg-center"
                   />
                   <div className="flex flex-col">
-                    <h1 className="text-xl font-semibold">Admin</h1>
+                    <h1 className="text-base font-[600] font-primary">Admin</h1>
                     <p>60 Rides</p>
                   </div>
                   <div className="flex gap-2 items-center text-blue-400">

@@ -10,10 +10,12 @@ const Users = () => {
       <div className=" mb-10  items-center flex flex-col md:flex-row justify-between space-y-1">
         <div>
           <div className=" flex space-x-8 items-center">
-            <div className=" text-2xl underline-offset-[10px] decoration-primary decoration-[4px]    underline ">
+            <div className=" text-[21px] font-[700] underline-offset-[10px] decoration-primary decoration-[4px]  text-[#48525B]  underline ">
               All Users
             </div>
-            <div className="text-gray-500 text-xl">Analytics</div>
+            <div className="text-[21px] font-[700] text-[#AFAFAF] text-xl">
+              Analytics
+            </div>
           </div>
         </div>
         <div>
@@ -48,21 +50,21 @@ const Users = () => {
         </div>
       </div>
       <UsersTable />
-      <div id="PAGINATION" className="mt-10">
-        <div className="flex flex-col md:flex-row items-center justify-between">
+      <div id="PAGINATION" className="  mt-10 ">
+        <div className="flex items-center flex-wrap justify-between">
           <div>
-            <span className="text-sm text-gray-700 ">
-              Showing data<span className=" ml-2 font-semibold ">1</span> to{" "}
-              <span className="font-semibold ">10</span> of{" "}
-              <span className="font-semibold  ">100</span> entries
+            <span className="text-sm text-[#48525B] font-[Poppins] ">
+              Showing data<span className=" ml-2  ">1</span> to{" "}
+              <span className=" ">10</span> of <span className="">100</span>{" "}
+              entries
             </span>
           </div>
           <div>
-            <ul className="flex items-center space-x-4 h-10 text-base">
+            <ul className="flex  items-center space-x-4 h-10 text-base">
               <li>
                 <a
                   href="#"
-                  className="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500  hover:text-gray-700 "
+                  className="flex items-center justify-center px-4 h-8 ms-0 leading-tight text-[#48525B]  hover:text-[#48525B] "
                 >
                   <span className="sr-only">Previous</span>
                   <svg
@@ -85,7 +87,7 @@ const Users = () => {
               <li>
                 <a
                   href="#"
-                  className="flex items-center justify-center px-2 h-10 leading-tight text-white rounded-md bg-primary border  "
+                  className="flex items-center justify-center px-2 h-7 leading-tight text-white rounded-md bg-primary border  "
                 >
                   1
                 </a>
@@ -93,7 +95,7 @@ const Users = () => {
               <li>
                 <a
                   href="#"
-                  className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white"
+                  className="flex items-center justify-center px-2 h-7 leading-tight text-[#48525B] rounded-md bg-[#F5F5F5] hover:bg-primary transition-all duration-300 hover:text-white"
                 >
                   2
                 </a>
@@ -101,7 +103,7 @@ const Users = () => {
               <li>
                 <a
                   href="#"
-                  className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white"
+                  className="flex items-center justify-center px-2 h-7 leading-tight text-[#48525B] rounded-md bg-[#F5F5F5] hover:bg-primary transition-all duration-300 hover:text-white"
                 >
                   3
                 </a>
@@ -109,7 +111,7 @@ const Users = () => {
               <li>
                 <a
                   href="#"
-                  className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white"
+                  className="flex items-center justify-center px-2 h-7 leading-tight text-[#48525B] rounded-md bg-[#F5F5F5] hover:bg-primary transition-all duration-300 hover:text-white"
                 >
                   ..
                 </a>
@@ -117,7 +119,7 @@ const Users = () => {
               <li>
                 <a
                   href="#"
-                  className="flex items-center justify-center px-2 h-10 leading-tight text-gray-500 rounded-md bg-white hover:bg-primary transition-all duration-300 hover:text-white"
+                  className="flex items-center justify-center px-2 h-7 leading-tight text-[#48525B] rounded-md bg-[#F5F5F5] hover:bg-primary transition-all duration-300 hover:text-white"
                 >
                   40
                 </a>
@@ -126,7 +128,7 @@ const Users = () => {
               <li>
                 <a
                   href="#"
-                  className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 hover:text-gray-700"
+                  className="flex items-center justify-center px-4 h-7 leading-tight text-[#48525B] hover:text-[#48525B]"
                 >
                   <span className="sr-only">Next</span>
                   <svg
