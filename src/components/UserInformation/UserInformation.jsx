@@ -8,6 +8,7 @@ import {
   FaExclamation,
   FaPhone,
   FaStar,
+  FaPlus,
 } from "react-icons/fa6";
 import Image from "../../assets/img/im.png";
 import Zoom from "../../assets/img/zoom.svg";
@@ -71,9 +72,14 @@ const UserInformation = () => {
           </h1>
           <form action="" className="flex flex-col w-full gap-3">
             <label className="flex flex-col ">
-              <span className="text-primary font-bold">
-                Upload Image:(Optional)
-              </span>
+              <div className="flex justify-between items-center">
+                <span className="text-primary font-bold">
+                  Upload Image:(Optional)
+                </span>
+                <div className="bg-primary p-2 rounded-full text-white">
+                  <FaPlus />
+                </div>
+              </div>
               <span className="text-primary font-semibold text-xs">
                 Image size upto 5MB
               </span>

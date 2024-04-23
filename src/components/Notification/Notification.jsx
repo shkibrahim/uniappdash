@@ -40,9 +40,14 @@ const Notification = () => {
               </div>
             </div>
             <label className="flex flex-col ">
-              <span className="text-primary font-bold">
-                Upload Image:(Optional)
-              </span>
+              <div className="flex justify-between items-center">
+                <span className="text-primary font-bold">
+                  Upload Image:(Optional)
+                </span>
+                <div className="bg-primary p-2 rounded-full text-white">
+                  <FaPlus />
+                </div>
+              </div>
               <span className="text-primary font-semibold text-xs">
                 Image size upto 5MB
               </span>
